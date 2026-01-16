@@ -321,6 +321,137 @@ function openProject(projectType) {
             </div>
         `;
     }
+    else if (projectType === 'mdm') {
+        content = `
+            <div class="project-demo">
+                <h2>Sistema MDM - Controle Parental</h2>
+                <div class="demo-container">
+                    <div class="project-showcase">
+                        <div class="showcase-header">
+                            <div class="showcase-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div>
+                                <div class="showcase-title">Gerenciamento de Dispositivos Móveis</div>
+                                <div class="showcase-subtitle">Segurança e Controle Remoto</div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-description">
+                                <p>Sistema completo para gerenciamento remoto e monitoramento de dispositivos móveis, com foco em segurança e controle parental.</p>
+                                <ul style="margin-top: 1rem; color: #cbd5e1; list-style-position: inside;">
+                                    <li>Implementação de regras de bloqueio remoto e políticas de uso.</li>
+                                    <li>Monitoramento de logs em tempo real.</li>
+                                    <li>Arquitetura preparada para alta disponibilidade utilizando containers.</li>
+                                </ul>
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Android SDK</span>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <h4 style="color: #f1f5f9; margin-bottom: 1rem;">Galeria do Projeto</h4>
+                                <div class="gallery-grid" id="mdmGallery">
+                                    <div class="gallery-item" onclick="openLightboxMDM('mdm-dashboard.jpg')"><img src="assets/mdm/mdm-dashboard.jpg" alt="Dashboard MDM" onerror="this.src='assets/images/placeholder.jpg'"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                                    <div class="gallery-item" onclick="openLightboxMDM('mdm-mapa.jpg')"><img src="assets/mdm/mdm-mapa.jpg" alt="Rastreamento em Mapa" onerror="this.src='assets/images/placeholder.jpg'"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                                    <div class="gallery-item" onclick="openLightboxMDM('mdm-bloqueio.jpg')"><img src="assets/mdm/mdm-bloqueio.jpg" alt="Tela de Bloqueio" onerror="this.src='assets/images/placeholder.jpg'"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    else if (projectType === 'techcenter') {
+        content = `
+            <div class="project-demo">
+                <h2>Tech Center & Tekka AI</h2>
+                <div class="demo-container">
+                    <div class="project-showcase">
+                        <div class="showcase-header">
+                            <div class="showcase-icon"><i class="fas fa-robot"></i></div>
+                            <div>
+                                <div class="showcase-title">Plataforma de E-commerce com IA</div>
+                                <div class="showcase-subtitle">Integração Tekka AI Ultra V3.0</div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-description" style="text-align: left;">
+                                <p>Acabo de finalizar a integração completa da <strong>Tekka AI Ultra V3.0</strong> ao projeto Tech Center. Mas a "mágica" não acontece sozinha. Para que a Assistente Virtual funcione com precisão, desenvolvi um Ecossistema Completo que une uma gestão administrativa robusta a uma experiência de cliente inovadora.</p>
+                                
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">⚙️ O Cérebro (Painel Administrativo)</h4>
+                                <p>Antes da IA responder, o dado precisa existir. Por isso, construí um Dashboard Administrativo completo onde o lojista controla tudo:</p>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Gestão de Vitrines:</strong> Criação dinâmica de banners e cards de coleção (que a IA lê automaticamente).</li>
+                                    <li><strong>Controle de Estoque & Pedidos:</strong> Atualizações em tempo real via Supabase.</li>
+                                    <li><strong>Identidade Visual:</strong> Configuração de cores e logos que refletem na loja instantaneamente.</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🤖 A Voz (Tekka AI Ultra V3.0)</h4>
+                                <p>Conectada a esse painel, a Tekka atua na ponta final eliminando a fricção de compra:</p>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Integração Real-Time:</strong> Se altero o preço no Painel Admin, a Tekka já informa o novo valor no chat segundos depois.</li>
+                                    <li><strong>Recomendação Inteligente:</strong> Ela entende o contexto ("Quero um PC Gamer") e busca produtos ativos no catálogo.</li>
+                                    <li><strong>Automação:</strong> Redireciona o usuário para as coleções criadas no dashboard.</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">💡 O Desafio Técnico</h4>
+                                <p>Unir a lógica de Frontend (JS Modules), a gestão de dados complexa (Admin) e a performance do Backend (Supabase). O resultado é: O Admin gerencia, o Banco sincroniza e a IA vende.</p>
+                                
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Supabase</span>
+                                    <span class="tech-tag">AI Integration</span>
+                                    <span class="tech-tag">Dashboard</span>
+                                </div>
+                            </div>
+                            <div class="project-gallery">
+                                <h4 style="color: #f1f5f9; margin-bottom: 1rem;">Galeria do Projeto</h4>
+                                <div class="gallery-grid" id="techGallery">
+                                    <div class="gallery-item" onclick="openLightboxTech('tech-home.jpg')"><img src="assets/techcenter/tech-home.jpg" alt="Home Tech Center" onerror="this.src='assets/images/placeholder.jpg'"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                                    <div class="gallery-item" onclick="openLightboxTech('tech-admin.jpg')"><img src="assets/techcenter/tech-admin.jpg" alt="Painel Administrativo" onerror="this.src='assets/images/placeholder.jpg'"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                                    <div class="gallery-item" onclick="openLightboxTech('tech-ai.jpg')"><img src="assets/techcenter/tech-ai.jpg" alt="Chat Tekka AI" onerror="this.src='assets/images/placeholder.jpg'"><div class="gallery-overlay"><i class="fas fa-expand"></i></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    else if (projectType === 'estoque') {
+        content = `
+            <div class="project-demo">
+                <h2>Sistema de Gestão de Estoque</h2>
+                <div class="demo-container">
+                    <div class="project-showcase">
+                        <div class="showcase-header">
+                            <div class="showcase-icon"><i class="fas fa-boxes"></i></div>
+                            <div>
+                                <div class="showcase-title">Controle de Insumos Full Stack</div>
+                                <div class="showcase-subtitle">React & Node.js</div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-description">
+                                <p>Aplicação web para controle de entrada e saída de insumos, focada em eficiência e escalabilidade.</p>
+                                <ul style="margin-top: 1rem; color: #cbd5e1; list-style-position: inside;">
+                                    <li>Implementação de CRUD completo.</li>
+                                    <li>Integração robusta entre front-end e back-end.</li>
+                                    <li>Estrutura preparada para crescimento e manutenção.</li>
+                                </ul>
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">Express</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
     
     modalBody.innerHTML = content;
     modal.style.display = 'block';
@@ -333,6 +464,9 @@ function viewCode(projectType) {
     else if (projectType === 'sentinelvision') { repoUrl = 'https://github.com/davifeels/ProjetoSentinel'; } 
     else if (projectType === 'furia') { repoUrl = 'https://github.com/davifeels/furia-know-your-fan'; } 
     else if (projectType === 'chatbot') { repoUrl = 'https://github.com/davifeels/chatbotfuria'; }
+    else if (projectType === 'mdm') { repoUrl = 'https://github.com/davifeels'; }
+    else if (projectType === 'techcenter') { repoUrl = 'https://github.com/davifeels'; }
+    else if (projectType === 'estoque') { repoUrl = 'https://github.com/davifeels'; }
     window.open(repoUrl, '_blank');
 }
 
@@ -471,11 +605,27 @@ const vigilanciaGalleryImages = [
     { src: 'dadossalvo.jpg', caption: 'Confirmação de Dados Salvos' }
 ];
 
+const mdmGalleryImages = [
+    { src: 'mdm-dashboard.jpg', caption: 'Dashboard MDM' },
+    { src: 'mdm-mapa.jpg', caption: 'Rastreamento em Mapa' },
+    { src: 'mdm-bloqueio.jpg', caption: 'Tela de Bloqueio' }
+];
+
+const techCenterGalleryImages = [
+    { src: 'tech-home.jpg', caption: 'Home Tech Center' },
+    { src: 'tech-admin.jpg', caption: 'Painel Administrativo' },
+    { src: 'tech-ai.jpg', caption: 'Chat Tekka AI' }
+];
+
 function updateLightbox() {
     const image = galleryImages[currentImageIndex];
     if (!image) return;
-
-    const folder = (galleryImages === sentinelGalleryImages) ? 'sentinel' : 'vigilancia';
+    
+    let folder = 'sentinel';
+    if (galleryImages === vigilanciaGalleryImages) folder = 'vigilancia';
+    else if (galleryImages === mdmGalleryImages) folder = 'mdm';
+    else if (galleryImages === techCenterGalleryImages) folder = 'techcenter';
+    
     document.getElementById('lightboxImage').src = `assets/${folder}/${image.src}`;
     document.getElementById('lightboxCaption').textContent = image.caption;
 }
@@ -489,6 +639,20 @@ function openLightbox(imageSrc) {
 
 function openLightboxVigilancia(imageSrc) {
     galleryImages = vigilanciaGalleryImages;
+    currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
+    document.getElementById('lightbox').style.display = 'block';
+    updateLightbox();
+}
+
+function openLightboxMDM(imageSrc) {
+    galleryImages = mdmGalleryImages;
+    currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
+    document.getElementById('lightbox').style.display = 'block';
+    updateLightbox();
+}
+
+function openLightboxTech(imageSrc) {
+    galleryImages = techCenterGalleryImages;
     currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
     document.getElementById('lightbox').style.display = 'block';
     updateLightbox();
