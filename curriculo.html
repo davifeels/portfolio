@@ -4,8 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo - Davi Anderson Batista Martins Da Silva</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+  <style>
+    @font-face { font-family: 'Poppins'; src: url('assets/poppins-regular.woff2') format('woff2'); font-weight: 400; font-style: normal; }
+    @font-face { font-family: 'Poppins'; src: url('assets/poppins-600.woff2') format('woff2'); font-weight: 600; font-style: normal; }
+    @font-face { font-family: 'Poppins'; src: url('assets/poppins-700.woff2') format('woff2'); font-weight: 700; font-style: normal; }
+  </style>
   <style>
     * {
       margin: 0;
@@ -475,9 +479,25 @@
           <div class="job-title">Graduação em Banco de Dados</div>
           <div class="company-period">
             <i class="fas fa-university"></i>
-            Faculdade UniCesumar • 3º Semestre • 2024 - 2027
+            Faculdade UniCesumar • 4º Semestre • 2024 - Março/2027
           </div>
           <p>Foco em modelagem de dados, administração de sistemas de banco de dados, business intelligence e análise de dados.</p>
+        </div>
+        <div class="education-item">
+          <div class="job-title">Curso Técnico em Programador de Sistemas</div>
+          <div class="company-period">
+            <i class="fas fa-school"></i>
+            Senac-DF • Concluído
+          </div>
+          <p>Formação técnica com base sólida em lógica de programação, algoritmos, desenvolvimento de sistemas e boas práticas de engenharia de software. Centenas de horas de prática em programação estruturada e orientada a objetos.</p>
+        </div>
+        <div class="education-item">
+          <div class="job-title">Imersão IA</div>
+          <div class="company-period">
+            <i class="fas fa-robot"></i>
+            Alura • Concluído
+          </div>
+          <p>Fundamentos e aplicações práticas de Inteligência Artificial com Google Gemini — prompting avançado, integração de LLMs em projetos reais e construção de pipelines de IA.</p>
         </div>
       </section>
 
@@ -528,12 +548,12 @@
         <div class="projects-grid">
           <div class="project-item">
             <div class="project-title">
-              <i class="fas fa-mobile-alt"></i>
-              <strong>Sistema MDM - Controle Parental</strong>
+              <i class="fas fa-fingerprint"></i>
+              <strong>Rekkon — MDM & Controle Parental (App Android + Backend)</strong>
             </div>
-            <p>Sistema completo para gerenciamento remoto e monitoramento de dispositivos móveis, com foco em segurança e controle parental. Implementação de regras de bloqueio e monitoramento em tempo real.</p>
-            <p><strong>Tecnologias:</strong> Node.js, Docker, Android SDK</p>
-            <a href="https://github.com/davifeels" target="_blank" class="project-link">
+            <p>Sistema completo de Mobile Device Management com app Android nativo em Kotlin. Identificação facial on-device via ML Kit (96 landmarks, CameraX), arquitetura MVVM com Jetpack Compose, WebSocket para comandos remotos em tempo real e Android DevicePolicyManager para restrições por horário/app. Backend Node.js + Docker Compose gerencia múltiplos dispositivos com dashboard de monitoramento em tempo real.</p>
+            <p><strong>Tecnologias:</strong> Kotlin, Android Studio, ML Kit, CameraX, Jetpack Compose, Node.js, Docker</p>
+            <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="project-link">
               <i class="fab fa-github"></i> Ver no GitHub
             </a>
           </div>
@@ -545,7 +565,7 @@
             </div>
             <p>Front-end robusto para loja virtual com integração da Tekka AI Ultra V3.0. Ecossistema completo unindo gestão administrativa e experiência do cliente via IA.</p>
             <p><strong>Tecnologias:</strong> JavaScript, Supabase, AI Integration</p>
-            <a href="https://github.com/davifeels" target="_blank" class="project-link">
+            <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="project-link">
               <i class="fab fa-github"></i> Ver no GitHub
             </a>
           </div>
@@ -557,7 +577,7 @@
             </div>
             <p>Aplicação web Full Stack para controle de entrada e saída de insumos. Estrutura preparada para crescimento e manutenção.</p>
             <p><strong>Tecnologias:</strong> React, Node.js, Express</p>
-            <a href="https://github.com/davifeels" target="_blank" class="project-link">
+            <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="project-link">
               <i class="fab fa-github"></i> Ver no GitHub
             </a>
           </div>
@@ -569,7 +589,7 @@
             </div>
             <p>Sistema de vigilância inteligente com detecção de movimento, captura de vídeo via webcam e interface web para visualização e controle em tempo real.</p>
             <p><strong>Tecnologias:</strong> Python, OpenCV, Flask, HTML/CSS, SQLite</p>
-            <a href="https://github.com/davifeels/Sistema-De-Vigilancia" target="_blank" class="project-link">
+            <a href="https://github.com/davifeels/Sistema-De-Vigilancia" target="_blank" rel="noopener" class="project-link">
               <i class="fab fa-github"></i> Ver no GitHub
             </a>
           </div>
@@ -581,7 +601,7 @@
             </div>
             <p>Sistema avançado de reconhecimento facial com autenticação biométrica, persistência de dados e controle de acesso seguro.</p>
             <p><strong>Tecnologias:</strong> Python, Flask, SQLAlchemy, PostgreSQL, FAISS, Docker</p>
-            <a href="https://github.com/davifeels/ProjetoSentinel" target="_blank" class="project-link">
+            <a href="https://github.com/davifeels/ProjetoSentinel" target="_blank" rel="noopener" class="project-link">
               <i class="fab fa-github"></i> Ver no GitHub
             </a>
           </div>
@@ -593,7 +613,7 @@
             </div>
             <p>Aplicação fullstack completa para coleta e validação de dados de fãs da FURIA com interface moderna e responsiva.</p>
             <p><strong>Tecnologias:</strong> React, Node.js, Express, MySQL, Axios, CSS Modular</p>
-            <a href="https://github.com/davifeels/furia-know-your-fan" target="_blank" class="project-link">
+            <a href="https://github.com/davifeels/furia-know-your-fan" target="_blank" rel="noopener" class="project-link">
               <i class="fab fa-github"></i> Ver no GitHub
             </a>
           </div>
@@ -605,7 +625,55 @@
             </div>
             <p>Página web interativa com perfis personalizados dos jogadores da FURIA e sistema de chatbot individual para cada membro da equipe.</p>
             <p><strong>Tecnologias:</strong> HTML5, CSS3, JavaScript ES6+</p>
-            <a href="https://github.com/davifeels/chatbotfuria" target="_blank" class="project-link">
+            <a href="https://github.com/davifeels/chatbotfuria" target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">
+              <i class="fas fa-shield-alt"></i>
+              <strong>DataProtection — Inventário de Dados LGPD (ITI)</strong>
+            </div>
+            <p>Sistema de conformidade com a LGPD desenvolvido para o Instituto de Tecnologia da Informação, implementando o Inventário de Dados exigido pelo Art. 37. Registra categorias de dados, finalidades, bases legais, agentes, localização, tempo de retenção e medidas de segurança. Inclui módulo de resposta a titulares, auditoria completa de alterações e exportação como base para o RIPD. Substitui planilhas manuais por sistema centralizado e auditável perante a ANPD.</p>
+            <p><strong>Tecnologias:</strong> Java, Spring Boot, PostgreSQL, Angular, JWT</p>
+            <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">
+              <i class="fas fa-eye"></i>
+              <strong>Phoenix Vision — Detecção de Objetos com YOLOv8</strong>
+            </div>
+            <p>Sistema de visão computacional com detecção de objetos em tempo real usando YOLOv8 (Ultralytics). Pipeline completo: captura via OpenCV → inferência YOLO → NMS → anotação de bounding boxes. Threshold de confiança configurável e contagem de objetos por classe em tempo real. Extensível para fine-tuning com datasets customizados.</p>
+            <p><strong>Tecnologias:</strong> Python, YOLOv8, OpenCV, Ultralytics, NumPy</p>
+            <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">
+              <i class="fas fa-satellite-dish"></i>
+              <strong>RiskCore AI — Monitoramento de Reputação Digital</strong>
+            </div>
+            <p>Centro de Comando para gestão de crises e inteligência reputacional. Monitora menções em tempo real, detecta desinformação com IA (LIKELY_FALSE / MISLEADING / VERIFIED_TRUE com confidence score), preserva evidências automaticamente e emite alertas via Telegram. Dashboard com 20+ views especializadas: Crisis Radar, Mapa Eleitoral, Meta Ads Monitor, Painel Parlamentar, SentinelChat e Detector de Fake News com ciclo automático de 30 min.</p>
+            <p><strong>Tecnologias:</strong> React, Next.js, TypeScript, Node.js, PostgreSQL, Redis, Tailwind CSS</p>
+            <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="project-link">
+              <i class="fab fa-github"></i> Ver no GitHub
+            </a>
+          </div>
+
+          <div class="project-item">
+            <div class="project-title">
+              <i class="fas fa-balance-scale"></i>
+              <strong>Jurimetria Preditiva — Análise Judicial com IA</strong>
+            </div>
+            <p>Plataforma LegalTech full-stack que coleta automaticamente sentenças judiciais do TJBA via Playwright (com anti-detecção stealth e resolução adaptativa de CAPTCHA GeeTest), indexa via embeddings vetoriais no pgvector e entrega insights preditivos por RAG + GPT-4o. Pipeline de análise em 5 camadas (estatística, jurídica, probatória, estratégica e mercado) com score de sucesso 0–100 por tese. Interface Streamlit de 9 abas com perfil decisório por magistrado. 32K+ linhas de Python, 257+ commits.</p>
+            <p><strong>Tecnologias:</strong> Python, Streamlit, PostgreSQL, pgvector, Playwright, Selenium, OpenAI GPT-4o, Docker</p>
+            <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="project-link">
               <i class="fab fa-github"></i> Ver no GitHub
             </a>
           </div>
@@ -623,7 +691,9 @@
             <div class="skill-tags">
               <span class="skill-tag">Java</span>
               <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">Python</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Python (Avançado)</span>
+              <span class="skill-tag">Kotlin</span>
               <span class="skill-tag">HTML5</span>
               <span class="skill-tag">CSS3</span>
               <span class="skill-tag">SQL</span>
@@ -637,9 +707,14 @@
               <span class="skill-tag">Node.js</span>
               <span class="skill-tag">Angular</span>
               <span class="skill-tag">React</span>
+              <span class="skill-tag">Next.js</span>
               <span class="skill-tag">RxJS</span>
               <span class="skill-tag">Angular Material</span>
               <span class="skill-tag">Flask</span>
+              <span class="skill-tag">Streamlit</span>
+              <span class="skill-tag">Playwright</span>
+              <span class="skill-tag">Supabase</span>
+              <span class="skill-tag">Selenium</span>
             </div>
           </div>
 
@@ -650,6 +725,8 @@
               <span class="skill-tag">MySQL</span>
               <span class="skill-tag">NoSQL</span>
               <span class="skill-tag">SQLite</span>
+              <span class="skill-tag">Redis</span>
+              <span class="skill-tag">pgvector</span>
               <span class="skill-tag">Modelagem</span>
               <span class="skill-tag">Performance Tuning</span>
             </div>
@@ -681,22 +758,30 @@
           <div class="skill-category">
             <h4><i class="fas fa-cloud"></i> DevOps & Cloud</h4>
             <div class="skill-tags">
-              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Docker (Avançado)</span>
+              <span class="skill-tag">Docker Compose</span>
               <span class="skill-tag">Kubernetes</span>
               <span class="skill-tag">GitLab CI/CD</span>
               <span class="skill-tag">Git</span>
               <span class="skill-tag">Linux</span>
-              <span class="skill-tag">Windows</span>
+              <span class="skill-tag">Android Studio</span>
             </div>
           </div>
 
           <div class="skill-category">
-            <h4><i class="fas fa-chart-line"></i> Análise de Dados</h4>
+            <h4><i class="fas fa-chart-line"></i> Análise de Dados & IA</h4>
             <div class="skill-tags">
               <span class="skill-tag">Elastic Search</span>
               <span class="skill-tag">Business Intelligence</span>
               <span class="skill-tag">Dashboards KPI</span>
               <span class="skill-tag">ETL</span>
+              <span class="skill-tag">OpenAI GPT-4o</span>
+              <span class="skill-tag">RAG / pgvector</span>
+              <span class="skill-tag">LLM Integration</span>
+              <span class="skill-tag">YOLOv8 / Ultralytics</span>
+              <span class="skill-tag">OpenCV</span>
+              <span class="skill-tag">ML Kit (Android)</span>
+              <span class="skill-tag">CAPTCHA Bypass</span>
             </div>
           </div>
 
@@ -719,73 +804,74 @@
         </h2>
         <div class="soft-skills">
           <div class="soft-skill">
-            <i class="fas fa-comments"></i>
-            Comunicação Eficaz
+            <i class="fas fa-sitemap"></i>
+            Arquitetura de Sistemas Complexos
+          </div>
+          <div class="soft-skill">
+            <i class="fas fa-shield-alt"></i>
+            Visão Analítica & Segurança da Informação
+          </div>
+          <div class="soft-skill">
+            <i class="fas fa-brain"></i>
+            Adoção Rápida de Tecnologias Emergentes
+          </div>
+          <div class="soft-skill">
+            <i class="fas fa-search"></i>
+            Pesquisa & Resolução Autônoma de Problemas
+          </div>
+          <div class="soft-skill">
+            <i class="fas fa-shipping-fast"></i>
+            Entrega Ponta a Ponta (Arquitetura ao Deploy)
           </div>
           <div class="soft-skill">
             <i class="fas fa-users"></i>
-            Trabalho em Equipe
+            Colaboração em Ambientes Ágeis (SCRUM)
           </div>
           <div class="soft-skill">
-            <i class="fas fa-tasks"></i>
-            Gestão de Múltiplas Tarefas
+            <i class="fas fa-eye"></i>
+            Atenção a Detalhes & Qualidade de Código
           </div>
           <div class="soft-skill">
-            <i class="fas fa-rocket"></i>
-            Proatividade
-          </div>
-          <div class="soft-skill">
-            <i class="fas fa-puzzle-piece"></i>
-            Solução Criativa de Problemas
-          </div>
-          <div class="soft-skill">
-            <i class="fas fa-medal"></i>
-            Comprometimento com Qualidade
-          </div>
-          <div class="soft-skill">
-            <i class="fas fa-sync-alt"></i>
-            Adaptabilidade
-          </div>
-          <div class="soft-skill">
-            <i class="fas fa-clock"></i>
-            Gestão de Tempo
+            <i class="fas fa-plug"></i>
+            Integração de APIs & Sistemas Externos
           </div>
         </div>
       </section>
     </div>
 
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
   <script>
-    document.getElementById('downloadPDF').addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const element = document.querySelector('.container');
-      const downloadBtn = document.querySelector('.download-section');
-      
-      // Hide download button during PDF generation
-      downloadBtn.style.display = 'none';
-      
+    const downloadBtn = document.getElementById('downloadPDF');
+
+    downloadBtn.addEventListener('click', function () {
+      const originalHTML = downloadBtn.innerHTML;
+      downloadBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Gerando PDF...';
+      downloadBtn.disabled = true;
+
+      const downloadSection = document.querySelector('.download-section');
+      downloadSection.style.display = 'none';
+
       const opt = {
         margin: [0.2, 0.2, 0.2, 0.2],
         filename: 'Curriculo_Davi_Anderson.pdf',
         image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: {
-          scale: 2,
-          useCORS: true,
-          letterRendering: true
-        },
-        jsPDF: {
-          unit: 'in',
-          format: 'a4',
-          orientation: 'portrait'
-        }
+        html2canvas: { scale: 2, useCORS: false, allowTaint: true, letterRendering: true, logging: false },
+        jsPDF: { unit: 'in', format: 'a4', orientation: 'portrait' }
       };
 
-      html2pdf().set(opt).from(element).save().then(() => {
-        // Show download button again after PDF generation
-        downloadBtn.style.display = 'block';
-      });
+      html2pdf()
+        .set(opt)
+        .from(document.querySelector('.container'))
+        .save()
+        .catch(function () {
+          alert('Erro ao gerar PDF. Tente usar Ctrl+P → Salvar como PDF.');
+        })
+        .finally(function () {
+          downloadSection.style.display = 'block';
+          downloadBtn.innerHTML = originalHTML;
+          downloadBtn.disabled = false;
+        });
     });
   </script>
 </body>

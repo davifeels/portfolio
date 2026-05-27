@@ -1869,3 +1869,14 @@ html { overflow-x: hidden; }
         height: 180px;
     }
 }
+
+.education-item-sub {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 0.2rem;
+}
+
+.education-item + .education-item {
+    margin-top: 0.75rem;
+}
