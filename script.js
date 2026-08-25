@@ -175,53 +175,6 @@ function openProject(projectType) {
         `;
     } 
     
-    else if (projectType === 'sentinelvision') {
-        content = `
-            <div class="project-demo">
-                <h2>Projeto Sentinel</h2>
-                <div class="demo-container">
-                    <div class="project-showcase">
-                        <div class="showcase-header">
-                            <div class="showcase-icon"><i class="fas fa-user-shield"></i></div>
-                            <div>
-                                <div class="showcase-title">Sistema de Reconhecimento Facial</div>
-                                <div class="showcase-subtitle">Autenticação e Controle de Acesso</div>
-                            </div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-description">
-                                <p>Sistema completo de reconhecimento facial desenvolvido com Python, Flask e SQLAlchemy. Implementa autenticação biométrica, persistência de dados e controle de acesso seguro.</p>
-                                <div class="showcase-stats">
-                                    <div class="stat-item"><span class="stat-number">98.5%</span><span class="stat-label">Precisão</span></div>
-                                    <div class="stat-item"><span class="stat-number">8+</span><span class="stat-label">Telas</span></div>
-                                    <div class="stat-item"><span class="stat-number">5</span><span class="stat-label">Perfis</span></div>
-                                    <div class="stat-item"><span class="stat-number">Flask</span><span class="stat-label">Framework</span></div>
-                                </div>
-                            </div>
-                            <div style="margin-top: 1.5rem;">
-                                <h4 style="color: #60a5fa; margin-bottom: 0.75rem;">⚙️ Como foi desenvolvido</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Reconhecimento Facial:</strong> Biblioteca face_recognition sobre OpenCV para identificar e comparar rostos em tempo real via webcam.</li>
-                                    <li><strong>Persistência:</strong> SQLAlchemy + SQLite armazenando embeddings faciais e logs de acesso por sessão.</li>
-                                    <li><strong>Backend:</strong> Flask expondo endpoints de autenticação biométrica e dashboard de usuários ativos.</li>
-                                    <li><strong>Anti-spoofing básico:</strong> Verificação de presença com detecção de movimento para evitar fotos estáticas.</li>
-                                    <li><strong>Multi-perfil:</strong> Suporte a 5+ perfis cadastrados com controle de nível de acesso individual.</li>
-                                    <li><strong>Frontend:</strong> Interface web minimalista em HTML/CSS + JavaScript para visualização de análise em tempo real e histórico de acessos.</li>
-                                </ul>
-                                <div class="showcase-stats">
-                                    <div class="stat-item"><span class="stat-number">98.5%</span><span class="stat-label">Precisão</span></div>
-                                    <div class="stat-item"><span class="stat-number">8+</span><span class="stat-label">Telas</span></div>
-                                    <div class="stat-item"><span class="stat-number">5</span><span class="stat-label">Perfis</span></div>
-                                    <div class="stat-item"><span class="stat-number">Flask</span><span class="stat-label">Framework</span></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    } 
-    
     else if (projectType === 'mdm') {
         content = `
             <div class="project-demo">
@@ -620,65 +573,6 @@ function openProject(projectType) {
             </div>
         `;
     }
-    else if (projectType === 'techcenter') {
-        content = `
-            <div class="project-demo">
-                <h2>Tech Center & Tekka AI</h2>
-                <div class="demo-container">
-                    <div class="project-showcase">
-                        <div class="showcase-header">
-                            <div class="showcase-icon"><i class="fas fa-robot"></i></div>
-                            <div>
-                                <div class="showcase-title">Plataforma de E-commerce com IA</div>
-                                <div class="showcase-subtitle">Integração Tekka AI Ultra V3.0</div>
-                            </div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-description" style="text-align: left;">
-                                <p>Acabo de finalizar a integração completa da <strong>Tekka AI Ultra V3.0</strong> ao projeto Tech Center. Mas a "mágica" não acontece sozinha. Para que a Assistente Virtual funcione com precisão, desenvolvi um Ecossistema Completo que une uma gestão administrativa robusta a uma experiência de cliente inovadora.</p>
-                                
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">⚙️ O Cérebro (Painel Administrativo)</h4>
-                                <p>Antes da IA responder, o dado precisa existir. Por isso, construí um Dashboard Administrativo completo onde o lojista controla tudo:</p>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Gestão de Vitrines:</strong> Criação dinâmica de banners e cards de coleção (que a IA lê automaticamente).</li>
-                                    <li><strong>Controle de Estoque & Pedidos:</strong> Atualizações em tempo real via Supabase.</li>
-                                    <li><strong>Identidade Visual:</strong> Configuração de cores e logos que refletem na loja instantaneamente.</li>
-                                </ul>
-
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🤖 A Voz (Tekka AI Ultra V3.0)</h4>
-                                <p>Conectada a esse painel, a Tekka atua na ponta final eliminando a fricção de compra:</p>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Integração Real-Time:</strong> Se altero o preço no Painel Admin, a Tekka já informa o novo valor no chat segundos depois.</li>
-                                    <li><strong>Recomendação Inteligente:</strong> Ela entende o contexto ("Quero um PC Gamer") e busca produtos ativos no catálogo.</li>
-                                    <li><strong>Automação:</strong> Redireciona o usuário para as coleções criadas no dashboard.</li>
-                                </ul>
-
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">💡 O Desafio Técnico</h4>
-                                <p>Unir a lógica de Frontend (JS Modules), a gestão de dados complexa (Admin) e a performance do Backend (Supabase). O resultado é: O Admin gerencia, o Banco sincroniza e a IA vende.</p>
-                                
-                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-                                    <span class="tech-tag">JavaScript</span>
-                                    <span class="tech-tag">Supabase</span>
-                                    <span class="tech-tag">AI Integration</span>
-                                    <span class="tech-tag">Dashboard</span>
-                                </div>
-                            </div>
-                            <div style="margin-top: 1.5rem;">
-                                <h4 style="color: #60a5fa; margin-bottom: 0.75rem;">⚙️ Como foi desenvolvido</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Painel Admin:</strong> CRUD completo em JavaScript puro com módulos ES6, permitindo gerenciar banners, produtos, preços e estoques que a IA lê em tempo real.</li>
-                                    <li><strong>Supabase como BaaS:</strong> PostgreSQL gerenciado com realtime subscriptions — alteração de preço no admin reflete em segundos no chat da IA.</li>
-                                    <li><strong>Tekka AI Ultra V3.0:</strong> Integração da API de IA com contexto dinâmico injetado do catálogo ativo, tornando-a ciente do estoque e coleções vigentes.</li>
-                                    <li><strong>Arquitetura modular:</strong> Frontend dividido em módulos independentes (auth, catalog, cart, admin, ai-chat) para manutenção isolada de cada domínio.</li>
-                                    <li><strong>Identidade visual dinâmica:</strong> Cores, logos e banners configuráveis no admin e aplicados instantaneamente na loja via CSS custom properties.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
 
     modalBody.innerHTML = content;
     modal.style.display = 'block';
@@ -687,10 +581,8 @@ function openProject(projectType) {
 
 function viewCode(projectType) {
     let repoUrl = '';
-    if (projectType === 'vigilancia') { repoUrl = 'https://github.com/davifeels/Sistema-De-Vigilancia'; } 
-    else if (projectType === 'sentinelvision') { repoUrl = 'https://github.com/davifeels/ProjetoSentinel'; } 
+    if (projectType === 'vigilancia') { repoUrl = 'https://github.com/davifeels/Sistema-De-Vigilancia'; }
     else if (projectType === 'mdm') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'techcenter') { repoUrl = 'https://github.com/davifeels'; }
     else if (projectType === 'riskcore') { repoUrl = 'https://github.com/davifeels/riskcore-ai-frontend'; }
     else if (projectType === 'jurimetria') { repoUrl = 'https://github.com/davifeels'; }
     else if (projectType === 'rekkon') { repoUrl = 'https://github.com/davifeels'; }
@@ -818,17 +710,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Lightbox functionality
 let galleryImages = [];
 
-const sentinelGalleryImages = [
-    { src: 'dashboard.2.jpg', caption: 'Dashboard de Análise' },
-    { src: 'bancoDeDados.jpg', caption: 'Banco de Dados de Perfis' },
-    { src: 'dashboard1.jpg', caption: 'Dashboard de Inteligência' },
-    { src: 'menu.jpg', caption: 'Menu Principal' },
-    { src: 'minhaConta.jpg', caption: 'Gerenciamento de Conta' },
-    { src: 'reconhecimentoAnalisado.jpg', caption: 'Dossiê do Indivíduo' },
-    { src: 'analise.facial.jpg', caption: 'Análise Facial em Tempo Real' },
-    { src: 'usuariosAtivos.jpg', caption: 'Usuários Ativos no Sistema' }
-];
-
 const vigilanciaGalleryImages = [
     { src: 'inicialcamera.jpg', caption: 'Tela Inicial da Câmera' },
     { src: 'dadossalvo.jpg', caption: 'Confirmação de Dados Salvos' }
@@ -840,31 +721,16 @@ const mdmGalleryImages = [
     { src: 'mdm-bloqueio.jpg', caption: 'Tela de Bloqueio' }
 ];
 
-const techCenterGalleryImages = [
-    { src: 'tech-home.jpg', caption: 'Home Tech Center' },
-    { src: 'tech-admin.jpg', caption: 'Painel Administrativo' },
-    { src: 'tech-ai.jpg', caption: 'Chat Tekka AI' }
-];
-
 function updateLightbox() {
     const image = galleryImages[currentImageIndex];
     if (!image) return;
 
-    let folder = 'sentinel';
-    if (galleryImages === vigilanciaGalleryImages) folder = 'vigilancia';
-    else if (galleryImages === mdmGalleryImages) folder = 'mdm';
-    else if (galleryImages === techCenterGalleryImages) folder = 'techcenter';
+    let folder = 'vigilancia';
+    if (galleryImages === mdmGalleryImages) folder = 'mdm';
     else if (typeof riskCoreGalleryImages !== 'undefined' && galleryImages === riskCoreGalleryImages) folder = 'imgsistema';
 
     document.getElementById('lightboxImage').src = `assets/${folder}/${image.src}`;
     document.getElementById('lightboxCaption').textContent = image.caption;
-}
-
-function openLightbox(imageSrc) {
-    galleryImages = sentinelGalleryImages;
-    currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
-    document.getElementById('lightbox').style.display = 'block';
-    updateLightbox();
 }
 
 function openLightboxVigilancia(imageSrc) {
@@ -876,13 +742,6 @@ function openLightboxVigilancia(imageSrc) {
 
 function openLightboxMDM(imageSrc) {
     galleryImages = mdmGalleryImages;
-    currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
-    document.getElementById('lightbox').style.display = 'block';
-    updateLightbox();
-}
-
-function openLightboxTech(imageSrc) {
-    galleryImages = techCenterGalleryImages;
     currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
     document.getElementById('lightbox').style.display = 'block';
     updateLightbox();
