@@ -222,97 +222,6 @@ function openProject(projectType) {
         `;
     } 
     
-    // ==================================================================
-    // INÍCIO DA SEÇÃO RESTAURADA: PROJETO FURIA
-    // ==================================================================
-    else if (projectType === 'furia') {
-        content = `
-            <div class="project-demo">
-                <h2>FURIA - Know Your Fan</h2>
-                <div class="demo-container">
-                    <div class="project-showcase">
-                        <div class="showcase-header">
-                            <div class="showcase-icon">
-                                <i class="fas fa-gamepad"></i>
-                            </div>
-                            <div>
-                                <div class="showcase-title">Plataforma de Validação de Fãs</div>
-                                <div class="showcase-subtitle">Aplicação Fullstack para E-sports</div>
-                            </div>
-                        </div>
-                        
-                        <div style="text-align: center; padding: 3rem 0;">
-                            <div style="font-size: 4rem; color: #60a5fa; margin-bottom: 1rem;">
-                                <i class="fas fa-trophy"></i>
-                            </div>
-                            <p style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem;">
-                                Aplicação fullstack desenvolvida para coleta e validação de dados de fãs da FURIA, 
-                                incluindo autenticação, análise de redes sociais e dashboard completo.
-                            </p>
-                            
-                            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">Express</span>
-                                <span class="tech-tag">MySQL</span>
-                                <span class="tech-tag">CSS Modular</span>
-                            </div>
-                            
-                            <a href="https://github.com/davifeels/furia-know-your-fan" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-                                <i class="fab fa-github"></i>
-                                Ver no GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    } 
-    // ==================================================================
-    // INÍCIO DA SEÇÃO RESTAURADA: PROJETO CHATBOT
-    // ==================================================================
-    else if (projectType === 'chatbot') {
-        content = `
-            <div class="project-demo">
-                <h2>Chatbot FURIA</h2>
-                <div class="demo-container">
-                    <div class="project-showcase">
-                        <div class="showcase-header">
-                            <div class="showcase-icon">
-                                <i class="fas fa-comments"></i>
-                            </div>
-                            <div>
-                                <div class="showcase-title">Página Interativa dos Jogadores</div>
-                                <div class="showcase-subtitle">Chatbots Personalizados</div>
-                            </div>
-                        </div>
-                        
-                        <div style="text-align: center; padding: 3rem 0;">
-                            <div style="font-size: 4rem; color: #60a5fa; margin-bottom: 1rem;">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <p style="color: #cbd5e1; font-size: 1.1rem; margin-bottom: 2rem;">
-                                Página web interativa com perfis personalizados dos jogadores da FURIA e chatbot 
-                                individual para cada um, com design responsivo e experiência focada no fã.
-                            </p>
-                            
-                            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-                                <span class="tech-tag">HTML5</span>
-                                <span class="tech-tag">CSS3</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Responsive</span>
-                            </div>
-                            
-                            <a href="https://github.com/davifeels/chatbotfuria" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; text-decoration: none;">
-                                <i class="fab fa-github"></i>
-                                Ver no GitHub
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
     else if (projectType === 'mdm') {
         content = `
             <div class="project-demo">
@@ -420,52 +329,6 @@ function openProject(projectType) {
                                     <span class="tech-tag">Angular</span>
                                     <span class="tech-tag">JWT</span>
                                     <span class="tech-tag">LGPD</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-    else if (projectType === 'phoenixvision') {
-        content = `
-            <div class="project-demo">
-                <h2>Phoenix Vision — Detecção de Objetos com YOLOv8</h2>
-                <div class="demo-container">
-                    <div class="project-showcase">
-                        <div class="showcase-header">
-                            <div class="showcase-icon"><i class="fas fa-eye"></i></div>
-                            <div>
-                                <div class="showcase-title">Visão Computacional em Tempo Real</div>
-                                <div class="showcase-subtitle">YOLOv8 + OpenCV para Detecção de Objetos via Webcam</div>
-                            </div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-description" style="text-align: left;">
-                                <p>Sistema de visão computacional que aplica o modelo <strong>YOLOv8</strong> para detecção de objetos em tempo real via feed de câmera. O pipeline captura frames, executa inferência e anota os resultados com bounding boxes e labels de classe em tempo real.</p>
-
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">⚙️ Como foi desenvolvido</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>YOLOv8 via Ultralytics:</strong> Modelo pré-treinado COCO (80 classes) com inferência frame a frame sobre o feed da webcam.</li>
-                                    <li><strong>Pipeline de inferência:</strong> Captura com OpenCV → redimensionamento → normalização → inferência YOLO → pós-processamento NMS → anotação com bounding boxes.</li>
-                                    <li><strong>Threshold configurável:</strong> Filtro de confiança ajustável em runtime para controlar o trade-off entre recall e precisão.</li>
-                                    <li><strong>Dashboard de resultados:</strong> Contagem por classe detectada e taxa de FPS em sobreposição no frame.</li>
-                                </ul>
-
-                                <div class="showcase-stats" style="margin-top: 1.5rem;">
-                                    <div class="stat-item"><span class="stat-number">80</span><span class="stat-label">Classes COCO</span></div>
-                                    <div class="stat-item"><span class="stat-number">Real-time</span><span class="stat-label">Inferência</span></div>
-                                    <div class="stat-item"><span class="stat-number">YOLOv8</span><span class="stat-label">Modelo</span></div>
-                                    <div class="stat-item"><span class="stat-number">OpenCV</span><span class="stat-label">Captura</span></div>
-                                </div>
-
-                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">YOLOv8</span>
-                                    <span class="tech-tag">OpenCV</span>
-                                    <span class="tech-tag">Ultralytics</span>
-                                    <span class="tech-tag">NumPy</span>
                                 </div>
                             </div>
                         </div>
@@ -678,6 +541,85 @@ function openProject(projectType) {
             </div>
         `;
     }
+    else if (projectType === 'nexus') {
+        content = `
+            <div class="project-demo">
+                <h2>Nexus AI OS — Sistema Operacional Cognitivo</h2>
+                <div class="demo-container">
+                    <div class="project-showcase">
+                        <div class="showcase-header">
+                            <div class="showcase-icon"><i class="fas fa-brain"></i></div>
+                            <div>
+                                <div class="showcase-title">Assistente Pessoal e Empresarial com Memória Permanente</div>
+                                <div class="showcase-subtitle">34 Agentes de IA + Modo Autônomo + RAG via pgvector</div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-description" style="text-align: left;">
+                                <p>Sistema operacional cognitivo pessoal e empresarial: um assistente com memória permanente, agentes especializados, modo autônomo com aprovações e módulos de Finanças, Carreira e Estudos — multiusuário/multiempresa, com transparência total sobre os próprios dados (LGPD).</p>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🧠 Nexus Brain</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Roteamento inteligente:</strong> cada mensagem é roteada para 1 de 34 agentes especializados (carreira, finanças, estudos, negócios, técnico, vida, conteúdo...).</li>
+                                    <li><strong>Contexto injetado:</strong> memórias de longo prazo, Digital Twin (perfil evolutivo em 12 facetas) e documentos via RAG.</li>
+                                    <li><strong>Feedback explícito:</strong> 👍/👎 do usuário vira memória episódica ("evite repetir") ou procedural ("bom padrão a repetir").</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">💾 Memória de Longo e Curto Prazo</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Extração automática:</strong> fatos das conversas com deduplicação vetorial via pgvector.</li>
+                                    <li><strong>Curto prazo real:</strong> uma conversa nova enxerga o que rolou em outras conversas das últimas 6h.</li>
+                                    <li><strong>Transparência LGPD:</strong> o usuário vê, edita e apaga qualquer memória na tela "Memórias".</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🤖 Modo Autônomo</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Planner → fila → executor → reflexão:</strong> o Brain planeja, pede aprovação quando sensível, executa em background e aprende com o resultado.</li>
+                                    <li><strong>Fila priorizada (1-10):</strong> vários workers concorrentes com <code>FOR UPDATE SKIP LOCKED</code> no Postgres.</li>
+                                    <li><strong>Ferramentas:</strong> <code>execute_code</code> (sandbox Python isolado) e <code>browse_page</code> (browser real com JS renderizado).</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🔐 Segurança</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>JWT</strong> + refresh token rotativo, rate limit em <code>/auth</code>.</li>
+                                    <li><strong>MFA</strong> (TOTP + códigos de backup) opcional por usuário, login social com Google (OAuth2).</li>
+                                    <li><strong>Auditoria</strong> de ações sensíveis e exportação/exclusão completa de dados sob demanda.</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">📦 Módulos</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Finanças:</strong> categorização automática por IA, assinaturas recorrentes, compras parceladas e fluxo de caixa projetado.</li>
+                                    <li><strong>Carreira:</strong> análise de currículo, busca de vagas reais, simulador de entrevistas, pipeline de candidaturas.</li>
+                                    <li><strong>Estudos:</strong> trilhas e flashcards com repetição espaçada (SM-2), simulados corrigidos na hora.</li>
+                                    <li><strong>Negócios:</strong> CRM, cobranças, propostas e contratos.</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🌐 Canais</h4>
+                                <p>Web (SPA instalável como PWA), Telegram, WhatsApp (Meta Cloud API) e Discord — mesma memória e cérebro em todos.</p>
+
+                                <div class="showcase-stats" style="margin-top: 1.5rem;">
+                                    <div class="stat-item"><span class="stat-number">34</span><span class="stat-label">Agentes de IA</span></div>
+                                    <div class="stat-item"><span class="stat-number">78</span><span class="stat-label">Testes Automatizados</span></div>
+                                    <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">Canais Integrados</span></div>
+                                    <div class="stat-item"><span class="stat-number">12</span><span class="stat-label">Facetas do Digital Twin</span></div>
+                                </div>
+
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">FastAPI</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">pgvector</span>
+                                    <span class="tech-tag">Alembic</span>
+                                    <span class="tech-tag">Ollama</span>
+                                    <span class="tech-tag">Docker</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
     else if (projectType === 'techcenter') {
         content = `
             <div class="project-demo">
@@ -737,40 +679,7 @@ function openProject(projectType) {
             </div>
         `;
     }
-    else if (projectType === 'estoque') {
-        content = `
-            <div class="project-demo">
-                <h2>Sistema de Gestão de Estoque</h2>
-                <div class="demo-container">
-                    <div class="project-showcase">
-                        <div class="showcase-header">
-                            <div class="showcase-icon"><i class="fas fa-boxes"></i></div>
-                            <div>
-                                <div class="showcase-title">Controle de Insumos Full Stack</div>
-                                <div class="showcase-subtitle">React & Node.js</div>
-                            </div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-description">
-                                <p>Aplicação web para controle de entrada e saída de insumos, focada em eficiência e escalabilidade.</p>
-                                <ul style="margin-top: 1rem; color: #cbd5e1; list-style-position: inside;">
-                                    <li>Implementação de CRUD completo.</li>
-                                    <li>Integração robusta entre front-end e back-end.</li>
-                                    <li>Estrutura preparada para crescimento e manutenção.</li>
-                                </ul>
-                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">Express</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-    
+
     modalBody.innerHTML = content;
     modal.style.display = 'block';
     document.body.classList.add('modal-open');
@@ -780,16 +689,13 @@ function viewCode(projectType) {
     let repoUrl = '';
     if (projectType === 'vigilancia') { repoUrl = 'https://github.com/davifeels/Sistema-De-Vigilancia'; } 
     else if (projectType === 'sentinelvision') { repoUrl = 'https://github.com/davifeels/ProjetoSentinel'; } 
-    else if (projectType === 'furia') { repoUrl = 'https://github.com/davifeels/furia-know-your-fan'; } 
-    else if (projectType === 'chatbot') { repoUrl = 'https://github.com/davifeels/chatbotfuria'; }
     else if (projectType === 'mdm') { repoUrl = 'https://github.com/davifeels'; }
     else if (projectType === 'techcenter') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'estoque') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'riskcore') { repoUrl = 'https://github.com/davifeels'; }
+    else if (projectType === 'riskcore') { repoUrl = 'https://github.com/davifeels/riskcore-ai-frontend'; }
     else if (projectType === 'jurimetria') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'phoenixvision') { repoUrl = 'https://github.com/davifeels'; }
     else if (projectType === 'rekkon') { repoUrl = 'https://github.com/davifeels'; }
     else if (projectType === 'dataprotection') { repoUrl = 'https://github.com/davifeels'; }
+    else if (projectType === 'nexus') { repoUrl = 'https://github.com/davifeels/nexus-ai-core'; }
     window.open(repoUrl, '_blank');
 }
 
