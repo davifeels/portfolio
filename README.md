@@ -1,105 +1,55 @@
-# 🌟 Portfólio Mundial - O Melhor Portfólio do Mundo
+# 🌟 Portfólio Davi Anderson — Desenvolvedor Backend Java Júnior
 
-Um portfólio moderno e interativo showcasing dois projetos incríveis: Sistema de Vigilância Inteligente e SentinelVision AI.
+Portfólio interativo apresentando meus projetos de destaque em desenvolvimento de software, arquitetura backend com Java e Spring Boot, bancos de dados relacionais (PostgreSQL), infraestrutura em nuvem, segurança e inteligência artificial.
 
 ## 🚀 Projetos em Destaque
 
-### 1. Sistema de Vigilância Inteligente
-- **Dashboard em tempo real** com monitoramento de múltiplas câmeras
-- **Detecção de movimento** inteligente
-- **Sistema de alertas** automático
-- **Interface responsiva** e moderna
-- **Gravação automática** de eventos
+### 1. PuffsZone — Sistema de Gestão Comercial e PDV (Em Produção)
+- **Status**: Projeto próprio em produção real em VPS Linux com Docker, Nginx e HTTPS.
+- **Backend**: Java 21, Spring Boot 3, Spring Security e autenticação JWT.
+- **Frontend**: React 19, TypeScript, Vite e Tailwind CSS.
+- **Banco de Dados**: PostgreSQL 16 com versionamento contínuo via Flyway.
+- **Módulos**: Ponto de Venda (PDV), controle de estoque, gestão de caixa, contas a pagar e a receber, regras promocionais e cupons, relatórios financeiros e auditoria completa.
+- **Aplicação Online**: [puffszone.tech](https://puffszone.tech)
+- **Repositório GitHub**: [github.com/davifeels/PuffsZone](https://github.com/davifeels/PuffsZone)
 
-### 2. SentinelVision AI
-- **Reconhecimento facial** avançado
-- **Análise de imagens** com IA
-- **Detecção de objetos** suspeitos
-- **Análise comportamental**
-- **Relatórios detalhados**
+### 2. DataProtection — Governança de Dados & LGPD
+- **Contexto**: Projeto profissional desenvolvido no Instituto Nacional de Tecnologia da Informação (ITI).
+- **Conformidade**: Catalogação de operações de tratamento de dados pessoais conforme Art. 37 da LGPD, base para RIPD e suporte ao DPO.
+- **Arquitetura**: APIs REST com Java e Spring Boot, controle de acesso granular por perfis (RBAC), auditoria de operações sensíveis e interface corporativa em Angular.
+- **Stack**: Java, Spring Boot, PostgreSQL, Angular, APIs REST, RBAC.
 
-## 🛠️ Tecnologias Utilizadas
+### 3. RiskCore AI — Monitoramento de Reputação Digital & Gestão de Crises
+- **Plataforma**: Inteligência reputacional, detecção preditiva de desinformação e riscos com IA e alertas em tempo real.
+- **Stack**: Node.js, TypeScript, React, Next.js, PostgreSQL via Prisma ORM e cache em Redis.
+- **Repositório GitHub**: [github.com/davifeels/riskcore-ai-frontend](https://github.com/davifeels/riskcore-ai-frontend)
 
-- **Frontend**: HTML5, CSS3, JavaScript ES6+
-- **Design**: Responsive Design, CSS Grid, Flexbox
-- **Animações**: CSS Animations, Intersection Observer API
-- **Icons**: Font Awesome 6
-- **Fonts**: Google Fonts (Poppins)
+### 4. Nexus AI OS — Assistente com Memória Persistente & Busca Semântica
+- **Arquitetura**: Assistente com persistência de memória, busca vetorial semântica utilizando pgvector sobre PostgreSQL e API em Python / FastAPI containerizada com Docker.
+- **Stack**: Python, FastAPI, PostgreSQL, pgvector, Docker.
+- **Repositório GitHub**: [github.com/davifeels/nexus-ai-core](https://github.com/davifeels/nexus-ai-core)
 
-## 📱 Características
+### 5. Rekkon — MDM & Controle Parental
+- **App Nativo Android**: Kotlin, Jetpack Compose, CameraX e arquitetura MVVM.
+- **Inteligência Artificial On-Device**: ML Kit Face Detection para autenticação e monitoramento.
+- **Stack**: Kotlin, Android Studio, ML Kit, Node.js, Docker.
 
-- ✅ **Design Responsivo** - Funciona perfeitamente em todos os dispositivos
-- ✅ **Animações Suaves** - Efeitos visuais modernos e elegantes
-- ✅ **Interface Intuitiva** - Navegação fácil e experiência do usuário otimizada
-- ✅ **Demos Interativas** - Visualize os projetos em ação
-- ✅ **Performance Otimizada** - Carregamento rápido e eficiente
+### 6. Jurimetria Preditiva — LegalTech com IA
+- **Análise Judicial**: RAG + GPT-4o com busca vetorial via pgvector no PostgreSQL e raspagem de dados resiliente (Playwright).
+- **Stack**: Python, Streamlit, PostgreSQL, pgvector, Playwright.
 
-## 🎨 Recursos Visuais
+## 🛠️ Tecnologias Principais
 
-- **Gradientes Modernos** - Paleta de cores profissional
-- **Efeitos Glassmorphism** - Elementos com blur e transparência
-- **Floating Cards** - Cartões flutuantes com animação parallax
-- **Smooth Scrolling** - Navegação suave entre seções
-- **Hover Effects** - Interações visuais responsivas
-
-## 📂 Estrutura do Projeto
-
-```
-portfolio-mundial/
-├── index.html          # Página principal
-├── styles.css          # Estilos principais
-├── demo-styles.css     # Estilos das demos
-├── script.js           # JavaScript interativo
-└── README.md           # Documentação
-```
-
-## 🚀 Como Executar
-
-1. **Clone ou baixe** os arquivos do projeto
-2. **Abra** o arquivo `index.html` em qualquer navegador moderno
-3. **Explore** o portfólio e teste as demos interativas
-
-## 🌐 Navegação
-
-- **Início** - Apresentação principal com hero section
-- **Sobre** - Informações sobre habilidades e tecnologias
-- **Projetos** - Showcase dos dois projetos principais
-- **Contato** - Formulário de contato funcional
-
-## 💡 Funcionalidades Especiais
-
-### Demos Interativas
-- **Sistema de Vigilância**: Dashboard completo com câmeras, alertas e monitoramento
-- **SentinelVision**: Interface de análise de IA com reconhecimento facial
-
-### Animações Avançadas
-- **Typing Effect** no título principal
-- **Parallax Scrolling** nos elementos flutuantes
-- **Intersection Observer** para animações de entrada
-- **Smooth Transitions** em todos os elementos
-
-### Responsividade Total
-- **Mobile First** - Otimizado para dispositivos móveis
-- **Tablet Friendly** - Adaptação perfeita para tablets
-- **Desktop Enhanced** - Experiência completa em desktops
-
-## 🎯 Destaques Técnicos
-
-- **CSS Grid e Flexbox** para layouts modernos
-- **JavaScript Vanilla** sem dependências externas
-- **Semantic HTML** para melhor acessibilidade
-- **Performance Optimized** com lazy loading de animações
+- **Linguagens**: Java 21, TypeScript, JavaScript, Python, SQL, Kotlin
+- **Backend**: Spring Boot 3, Spring Security, APIs REST, Microsserviços, Node.js, FastAPI
+- **Bancos de Dados**: PostgreSQL 16, Flyway, pgvector, Redis, Elasticsearch
+- **DevOps & Cloud**: Docker, Docker Compose, Linux (VPS), Nginx, GitLab CI/CD, AWS Essentials
+- **Segurança**: JWT, RBAC, Criptografia RSA/AES, PKI, ICP-Brasil, LGPD Compliance
+- **Frontend**: React 19, Angular, Tailwind CSS, HTML5, CSS3
 
 ## 📞 Contato
 
-O formulário de contato inclui:
-- Validação de campos
-- Feedback visual de envio
-- Animações de confirmação
-- Design responsivo
-
----
-
-**Desenvolvido com 💙 para ser o melhor portfólio do mundo!**
-
-> Este portfólio demonstra expertise em desenvolvimento frontend, UX/UI design e criação de experiências digitais memoráveis.
+- **LinkedIn**: [linkedin.com/in/davi-tech](https://linkedin.com/in/davi-tech)
+- **GitHub**: [github.com/davifeels](https://github.com/davifeels)
+- **E-mail**: [davifeels333@gmail.com](mailto:davifeels333@gmail.com)
+- **Portfólio Online**: [davifeels.github.io/portfolio](https://davifeels.github.io/portfolio)

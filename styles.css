@@ -1,4 +1,4 @@
-/* Reset e Base */
+﻿/* Reset e Base */
 * {
     margin: 0;
     padding: 0;
@@ -235,6 +235,18 @@ img, video {
 .btn-secondary:hover {
     background: white;
     color: #333;
+}
+
+span.btn-secondary {
+    cursor: default !important;
+    opacity: 0.85;
+}
+
+span.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: white !important;
+    transform: none !important;
+    box-shadow: none !important;
 }
 
 .hero-visual {
@@ -576,6 +588,26 @@ img, video {
 .project-buttons {
     display: flex;
     gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-card[data-project="puffszone"] .project-image {
+    background: linear-gradient(135deg, #09131f 0%, #172a45 100%);
+    padding: 1rem;
+}
+
+.project-card[data-project="puffszone"] .project-image img {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 12px;
+    max-height: 140px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card[data-project="puffszone"]:hover .project-image img {
+    transform: scale(1.05);
+    box-shadow: 0 15px 35px rgba(16, 185, 129, 0.25);
 }
 
 /* Tech tags for project demos */

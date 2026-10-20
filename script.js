@@ -1,4 +1,4 @@
-// Smooth scrolling for navigation links
+﻿// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -135,38 +135,83 @@ window.addEventListener('click', (e) => {
 function openProject(projectType) {
     let content = '';
     
-    if (projectType === 'vigilancia') {
+    if (projectType === 'puffszone' || projectType === 'vigilancia') {
         content = `
             <div class="project-demo">
-                <h2>Sistema de Vigilância</h2>
+                <h2>PuffsZone — Sistema de Gestão Comercial e PDV</h2>
                 <div class="demo-container">
                     <div class="project-showcase">
                         <div class="showcase-header">
-                            <div class="showcase-icon"><i class="fas fa-video"></i></div>
+                            <div class="showcase-icon"><i class="fas fa-cash-register"></i></div>
                             <div>
-                                <div class="showcase-title">Sistema de Vigilância Inteligente</div>
-                                <div class="showcase-subtitle">Detecção de Movimento e Monitoramento</div>
+                                <div class="showcase-title">PuffsZone — Sistema de Gestão Comercial & PDV</div>
+                                <div class="showcase-subtitle">Java 21 + Spring Boot 3 + React 19 + TypeScript + Docker em Produção</div>
                             </div>
                         </div>
                         <div class="showcase-content">
-                            <div class="showcase-description">
-                                <p>Sistema de vigilância com detecção de movimento e captura de vídeo via webcam. Interface desenvolvida com Python e OpenCV para monitoramento em tempo real.</p>
-                                <p style="color:#f59e0b; margin-top:1rem; text-align:center; background-color:rgba(245,158,11,0.1); padding: 0.5rem; border-radius: 8px;">
-                                    <i class="fas fa-wrench"></i> Projeto em desenvolvimento...
-                                </p>
-                            </div>
-                            <div style="margin-top: 1.5rem;">
-                                <h4 style="color: #60a5fa; margin-bottom: 0.75rem;">⚙️ Como foi desenvolvido</h4>
+                            <div class="showcase-description" style="text-align: left;">
+                                <p>A <strong>PuffsZone</strong> é uma solução completa para gestão comercial, operações de frente de caixa (PDV), controle de estoque e gerenciamento financeiro empresarial. Desenvolvida para ir muito além de um CRUD convencional, implementa regras de negócio complexas, segurança com Spring Security e JWT, persistência com PostgreSQL 16 e Flyway, e implantação real em ambiente de produção (VPS Linux) com Docker, Nginx e HTTPS.</p>
+
+                                <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                                    <a href="https://puffszone.tech" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 0.75rem 1.5rem; border-radius: 8px; color: white; font-weight: 600;">
+                                        <i class="fas fa-globe"></i> Acessar Aplicação em Produção (puffszone.tech)
+                                    </a>
+                                    <a href="https://github.com/davifeels/PuffsZone" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">
+                                        <i class="fab fa-github"></i> Ver Código no GitHub
+                                    </a>
+                                </div>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">💻 Principais Funcionalidades</h4>
                                 <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Captura de vídeo:</strong> OpenCV lendo frames da webcam em loop contínuo e aplicando subtração de fundo para detectar pixels de movimento.</li>
-                                    <li><strong>Threshold adaptativo:</strong> Algoritmo de contorno para filtrar pequenas variações de luz e só acionar alerta em movimentos significativos.</li>
-                                    <li><strong>Persistência de eventos:</strong> Cada detecção grava timestamp, frame e metadados em SQLite para histórico consultável.</li>
-                                    <li><strong>Interface web:</strong> Flask servindo stream de vídeo em MJPEG via rota /video_feed para visualização em qualquer navegador da rede local.</li>
-                                    <li><strong>Aprendizado:</strong> Projeto foco em explorar visão computacional — conceitos de kernel, erosão/dilatação e bounding boxes na prática.</li>
+                                    <li><strong>Ponto de Venda (PDV):</strong> Interface ágil de frente de caixa com registro instantâneo de vendas, suporte a múltiplos métodos de pagamento e histórico em tempo real.</li>
+                                    <li><strong>Catálogo e Controle de Estoque:</strong> Cadastro de produtos, categorias, precificação, controle rigoroso de saldo e alertas de reposição.</li>
+                                    <li><strong>Gestão de Caixa & Movimentações:</strong> Abertura e fechamento de turno de caixa, sangrias, suprimentos e conferência detalhada.</li>
+                                    <li><strong>Gestão Financeira & Contas:</strong> Módulos completos de Contas a Pagar e Contas a Receber com acompanhamento de prazos, juros e status.</li>
+                                    <li><strong>Relatórios Gerenciais:</strong> Relatórios financeiros analíticos e sintéticos, lucratividade, métricas de vendas e controle de descontos.</li>
+                                    <li><strong>Políticas de Desconto & Cupons:</strong> Regras promocionais flexíveis com cupons de desconto e limites parametrizáveis.</li>
+                                    <li><strong>Controle de Acesso (RBAC):</strong> Permissões granulares baseadas em papéis de usuário (Administrador, Gerente, Operador de Caixa).</li>
+                                    <li><strong>Auditoria Completa:</strong> Rastreamento e log de auditoria detalhado para todas as mutações e operações comerciais sensíveis.</li>
                                 </ul>
-                                <p style="color:#f59e0b; margin-top:1rem; text-align:center; background-color:rgba(245,158,11,0.1); padding: 0.5rem; border-radius: 8px;">
-                                    <i class="fas fa-wrench"></i> Projeto em desenvolvimento contínuo
-                                </p>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🛠️ Tecnologias & Arquitetura</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Backend Java 21 / Spring Boot 3:</strong> Arquitetura robusta em camadas (Controller, Service, Repository, DTOs e Mappers) com Jakarta Bean Validation.</li>
+                                    <li><strong>Segurança:</strong> Spring Security 6 com autenticação stateless via tokens JWT e criptografia de senhas com BCrypt.</li>
+                                    <li><strong>Banco de Dados & Persistência:</strong> PostgreSQL 16 com Spring Data JPA/Hibernate e versionamento contínuo de schema via migrações com Flyway.</li>
+                                    <li><strong>Frontend:</strong> React 19 com TypeScript, empacotador Vite e estilização responsiva moderna com Tailwind CSS.</li>
+                                    <li><strong>DevOps & Infraestrutura:</strong> Docker e Docker Compose isolando backend, frontend e banco de dados; Nginx atuando como proxy reverso e gerenciador de SSL (Let's Encrypt); hospedagem em VPS Linux com rotinas de backup criptografado e testes periódicos de restauração.</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🔐 Desafios Técnicos Superados</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Consistência Transacional:</strong> Garantia de atomicidade e integridade nas operações de vendas, estornos de estoque e conciliação de caixa com transações controladas (@Transactional).</li>
+                                    <li><strong>Pipeline de Deploy em Produção:</strong> Configuração completa de VPS Linux do zero, orquestração com Docker Compose, automação de certificado SSL com Let's Encrypt e proxy reverso Nginx para tráfego seguro no domínio customizado (puffszone.tech).</li>
+                                    <li><strong>Resiliência de Dados & Backups:</strong> Implementação de rotinas automatizadas de backup do PostgreSQL com criptografia e validação por rotinas de teste de restauração.</li>
+                                </ul>
+
+                                <div class="showcase-stats" style="margin-top: 1.5rem;">
+                                    <div class="stat-item"><span class="stat-number">Java 21</span><span class="stat-label">Spring Boot 3</span></div>
+                                    <div class="stat-item"><span class="stat-number">React 19</span><span class="stat-label">TypeScript + Vite</span></div>
+                                    <div class="stat-item"><span class="stat-number">Postgres</span><span class="stat-label">Flyway Migrations</span></div>
+                                    <div class="stat-item"><span class="stat-number">Produção</span><span class="stat-label">VPS + Docker + SSL</span></div>
+                                </div>
+
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+                                    <span class="tech-tag">Java 21</span>
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">Spring Security</span>
+                                    <span class="tech-tag">JWT</span>
+                                    <span class="tech-tag">React 19</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">Vite</span>
+                                    <span class="tech-tag">Tailwind CSS</span>
+                                    <span class="tech-tag">PostgreSQL 16</span>
+                                    <span class="tech-tag">Flyway</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Docker Compose</span>
+                                    <span class="tech-tag">Nginx</span>
+                                    <span class="tech-tag">VPS Linux</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -190,6 +235,10 @@ function openProject(projectType) {
                         </div>
                         <div class="showcase-content">
                             <div class="showcase-description" style="text-align: left;">
+                                <div style="background: rgba(139, 92, 246, 0.1); border-left: 4px solid #8b5cf6; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; color: #c4b5fd; font-size: 0.95rem;">
+                                    <i class="fas fa-lock" style="margin-right: 0.5rem;"></i>
+                                    <strong>Repositório Privado:</strong> Projeto em ciclo contínuo de testes e validação biométrica on-device. Arquitetura completa detalhada a seguir.
+                                </div>
                                 <p>Sistema completo de MDM (Mobile Device Management) com foco em controle parental. O <strong>Rekkon</strong> é o app Android nativo em Kotlin que roda no dispositivo controlado, comunicando-se com um backend Node.js para execução de políticas remotas e autenticação biométrica facial.</p>
 
                                 <h4 style="color: #60a5fa; margin-top: 1.5rem;">📱 App Android — Rekkon (Kotlin)</h4>
@@ -246,6 +295,10 @@ function openProject(projectType) {
                         </div>
                         <div class="showcase-content">
                             <div class="showcase-description" style="text-align: left;">
+                                <div style="background: rgba(59, 130, 246, 0.1); border-left: 4px solid #3b82f6; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; color: #93c5fd; font-size: 0.95rem;">
+                                    <i class="fas fa-building" style="margin-right: 0.5rem;"></i>
+                                    <strong>Projeto Corporativo Interno:</strong> Desenvolvido internamente para o <strong>Instituto de Tecnologia da Informação (ITI)</strong>. Código restrito sob diretrizes de segurança governamental.
+                                </div>
                                 <p>Sistema de gestão de conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD) desenvolvido internamente para o <strong>Instituto de Tecnologia da Informação (ITI)</strong>. Implementa o Inventário de Dados exigido pelo <strong>Art. 37 da LGPD</strong>, catalogando todas as operações de tratamento de dados pessoais da organização.</p>
 
                                 <h4 style="color: #60a5fa; margin-top: 1.5rem;">📋 O que o sistema registra</h4>
@@ -435,6 +488,10 @@ function openProject(projectType) {
                         </div>
                         <div class="showcase-content">
                             <div class="showcase-description" style="text-align: left;">
+                                <div style="background: rgba(245, 158, 11, 0.1); border-left: 4px solid #f59e0b; border-radius: 6px; padding: 0.75rem 1rem; margin-bottom: 1.25rem; color: #fcd34d; font-size: 0.95rem;">
+                                    <i class="fas fa-balance-scale" style="margin-right: 0.5rem;"></i>
+                                    <strong>LegalTech Proprietária:</strong> Plataforma de inteligência jurídica com pipelines de scraping e RAG sob termos de propriedade intelectual.
+                                </div>
                                 <p>Plataforma full-stack que coleta automaticamente sentenças judiciais do TJBA, indexa via embeddings vetoriais e entrega insights preditivos por meio de RAG + GPT-4o. Advogados consultam padrões decisórios por magistrado, valor médio de condenações e teses jurídicas dominantes — tudo em uma interface Streamlit de 9 abas.</p>
 
                                 <h4 style="color: #60a5fa; margin-top: 1.5rem;">🕷️ Coleta de Dados</h4>
@@ -581,14 +638,25 @@ function openProject(projectType) {
 
 function viewCode(projectType) {
     let repoUrl = '';
-    if (projectType === 'vigilancia') { repoUrl = 'https://github.com/davifeels/Sistema-De-Vigilancia'; }
-    else if (projectType === 'mdm') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'riskcore') { repoUrl = 'https://github.com/davifeels/riskcore-ai-frontend'; }
-    else if (projectType === 'jurimetria') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'rekkon') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'dataprotection') { repoUrl = 'https://github.com/davifeels'; }
-    else if (projectType === 'nexus') { repoUrl = 'https://github.com/davifeels/nexus-ai-core'; }
-    window.open(repoUrl, '_blank');
+    if (projectType === 'puffszone' || projectType === 'vigilancia') {
+        repoUrl = 'https://github.com/davifeels/PuffsZone';
+        window.open(repoUrl, '_blank');
+    } else if (projectType === 'riskcore') {
+        repoUrl = 'https://github.com/davifeels/riskcore-ai-frontend';
+        window.open(repoUrl, '_blank');
+    } else if (projectType === 'nexus') {
+        repoUrl = 'https://github.com/davifeels/nexus-ai-core';
+        window.open(repoUrl, '_blank');
+    } else if (projectType === 'dataprotection') {
+        openProject('dataprotection');
+    } else if (projectType === 'mdm' || projectType === 'rekkon') {
+        openProject('mdm');
+    } else if (projectType === 'jurimetria') {
+        openProject('jurimetria');
+    } else {
+        repoUrl = 'https://github.com/davifeels';
+        window.open(repoUrl, '_blank');
+    }
 }
 
 // Contact form submission (somente se existir)
@@ -709,42 +777,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Lightbox functionality
 let galleryImages = [];
-
-const vigilanciaGalleryImages = [
-    { src: 'inicialcamera.jpg', caption: 'Tela Inicial da Câmera' },
-    { src: 'dadossalvo.jpg', caption: 'Confirmação de Dados Salvos' }
-];
-
-const mdmGalleryImages = [
-    { src: 'mdm-dashboard.jpg', caption: 'Dashboard MDM' },
-    { src: 'mdm-mapa.jpg', caption: 'Rastreamento em Mapa' },
-    { src: 'mdm-bloqueio.jpg', caption: 'Tela de Bloqueio' }
-];
+let currentImageIndex = 0;
 
 function updateLightbox() {
     const image = galleryImages[currentImageIndex];
     if (!image) return;
 
-    let folder = 'vigilancia';
-    if (galleryImages === mdmGalleryImages) folder = 'mdm';
-    else if (typeof riskCoreGalleryImages !== 'undefined' && galleryImages === riskCoreGalleryImages) folder = 'imgsistema';
-
-    document.getElementById('lightboxImage').src = `assets/${folder}/${image.src}`;
-    document.getElementById('lightboxCaption').textContent = image.caption;
-}
-
-function openLightboxVigilancia(imageSrc) {
-    galleryImages = vigilanciaGalleryImages;
-    currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
-    document.getElementById('lightbox').style.display = 'block';
-    updateLightbox();
-}
-
-function openLightboxMDM(imageSrc) {
-    galleryImages = mdmGalleryImages;
-    currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
-    document.getElementById('lightbox').style.display = 'block';
-    updateLightbox();
+    let folder = 'imgsistema';
+    const lightboxImg = document.getElementById('lightboxImage');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    if (lightboxImg) lightboxImg.src = `assets/${folder}/${image.src}`;
+    if (lightboxCaption) lightboxCaption.textContent = image.caption;
 }
 
 const riskCoreGalleryImages = [
@@ -755,24 +798,46 @@ const riskCoreGalleryImages = [
 function openLightboxRiskCore(imageSrc) {
     galleryImages = riskCoreGalleryImages;
     currentImageIndex = galleryImages.findIndex(img => img.src === imageSrc);
-    document.getElementById('lightbox').style.display = 'block';
+    if (currentImageIndex === -1) currentImageIndex = 0;
+    const lb = document.getElementById('lightbox');
+    if (lb) lb.style.display = 'block';
     updateLightbox();
 }
 
 function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
+    const lb = document.getElementById('lightbox');
+    if (lb) lb.style.display = 'none';
 }
 
 function nextImage() {
+    if (!galleryImages.length) return;
     currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
     updateLightbox();
 }
 
 function prevImage() {
+    if (!galleryImages.length) return;
     currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
     updateLightbox();
 }
 
+// Global keyboard navigation: ESC para fechar modal/lightbox e setas para navegar fotos
+document.addEventListener('keydown', (e) => {
+    const lb = document.getElementById('lightbox');
+    if (lb && lb.style.display === 'block') {
+        if (e.key === 'Escape') closeLightbox();
+        else if (e.key === 'ArrowRight') nextImage();
+        else if (e.key === 'ArrowLeft') prevImage();
+        return;
+    }
+    const modal = document.getElementById('projectModal');
+    if (modal && modal.style.display === 'block') {
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+            document.body.classList.remove('modal-open');
+        }
+    }
+});
 // Video player functionality
 function playVideo(button) {
     // Suporta novo layout (.demo-video-block) e mantém compatibilidade
