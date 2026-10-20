@@ -533,14 +533,14 @@ span.btn-secondary:hover {
 }
 
 .project-image {
-    height: 130px;
+    height: 145px;
     background: radial-gradient(circle at 50% 50%, #151d30 0%, #080d19 100%);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    padding: 0.75rem;
+    padding: 1.25rem 0.75rem 0.75rem 0.75rem;
 }
 
 .project-image > i {
@@ -589,6 +589,25 @@ span.btn-secondary:hover {
 
 .project-card[data-project="jurimetria"] .project-image {
     background: radial-gradient(circle at 50% 50%, rgba(236, 72, 153, 0.12) 0%, #080d19 100%);
+}
+
+/* Logos ampliados e destacados (DataProtection, RiskCore, Rekkon e Jurimetria - exceto PuffsZone e Nexus) */
+.project-card[data-project="dataprotection"] .project-image img,
+.project-card[data-project="riskcore"] .project-image img,
+.project-card[data-project="mdm"] .project-image img,
+.project-card[data-project="jurimetria"] .project-image img {
+    max-width: 88%;
+    max-height: 104px;
+    object-fit: contain;
+    filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.45));
+    transition: transform 0.25s ease;
+}
+
+.project-card[data-project="dataprotection"]:hover .project-image img,
+.project-card[data-project="riskcore"]:hover .project-image img,
+.project-card[data-project="mdm"]:hover .project-image img,
+.project-card[data-project="jurimetria"]:hover .project-image img {
+    transform: scale(1.08);
 }
 
 .project-content {
