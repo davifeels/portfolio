@@ -1,4 +1,4 @@
-﻿// Smooth scrolling for navigation links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -189,6 +189,34 @@ function openProject(projectType) {
                                     <li><strong>Resiliência de Dados & Backups:</strong> Implementação de rotinas automatizadas de backup do PostgreSQL com criptografia e validação por rotinas de teste de restauração.</li>
                                 </ul>
 
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-check-circle"></i> Estratégia de Testes Automatizados & Qualidade (Java & React)
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">JUnit 5</span><span class="testing-tag">Mockito</span>
+                                            <strong>Testes Unitários de Regras de Negócio:</strong> Cobertura isolada de serviços críticos (<code>VendaService</code>, <code>CaixaService</code>, <code>DescontoService</code>). Testes com <code>@Mock</code> e <code>@InjectMocks</code> validando regras de desconto progressivo por cupom, limites percentuais máximos, sangria e conciliação de turno sem permitir valores negativos.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">MockMvc</span><span class="testing-tag">SpringBootTest</span>
+                                            <strong>Testes de Integração & Camada Web:</strong> Validação de endpoints REST simulando requisições HTTP reais com <code>MockMvc</code>. Verificação rigorosa do Jakarta Bean Validation (<code>@Valid</code>, <code>@NotNull</code>, <code>@PositiveOrZero</code>) com rejeição e tratamento de payloads malformados via HTTP 400.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Spring Security</span><span class="testing-tag">RBAC</span>
+                                            <strong>Testes de Autorização & Segurança:</strong> Testes com <code>@WithMockUser</code> garantindo que apenas administradores acessem rotas financeiras e de auditoria, enquanto operadores de caixa possuem acesso estritamente restrito às operações de PDV.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">@Transactional</span><span class="testing-tag">PostgreSQL</span>
+                                            <strong>Integridade Transacional & Rollback:</strong> Testes que forçam falha em cascata (ex: persistência de item corrompido) para certificar que movimentações financeiras e decrementos de estoque sofrem rollback automático, mantendo integridade zero de dados órfãos.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Vitest</span><span class="testing-tag">Testing Library</span>
+                                            <strong>Testes de Frontend (React 19):</strong> Testes de unidade e renderização dos componentes do PDV, hooks de carrinho de compras, cálculo de troco dinâmico e bloqueio de finalização de venda com carrinho vazio.
+                                        </li>
+                                    </ul>
+                                </div>
+
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
                                     <div class="stat-item"><span class="stat-number">Java 21</span><span class="stat-label">Spring Boot 3</span></div>
                                     <div class="stat-item"><span class="stat-number">React 19</span><span class="stat-label">TypeScript + Vite</span></div>
@@ -257,6 +285,30 @@ function openProject(projectType) {
                                     <li><strong>Docker Compose:</strong> Infraestrutura completa containerizada para deploy em qualquer VPS.</li>
                                 </ul>
 
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-mobile-alt"></i> Estratégia de Testes Automatizados Mobile & Backend (Kotlin & Node.js)
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">JUnit 5</span><span class="testing-tag">Mockk</span>
+                                            <strong>Testes Unitários Android (Kotlin MVVM):</strong> Testes cobrindo ViewModels (<code>DevicePolicyViewModel</code>, <code>BiometricAuthViewModel</code>) e UseCases. Validação de transições de estado via <code>StateFlow</code> garantindo que a análise de frames não provoque vazamento de memória (memory leaks).
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Robolectric</span><span class="testing-tag">DevicePolicyManager</span>
+                                            <strong>Testes de Integração Android sem Emulador:</strong> Execução de testes locais de componentes com Robolectric, simulando o framework Android para validação de aplicação de políticas de bloqueio de apps, restrição de câmera e limites de horário.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">ML Kit Mocking</span><span class="testing-tag">CameraX</span>
+                                            <strong>Mocking do Pipeline Biométrico:</strong> Simulação de detecção facial com dados mockados de 96 landmarks faciais (FaceMesh), cobrindo cenários de oclusão parcial, baixa luminosidade e fallback de segurança.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Jest</span><span class="testing-tag">WebSockets</span>
+                                            <strong>Testes de Comunicação em Tempo Real no Backend:</strong> Testes do servidor Node.js validando recepção de heartbeats dos dispositivos, envio de comandos remotos de bloqueio instantâneo e reconexão com backoff exponencial.
+                                        </li>
+                                    </ul>
+                                </div>
+
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
                                     <div class="stat-item"><span class="stat-number">Kotlin</span><span class="stat-label">App Nativo</span></div>
                                     <div class="stat-item"><span class="stat-number">On-device</span><span class="stat-label">Biometria ML</span></div>
@@ -321,6 +373,30 @@ function openProject(projectType) {
                                     <li><strong>Privacy by Design:</strong> Conformidade como requisito de arquitetura, não como correção posterior.</li>
                                 </ul>
 
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-shield-alt"></i> Estratégia de Testes Automatizados & Segurança Corporativa (ITI)
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">JUnit 5</span><span class="testing-tag">Mockito</span>
+                                            <strong>Testes Unitários de Conformidade com a LGPD:</strong> Validação automatizada dos critérios do <strong>Art. 37 da LGPD</strong>. Testes unitários para regras de preenchimento obrigatório de base legal (consentimento, dever legal, execução de contrato) antes de permitir a persistência de operações de tratamento.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Spring Security Test</span><span class="testing-tag">RBAC</span>
+                                            <strong>Testes Automatizados de Controle de Acesso:</strong> Suíte de testes com <code>MockMvc</code> validando isolamento estrito de papéis (DPO, Gestor, Operador). Verificação de que apenas o DPO tem permissão de homologar ou expurgar relatórios RIPD, barrando mutações não autorizadas.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Trilha de Auditoria</span><span class="testing-tag">PostgreSQL</span>
+                                            <strong>Testes de Auditoria & Não-Repúdio:</strong> Testes de integração assegurando que toda operação (CREATE, UPDATE, DELETE) gera logs imutáveis com carimbo de data/hora (timestamp UTC), IP de origem e hash do operador para conformidade fiscalizatória ANPD.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Sanitização</span><span class="testing-tag">OWASP</span>
+                                            <strong>Testes de Prevenção contra Vulnerabilidades:</strong> Validação de filtros contra SQL Injection, XSS e manipulação indevida de identificadores corporativos.
+                                        </li>
+                                    </ul>
+                                </div>
+
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
                                     <div class="stat-item"><span class="stat-number">Art. 37</span><span class="stat-label">LGPD</span></div>
                                     <div class="stat-item"><span class="stat-number">RIPD</span><span class="stat-label">Exportação</span></div>
@@ -368,6 +444,26 @@ function openProject(projectType) {
                                     <li><strong>Comunicação Backend:</strong> Retrofit para envio do embedding ao servidor Python, retornando o perfil identificado.</li>
                                     <li><strong>Jetpack Compose:</strong> Interface declarativa com overlay de bounding box desenhado em Canvas sobre o preview.</li>
                                 </ul>
+
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-mobile-alt"></i> Estratégia de Testes Automatizados Mobile (Kotlin MVVM)
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">JUnit 5</span><span class="testing-tag">Mockk</span>
+                                            <strong>Testes Unitários de ViewModels & UseCases:</strong> Testes de transição de estado no <code>StateFlow</code> e <code>LiveData</code> garantindo isolamento entre processamento de imagem e interface de usuário.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Robolectric</span><span class="testing-tag">Android Tests</span>
+                                            <strong>Testes Locais de Componentes:</strong> Validação de lifecycle da Activity e permissões da câmera sem dependência de dispositivo físico conectado.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">ML Kit Mocking</span><span class="testing-tag">CameraX</span>
+                                            <strong>Mocks de Landmarks Faciais:</strong> Mocks sintéticos para validação de tolerância a variações de ângulo, oclusão e tempo de resposta de inferência.
+                                        </li>
+                                    </ul>
+                                </div>
 
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
                                     <div class="stat-item"><span class="stat-number">Kotlin</span><span class="stat-label">Linguagem</span></div>
@@ -435,6 +531,34 @@ function openProject(projectType) {
                                     <li><strong>Performance:</strong> Redis para filas garante que picos de volume não travam a interface.</li>
                                     <li><strong>Multiview:</strong> 20+ views especializadas (FakeNews, Judicial, Archive, Polls, Radio, Reports...) construídas como componentes independentes em React.</li>
                                 </ul>
+
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-vial"></i> Estratégia de Testes Automatizados & Resiliência (Jest & Vitest)
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">Jest</span><span class="testing-tag">TypeScript</span>
+                                            <strong>Testes Unitários do Motor de Risco Reputacional:</strong> Testes unitários do algoritmo ponderado de risco (<code>RiskScoringEngine</code>): validação matemática dos scores de severidade com base em sentimento NLP (-1.0 a +1.0), autoridade do canal e velocidade de propagação viral.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Supertest</span><span class="testing-tag">API REST</span>
+                                            <strong>Testes de Integração de Endpoints:</strong> Testes de rotas da API com <code>Supertest</code> cobrindo autenticação JWT, filtragem de alertas críticos e validação de contratos com schemas Zod.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Nock</span><span class="testing-tag">Mocking</span>
+                                            <strong>Mocking de Serviços Externos & Resiliência:</strong> Mocking de APIs de mensageria (Telegram Bot API) e LLM APIs. Simulação de cenários de queda de rede, rate limit (HTTP 429) e retentativas com backoff exponencial.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Redis Mock</span><span class="testing-tag">Dead Letter Queue</span>
+                                            <strong>Testes de Fila & Concorrência Assíncrona:</strong> Testes garantindo que picos repentinos de menções sejam enfileirados no Redis sem perda de pacotes, com tratamento automático para mensagens corrompidas na DLQ.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">React Testing Library</span><span class="testing-tag">Next.js</span>
+                                            <strong>Testes de Componentes do Command Center:</strong> Testes de UI validando renderização de gráficos em tempo real, alternância de filtros de crise e preservação de evidências digitais.
+                                        </li>
+                                    </ul>
+                                </div>
 
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
                                     <div class="stat-item"><span class="stat-number">20+</span><span class="stat-label">Views no Dashboard</span></div>
@@ -527,6 +651,30 @@ function openProject(projectType) {
                                     <li><strong>Estatísticas:</strong> Analytics comparativos e segmentação por tipo de pedido.</li>
                                 </ul>
 
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-balance-scale"></i> Estratégia de Testes Automatizados & Validação Analítica (PyTest & Pandas)
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">PyTest</span><span class="testing-tag">Regex</span>
+                                            <strong>Testes Unitários de Sanitização Textual:</strong> Testes unitários para pipelines de parsing de sentenças jurídicas do TJBA, garantindo limpeza precisa de carimbos eletrônicos, cabeçalhos forenses e anonimização de dados sensíveis (LGPD).
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Pandas Testing</span><span class="testing-tag">Estatística</span>
+                                            <strong>Testes de Consistência Analítica com Pandas:</strong> Validação de agregação de dados via <code>pandas.testing.assert_frame_equal</code>, certificando que cálculos de valores médios de condenação, medianas por magistrado e taxas de deferimento sejam 100% exatos.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">pgvector</span><span class="testing-tag">RAG Pipeline</span>
+                                            <strong>Testes de Recuperação Semântica & Reranking:</strong> Testes do pipeline RAG validando a divisão em chunks (com overlap semântico) e a ordenação dos 15 fragmentos mais relevantes antes do envio ao GPT-4o.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Responses</span><span class="testing-tag">VCR Mock</span>
+                                            <strong>Mocking de Scraping & Resiliência a Mudanças:</strong> Testes de parsers HTML com payloads reais gravados de PROJUDI e PJe, assegurando que o coletor autônomo continue operando mesmo com pequenas variações de layout nos portais dos tribunais.
+                                        </li>
+                                    </ul>
+                                </div>
+
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
                                     <div class="stat-item"><span class="stat-number">32K+</span><span class="stat-label">Linhas de Python</span></div>
                                     <div class="stat-item"><span class="stat-number">257+</span><span class="stat-label">Commits</span></div>
@@ -606,6 +754,34 @@ function openProject(projectType) {
 
                                 <h4 style="color: #60a5fa; margin-top: 1.5rem;">🌐 Canais</h4>
                                 <p>Web (SPA instalável como PWA), Telegram, WhatsApp (Meta Cloud API) e Discord — mesma memória e cérebro em todos.</p>
+
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-microchip"></i> 78+ Testes Automatizados & Arquitetura Cognitiva (PyTest & FastAPI)
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">PyTest</span><span class="testing-tag">PyTest-AsyncIO</span>
+                                            <strong>78+ Testes Automatizados Assíncronos:</strong> Suíte completa de testes executada com <code>pytest -v --asyncio-mode=auto</code> cobrindo orquestração assíncrona com latência mínima e isolamento total sem flakiness.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">FastAPI TestClient</span><span class="testing-tag">HTTPX</span>
+                                            <strong>Testes de Integração da API & WebSockets:</strong> Testes com <code>httpx.AsyncClient</code> validando endpoints de chat, ciclo de vida de conexões WebSocket persistentes e autenticação via refresh token rotativo.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">pgvector</span><span class="testing-tag">RAG Testing</span>
+                                            <strong>Testes de Deduplicação & Recuperação Semântica:</strong> Testes de cálculo de similaridade de cosseno com embeddings sintéticos: validação de que memórias repetidas são fundidas e fatos de curto prazo expiram após 6 horas.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Sandbox Isolation</span><span class="testing-tag">Segurança</span>
+                                            <strong>Testes de Contenção de Execução de Código:</strong> Testes unitários do módulo <code>execute_code</code> assegurando que comandos maliciosos ou chamadas de sistema (<code>os.system</code>, <code>subprocess</code>) sejam barrados antes da execução.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Mock LLM Fixtures</span><span class="testing-tag">Zero Custo</span>
+                                            <strong>Fixtures Determinísticas de IA:</strong> Mock de respostas de modelos Ollama e OpenAI com fixtures de PyTest, permitindo execução de toda a suíte de 78 testes em menos de 8 segundos.
+                                        </li>
+                                    </ul>
+                                </div>
 
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
                                     <div class="stat-item"><span class="stat-number">34</span><span class="stat-label">Agentes de IA</span></div>
@@ -874,3 +1050,62 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+/* ═══════════════════════════════════════════════════
+   PREMIUM FEATURES: Filtering & Clipboard Toast
+   ═══════════════════════════════════════════════════ */
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Project Category Filtering
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const categories = (card.getAttribute('data-category') || '').split(' ');
+                if (filter === 'all' || categories.includes(filter)) {
+                    card.classList.remove('filter-hidden');
+                } else {
+                    card.classList.add('filter-hidden');
+                }
+            });
+        });
+    });
+
+    // Copy to clipboard with toast notification on contact items
+    const contactLinks = document.querySelectorAll('.contact-item');
+    contactLinks.forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href.startsWith('mailto:') || href.startsWith('tel:')) {
+            link.addEventListener('click', () => {
+                const textToCopy = href.startsWith('mailto:') 
+                    ? href.replace('mailto:', '') 
+                    : href.replace('tel:', '');
+                
+                if (navigator.clipboard) {
+                    navigator.clipboard.writeText(textToCopy).then(() => {
+                        showToast(`Copiado: ${textToCopy} 📋`);
+                    }).catch(() => {});
+                }
+            });
+        }
+    });
+});
+
+function showToast(message) {
+    const toast = document.getElementById('toastNotification');
+    const msgEl = document.getElementById('toastMsg');
+    if (!toast || !msgEl) return;
+    msgEl.textContent = message;
+    toast.classList.add('show');
+    clearTimeout(window.__toastTimeout);
+    window.__toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2800);
+}
