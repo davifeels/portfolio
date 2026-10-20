@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 270" width="100%" height="270" fill="none">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#0f1f38" stop-opacity="0.85"/>
+      <stop offset="50%" stop-color="#0a101d" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#05070c" stop-opacity="1"/>
+    </radialGradient>
+
+    <!-- Accent Linear Gradients -->
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="neonGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <linearGradient id="borderGleam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="25%" stop-color="#38bdf8" stop-opacity="0.7"/>
+      <stop offset="50%" stop-color="#10b981" stop-opacity="0.9"/>
+      <stop offset="75%" stop-color="#818cf8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <style>
+      @keyframes beaconPulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.35; transform: scale(1.3); }
+      }
+      @keyframes beamSlide {
+        0% { transform: translateX(-920px); }
+        100% { transform: translateX(920px); }
+      }
+      @keyframes textGlow {
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.4)); }
+        50% { filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.5)); }
+      }
+      .beacon {
+        transform-origin: 460px 42px;
+        animation: beaconPulse 2.4s ease-in-out infinite;
+      }
+      .laser-beam {
+        animation: beamSlide 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .title-glow {
+        animation: textGlow 5s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Container Box -->
+  <rect width="920" height="270" rx="18" fill="url(#bgGlow)"/>
+  <rect width="920" height="270" rx="18" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5"/>
+
+  <!-- Subtle Top Ambient Grid -->
+  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+    <path d="M 0,40 L 920,40 M 0,80 L 920,80 M 0,120 L 920,120 M 0,160 L 920,160 M 0,200 L 920,200"/>
+    <path d="M 80,0 L 80,270 M 160,0 L 160,270 M 240,0 L 240,270 M 320,0 L 320,270 M 400,0 L 400,270 M 480,0 L 480,270 M 560,0 L 560,270 M 640,0 L 640,270 M 720,0 L 720,270 M 800,0 L 800,270 M 880,0 L 880,270"/>
+  </g>
+
+  <!-- Animated Bottom Edge Laser Beam -->
+  <g clip-path="url(#borderClip)">
+    <clipPath id="borderClip">
+      <rect width="920" height="270" rx="18"/>
+    </clipPath>
+    <rect class="laser-beam" y="267" width="460" height="3" fill="url(#borderGleam)"/>
+  </g>
+
+  <!-- Status Capsule Badge -->
+  <g transform="translate(270, 24)">
+    <rect width="380" height="34" rx="17" fill="#0b1324" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.2"/>
+    <!-- Pulsing dot -->
+    <circle cx="22" cy="17" r="7" fill="#10b981" opacity="0.25" class="beacon"/>
+    <circle cx="22" cy="17" r="4.5" fill="#10b981"/>
+    <text x="38" y="22" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600" letter-spacing="0.4">
+      DISPONÍVEL PARA OPORTUNIDADES · JAVA JÚNIOR
+    </text>
+  </g>
+
+  <!-- Main Title -->
+  <g class="title-glow">
+    <text x="460" y="118" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, sans-serif" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="-0.8">
+      Davi Anderson
+    </text>
+  </g>
+
+  <!-- Subtitle Line -->
+  <text x="460" y="152" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15.5" font-weight="500" fill="#94a3b8" letter-spacing="0.2">
+    Desenvolvedor de Software <tspan fill="#38bdf8">|</tspan> Backend Java • Spring Boot • APIs REST <tspan fill="#38bdf8">|</tspan> Full Stack • PostgreSQL
+  </text>
+
+  <!-- 4 Glass Metrics Badges in Bottom Row -->
+  <g transform="translate(45, 185)">
+    <!-- Metric 1: ITI Experience -->
+    <g transform="translate(0, 0)">
+      <rect width="195" height="54" rx="12" fill="url(#cardBg)" stroke="rgba(56, 189, 248, 0.22)" stroke-width="1"/>
+      <text x="18" y="24" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">VIVÊNCIA PRÁTICA</text>
+      <text x="18" y="43" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">2 Anos no ITI (Federal)</text>
+    </g>
+
+    <!-- Metric 2: Backend Stack -->
+    <g transform="translate(210, 0)">
+      <rect width="195" height="54" rx="12" fill="url(#cardBg)" stroke="rgba(16, 185, 129, 0.22)" stroke-width="1"/>
+      <text x="18" y="24" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">CORE BACKEND</text>
+      <text x="18" y="43" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">Java 21 · Spring Boot 3</text>
+    </g>
+
+    <!-- Metric 3: Database & SQL -->
+    <g transform="translate(420, 0)">
+      <rect width="195" height="54" rx="12" fill="url(#cardBg)" stroke="rgba(129, 140, 248, 0.22)" stroke-width="1"/>
+      <text x="18" y="24" fill="#818cf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">BANCO DE DADOS</text>
+      <text x="18" y="43" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">PostgreSQL 16 · Flyway</text>
+    </g>
+
+    <!-- Metric 4: PuffsZone in Prod -->
+    <g transform="translate(630, 0)">
+      <rect width="200" height="54" rx="12" fill="url(#cardBg)" stroke="rgba(244, 114, 182, 0.22)" stroke-width="1"/>
+      <text x="18" y="24" fill="#f472b6" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="11" font-weight="700" letter-spacing="0.5">EM PRODUÇÃO REAL</text>
+      <text x="18" y="43" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="13" font-weight="700">PuffsZone · VPS Linux</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 340" width="100%" height="340" fill="none">
+  <defs>
+    <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#050811"/>
+    </linearGradient>
+
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="100%" stop-color="#1f2937"/>
+    </linearGradient>
+
+    <style>
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+      }
+      .cursor {
+        animation: blink 1s infinite;
+      }
+      .code-font {
+        font-family: 'Fira Code', 'JetBrains Mono', 'Courier New', monospace;
+      }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect width="880" height="340" rx="14" fill="url(#termBg)" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1.2"/>
+
+  <!-- Terminal Title Bar -->
+  <rect width="880" height="36" rx="14" fill="url(#headerGrad)"/>
+  <rect y="22" width="880" height="14" fill="url(#headerGrad)"/>
+  <line x1="0" y1="36" x2="880" y2="36" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1"/>
+
+  <!-- Window Controls -->
+  <circle cx="22" cy="18" r="6" fill="#ef4444"/>
+  <circle cx="42" cy="18" r="6" fill="#f59e0b"/>
+  <circle cx="62" cy="18" r="6" fill="#10b981"/>
+
+  <!-- Title Text -->
+  <text x="440" y="23" text-anchor="middle" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="600">
+    davi@vps-prod: ~ (bash · zsh)
+  </text>
+
+  <!-- Terminal Body Content -->
+  <g class="code-font" font-size="13">
+    <!-- Command 1 -->
+    <text x="24" y="66">
+      <tspan fill="#10b981" font-weight="bold">davi@backend</tspan><tspan fill="#6b7280">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#e5e7eb">$ curl -s https://puffszone.tech/actuator/health | jq</tspan>
+    </text>
+
+    <!-- JSON Response -->
+    <text x="24" y="90" fill="#94a3b8">{</text>
+    <text x="44" y="110">
+      <tspan fill="#38bdf8">"status"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#34d399">"UP"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#38bdf8">"environment"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#fbbf24">"VPS Linux (Production)"</tspan><tspan fill="#94a3b8">, </tspan>
+      <tspan fill="#38bdf8">"ssl"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#34d399">"Let's Encrypt / HTTPS"</tspan>
+    </text>
+    <text x="44" y="130">
+      <tspan fill="#38bdf8">"runtime"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#a78bfa">"Java 21 (LTS) · Spring Boot 3 · Spring Security (JWT Stateless)"</tspan><tspan fill="#94a3b8">,</tspan>
+    </text>
+    <text x="44" y="150">
+      <tspan fill="#38bdf8">"database"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#60a5fa">"PostgreSQL 16 · Flyway Migrations (HikariCP Pool Active)"</tspan><tspan fill="#94a3b8">,</tspan>
+    </text>
+    <text x="44" y="170">
+      <tspan fill="#38bdf8">"frontend"</tspan><tspan fill="#94a3b8">: </tspan><tspan fill="#38bdf8">"React 19 · TypeScript · Tailwind CSS"</tspan>
+    </text>
+    <text x="24" y="190" fill="#94a3b8">}</text>
+
+    <!-- Command 2 -->
+    <text x="24" y="222">
+      <tspan fill="#10b981" font-weight="bold">davi@backend</tspan><tspan fill="#6b7280">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#e5e7eb">$ davi --experience-summary</tspan>
+    </text>
+
+    <!-- Response 2 -->
+    <text x="24" y="246">
+      <tspan fill="#10b981">[✓] ITI Federal Agency</tspan><tspan fill="#cbd5e1">: 2 Anos de Experiência (18m Dev Java/Spring + 6m DBA Postgres)</tspan>
+    </text>
+    <text x="24" y="268">
+      <tspan fill="#10b981">[✓] Performance SQL</tspan><tspan fill="#cbd5e1">: Otimização EXPLAIN ANALYZE com redução de 40% em consultas críticas</tspan>
+    </text>
+    <text x="24" y="290">
+      <tspan fill="#10b981">[✓] Objetivo Imediato</tspan><tspan fill="#cbd5e1">: Desenvolvedor Backend Java Júnior / APIs REST / Full Stack</tspan>
+    </text>
+
+    <!-- Prompt with blinking cursor -->
+    <text x="24" y="318">
+      <tspan fill="#10b981" font-weight="bold">davi@backend</tspan><tspan fill="#6b7280">:</tspan><tspan fill="#38bdf8">~</tspan><tspan fill="#e5e7eb">$ </tspan><tspan fill="#38bdf8" class="cursor">█</tspan>
+    </text>
+  </g>
+</svg>

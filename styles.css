@@ -2366,3 +2366,66 @@ html { overflow-x: hidden; }
     margin-right: 6px;
     display: inline-block;
 }
+
+
+/* Architecture & Systems Section */
+.architecture-section {
+    padding: 5rem 0;
+    position: relative;
+}
+
+.architecture-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.arch-card {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 1.75rem;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(16px);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.arch-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(56, 189, 248, 0.4);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.6), 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+.arch-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.arch-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.arch-card-title i {
+    color: #38bdf8;
+}
+
+.arch-card-badge {
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: #38bdf8;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 20px;
+}
