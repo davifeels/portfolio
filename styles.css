@@ -658,46 +658,6 @@ span.btn-secondary:hover {
     font-size: 0.9rem;
 }
 
-.skills {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-}
-
-.skill-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 1rem;
-    background: #334155;
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-}
-
-.skill-item:hover {
-    transform: translateY(-5px);
-    background: #475569;
-    border-color: rgba(96, 165, 250, 0.3);
-}
-
-.skill-item i {
-    font-size: 2rem;
-    color: #60a5fa;
-}
-
-/* SVG variant for skill icons (e.g., PostgreSQL) */
-.skill-item img.skill-icon-svg {
-    width: 2rem;
-    height: 2rem;
-    display: block;
-    /* approximate theme blue via filter on monochrome SVG */
-    filter: invert(60%) sepia(46%) saturate(1317%) hue-rotate(187deg) brightness(101%) contrast(94%);
-}
-
 /* Projects Section */
 .projects {
     padding: 100px 0;
@@ -1273,414 +1233,215 @@ span.btn-secondary:hover {
 }
 
 /* ================================================================== */
-/* WORLD-CLASS TECH BENTO MATRIX (SENIOR ARCHITECTURE SHOWCASE)
+/* HABILIDADES TÉCNICAS (QUADRADINHOS CHAMATIVOS & PRODUÇÃO REAL)
 /* ================================================================== */
 .skills-section {
-    padding: 110px 0;
-    background: radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 90% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 40%),
-                linear-gradient(145deg, #070b13 0%, #0d1424 50%, #111a2f 100%);
+    padding: 100px 0;
+    background: radial-gradient(circle at 10% 15%, rgba(56, 189, 248, 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 90% 85%, rgba(139, 92, 246, 0.08) 0%, transparent 45%),
+                linear-gradient(145deg, #070b13 0%, #0f172a 50%, #162032 100%);
     position: relative;
-    overflow: hidden;
 }
 
-.skills-container-expanded {
-    max-width: 1540px !important;
-    width: 100% !important;
-    padding: 0 clamp(1.5rem, 4vw, 5rem) !important;
-    margin: 0 auto !important;
-}
-
-.skills-header-center {
-    text-align: center;
-    max-width: 880px;
-    margin: 0 auto 3.5rem auto;
-}
-
-.skills-kicker {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.55rem;
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    color: #38bdf8;
-    background: rgba(56, 189, 248, 0.1);
-    border: 1px solid rgba(56, 189, 248, 0.3);
-    padding: 0.35rem 0.95rem;
-    border-radius: 9999px;
-    margin-bottom: 1.1rem;
-    text-transform: uppercase;
-}
-
-.skills-lead {
-    font-size: 1.12rem;
-    color: #cbd5e1;
-    line-height: 1.75;
-    margin-top: 1rem;
-    margin-bottom: 2.5rem;
-}
-
-/* Tech Matrix Interactive Filter Bar */
-.tech-matrix-filters {
-    display: flex;
-    justify-content: center;
-    gap: 0.65rem;
-    flex-wrap: wrap;
-    margin-bottom: 1.5rem;
-}
-
-.t-filter-btn {
-    background: rgba(15, 23, 42, 0.75);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #94a3b8;
-    padding: 0.6rem 1.15rem;
-    border-radius: 9999px;
-    font-size: 0.84rem;
-    font-weight: 600;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    backdrop-filter: blur(8px);
-}
-
-.t-filter-btn:hover {
-    color: #ffffff;
-    background: rgba(56, 189, 248, 0.12);
-    border-color: rgba(56, 189, 248, 0.4);
-    transform: translateY(-2px);
-}
-
-.t-filter-btn.active {
-    background: linear-gradient(135deg, rgba(56, 189, 248, 0.2) 0%, rgba(129, 140, 248, 0.2) 100%);
-    border-color: #38bdf8;
-    color: #38bdf8;
-    box-shadow: 0 0 20px rgba(56, 189, 248, 0.28);
-}
-
-/* Tech Bento Matrix Grid */
-.tech-bento-matrix {
+.skills-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.75rem;
-    position: relative;
-    z-index: 1;
+    grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+    gap: 2.25rem;
+    margin-top: 2rem;
 }
 
-.bento-box {
-    background: linear-gradient(145deg, rgba(15, 23, 42, 0.88) 0%, rgba(9, 14, 25, 0.96) 100%);
-    border: 1px solid rgba(56, 189, 248, 0.2);
+.skill-category {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+    border: 1px solid rgba(56, 189, 248, 0.22);
     border-radius: 20px;
-    padding: 2.25rem 2.2rem;
-    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
-    position: relative;
-    overflow: visible;
+    padding: 2rem 2.2rem;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.45);
     transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
     display: flex;
     flex-direction: column;
 }
 
-.bento-box:hover {
+.skill-category:hover {
     border-color: rgba(56, 189, 248, 0.45);
-    box-shadow: 0 24px 65px rgba(0, 0, 0, 0.65), 0 0 30px rgba(56, 189, 248, 0.16);
-    transform: translateY(-4px);
-}
-
-.bento-box.faded {
-    opacity: 0.18;
-    filter: grayscale(70%);
-    transform: scale(0.98);
-    pointer-events: none;
-}
-
-/* Titular Flagship Java Hero */
-.bento-hero-java {
-    grid-column: span 2;
-    border-top: 4px solid #38bdf8;
-    background: radial-gradient(circle at 90% 10%, rgba(56, 189, 248, 0.1) 0%, transparent 50%),
-                linear-gradient(145deg, rgba(15, 23, 42, 0.92) 0%, rgba(8, 13, 24, 0.98) 100%);
-}
-
-.bento-security-box {
-    border-top: 3.5px solid #a855f7;
-}
-
-.bento-data-box {
-    border-top: 3.5px solid #10b981;
-}
-
-.bento-devops-box {
-    border-top: 3.5px solid #06b6d4;
-}
-
-.bento-ai-box {
-    border-top: 3.5px solid #f59e0b;
-}
-
-/* Ambient Blobs */
-.bento-glow-blob {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    filter: blur(80px);
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.15;
-}
-
-.blob-blue { top: -60px; right: -40px; background: #38bdf8; }
-.blob-purple { top: -50px; right: -30px; background: #a855f7; }
-.blob-emerald { top: -50px; right: -30px; background: #10b981; }
-.blob-cyan { top: -50px; right: -30px; background: #06b6d4; }
-.blob-amber { top: -50px; right: -30px; background: #f59e0b; }
-
-/* Bento Top Bar */
-.bento-top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.25rem;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    position: relative;
-    z-index: 2;
-}
-
-.bento-badge-tech {
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 0.35rem 0.85rem;
-    border-radius: 9999px;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
-    text-transform: uppercase;
-}
-
-.core-pill {
-    background: rgba(56, 189, 248, 0.15);
-    color: #38bdf8;
-    border: 1px solid rgba(56, 189, 248, 0.35);
-}
-
-.security-pill {
-    background: rgba(168, 85, 247, 0.15);
-    color: #c084fc;
-    border: 1px solid rgba(168, 85, 247, 0.35);
-}
-
-.data-pill {
-    background: rgba(16, 185, 129, 0.15);
-    color: #34d399;
-    border: 1px solid rgba(16, 185, 129, 0.35);
-}
-
-.devops-pill {
-    background: rgba(6, 182, 212, 0.15);
-    color: #22d3ee;
-    border: 1px solid rgba(6, 182, 212, 0.35);
-}
-
-.ai-pill {
-    background: rgba(245, 158, 11, 0.15);
-    color: #fbbf24;
-    border: 1px solid rgba(245, 158, 11, 0.35);
-}
-
-.bento-telemetry-chip {
-    font-size: 0.75rem;
-    color: #94a3b8;
-    font-weight: 600;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-}
-
-.bento-telemetry-chip i {
-    color: #10b981;
-}
-
-.bento-main-info {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 1.75rem;
-}
-
-.bento-main-info h3 {
-    font-size: 1.55rem;
-    font-weight: 800;
-    color: #ffffff;
-    margin-bottom: 0.65rem;
-    letter-spacing: -0.02em;
-}
-
-.bento-desc {
-    font-size: 0.98rem;
-    color: #cbd5e1;
-    line-height: 1.65;
-    margin: 0;
-}
-
-.bento-desc strong {
-    color: #f8fafc;
-}
-
-/* Tech Chips Grid (HUD System) */
-.tech-chips-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    position: relative;
-    z-index: 3;
-}
-
-.grid-java-six {
-    grid-template-columns: repeat(3, 1fr);
-}
-
-.grid-devops-four {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-.tech-chips-grid:not(.grid-java-six):not(.grid-devops-four) {
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-}
-
-.tech-item-hud {
-    background: rgba(15, 23, 42, 0.8);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
-    padding: 0.85rem 1rem;
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-    cursor: pointer;
-    position: relative;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.tech-item-hud:hover {
-    background: rgba(30, 41, 59, 0.95);
-    border-color: rgba(56, 189, 248, 0.5);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px rgba(56, 189, 248, 0.22);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.6), 0 0 25px rgba(56, 189, 248, 0.15);
     transform: translateY(-3px);
 }
 
-.hud-icon {
-    font-size: 1.65rem;
+.skill-category h3 {
+    color: #f8fafc;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.75rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    gap: 0.65rem;
+    letter-spacing: -0.01em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    padding-bottom: 0.9rem;
 }
 
-.hud-meta {
+.skill-category h3 i {
+    color: #38bdf8;
+    font-size: 1.2rem;
+}
+
+/* O Quadradinho Chamativo */
+.skill-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 1.15rem;
+}
+
+.skill-item {
+    background: rgba(15, 23, 42, 0.85);
+    border: 1px solid rgba(56, 189, 248, 0.22);
+    border-radius: 16px;
+    padding: 1.35rem 0.85rem 1.15rem;
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    min-width: 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 0.55rem;
+    min-height: 142px;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    cursor: pointer;
 }
 
-.hud-name {
-    font-size: 0.88rem;
+.skill-item:hover {
+    transform: translateY(-6px) scale(1.04);
+    border-color: rgba(56, 189, 248, 0.75);
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.95) 0%, rgba(15, 23, 42, 0.98) 100%);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7), 0 0 25px rgba(56, 189, 248, 0.3);
+}
+
+.skill-item i {
+    font-size: 2.6rem;
+    margin-bottom: 0.25rem;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+}
+
+.skill-item:hover i {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 16px currentColor);
+}
+
+.skill-item span {
+    font-size: 0.92rem;
     font-weight: 700;
     color: #ffffff;
+    line-height: 1.25;
+}
+
+/* Badges Técnicas Chamativas & Precisas */
+.skill-badge {
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 0.3rem 0.65rem;
+    border-radius: 9999px;
+    letter-spacing: 0.02em;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    line-height: 1.2;
+    text-align: center;
+    transition: all 0.25s ease;
 }
 
-.hud-proof {
-    font-size: 0.72rem;
-    font-weight: 600;
+/* Cores das Badges por Tipo de Aplicação */
+.badge-prod {
+    background: rgba(16, 185, 129, 0.16);
+    color: #34d399;
+    border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.badge-core {
+    background: rgba(56, 189, 248, 0.16);
     color: #38bdf8;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    letter-spacing: -0.01em;
+    border: 1px solid rgba(56, 189, 248, 0.4);
 }
 
-/* Hover HUD Tooltip (Micro-Painel de Evidência) */
-.hud-tooltip {
-    position: absolute;
-    bottom: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%) translateY(8px);
-    background: #080d19;
-    border: 1px solid #38bdf8;
-    border-radius: 10px;
-    padding: 0.75rem 1rem;
-    font-size: 0.76rem;
-    color: #cbd5e1;
-    line-height: 1.5;
-    width: 260px;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 100;
-    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.85), 0 0 20px rgba(56, 189, 248, 0.25);
+.badge-test {
+    background: rgba(129, 140, 248, 0.16);
+    color: #a5b4fc;
+    border: 1px solid rgba(129, 140, 248, 0.4);
 }
 
-.hud-tooltip::after {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    border-width: 6px;
-    border-style: solid;
-    border-color: #38bdf8 transparent transparent transparent;
+.badge-sec {
+    background: rgba(6, 182, 212, 0.16);
+    color: #67e8f9;
+    border: 1px solid rgba(6, 182, 212, 0.4);
 }
 
-.hud-tooltip strong {
+.badge-dba {
+    background: rgba(14, 165, 233, 0.16);
+    color: #7dd3fc;
+    border: 1px solid rgba(14, 165, 233, 0.4);
+}
+
+.badge-fed {
+    background: rgba(245, 158, 11, 0.16);
+    color: #fbbf24;
+    border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.badge-devops {
+    background: rgba(56, 189, 248, 0.16);
     color: #38bdf8;
-    display: block;
-    margin-bottom: 0.25rem;
-    font-size: 0.78rem;
+    border: 1px solid rgba(56, 189, 248, 0.4);
 }
 
-.tech-item-hud:hover .hud-tooltip {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-    pointer-events: auto;
+.badge-cloud {
+    background: rgba(251, 191, 36, 0.16);
+    color: #fef08a;
+    border: 1px solid rgba(251, 191, 36, 0.4);
 }
 
-/* Responsividade do Bento Grid */
-@media (max-width: 1100px) {
-    .bento-hero-java {
-        grid-column: span 1;
-    }
-    .tech-bento-matrix {
+.badge-perf {
+    background: rgba(239, 68, 68, 0.16);
+    color: #fca5a5;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.badge-ai {
+    background: rgba(168, 85, 247, 0.16);
+    color: #d8b4fe;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+.badge-front {
+    background: rgba(59, 130, 246, 0.16);
+    color: #93c5fd;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+}
+
+.badge-mob {
+    background: rgba(132, 204, 22, 0.16);
+    color: #bef264;
+    border: 1px solid rgba(132, 204, 22, 0.4);
+}
+
+@media (max-width: 992px) {
+    .skills-grid {
         grid-template-columns: 1fr;
     }
-    .tech-chips-grid,
-    .grid-java-six,
-    .grid-devops-four {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) !important;
-    }
 }
 
-@media (max-width: 768px) {
-    .bento-box {
-        padding: 1.5rem 1.25rem;
+@media (max-width: 480px) {
+    .skill-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.85rem;
     }
-    .tech-item-hud {
-        padding: 0.75rem 0.85rem;
+    .skill-item {
+        min-height: 125px;
+        padding: 1.1rem 0.6rem 0.9rem;
     }
-    .hud-tooltip {
-        left: 0;
-        transform: translateY(8px);
-        width: 230px;
-    }
-    .hud-tooltip::after {
-        left: 20%;
-    }
-    .tech-item-hud:hover .hud-tooltip {
-        transform: translateY(0);
+    .skill-item i {
+        font-size: 2.1rem;
     }
 }
 
@@ -2071,24 +1832,11 @@ body.modal-open { overflow: hidden; }
     /* Skills Mobile */
     .skills-grid {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 1.5rem;
     }
     
     .skill-category {
-        padding: 1.5rem;
-    }
-    
-    .skill-items {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.8rem;
-    }
-    
-    .skill-item {
-        padding: 0.8rem;
-    }
-    
-    .skill-item i {
-        font-size: 1.5rem;
+        padding: 1.5rem 1.25rem;
     }
     
     .nav-container {
@@ -2439,23 +2187,7 @@ body.modal-open { overflow: hidden; }
         max-width: 100%;
     }
     
-    .skills {
-        gap: 1rem;
-        justify-content: center;
-    }
-    
-    .skill-item {
-        padding: 0.8rem;
-        min-width: 80px;
-    }
-    
-    .skill-item i {
-        font-size: 1.5rem;
-    }
-    
-    .skill-item span {
-        font-size: 0.8rem;
-    }
+
 }
 
 /* Mobile muito pequeno */
@@ -2507,14 +2239,7 @@ body.modal-open { overflow: hidden; }
         gap: 1rem;
     }
     
-    .skills {
-        gap: 0.8rem;
-    }
-    
-    .skill-item {
-        padding: 0.6rem;
-        min-width: 70px;
-    }
+
 }
 
 /* ===== Estabilidade e viewports muito estreitas ===== */
