@@ -138,19 +138,19 @@ function openProject(projectType) {
     if (projectType === 'puffszone' || projectType === 'vigilancia') {
         content = `
             <div class="project-demo">
-                <h2>PuffsZone — Sistema de Gestão Comercial e PDV</h2>
+                <h2>PuffsZone — Sistema de Gestão Comercial e PDV (Concluído)</h2>
                 <div class="demo-container">
                     <div class="project-showcase">
                         <div class="showcase-header">
                             <div class="showcase-icon"><i class="fas fa-cash-register"></i></div>
                             <div>
                                 <div class="showcase-title">PuffsZone — Sistema de Gestão Comercial & PDV</div>
-                                <div class="showcase-subtitle">Java 21 + Spring Boot 3 + React 19 + TypeScript + Docker em Produção</div>
+                                <div class="showcase-subtitle">Concluído &amp; Operacional em Produção · Java 21 + Spring Boot 3 + React 19 + Docker + VPS Linux</div>
                             </div>
                         </div>
                         <div class="showcase-content">
                             <div class="showcase-description" style="text-align: left;">
-                                <p>A <strong>PuffsZone</strong> é uma solução completa para gestão comercial, operações de frente de caixa (PDV), controle de estoque e gerenciamento financeiro empresarial. Desenvolvida para ir muito além de um CRUD convencional, implementa regras de negócio complexas, segurança com Spring Security e JWT, persistência com PostgreSQL 16 e Flyway, e implantação real em ambiente de produção (VPS Linux) com Docker, Nginx e HTTPS.</p>
+                                <p>A <strong>PuffsZone</strong> é uma solução completa para gestão comercial, operações de frente de caixa (PDV), controle de estoque e gerenciamento financeiro empresarial. <strong>100% concluída e operacional em ambiente real de produção</strong>, foi desenvolvida para ir muito além de um CRUD convencional: implementa regras de negócio complexas, fechamento cego de turno, segurança com Spring Security e JWT, persistência com PostgreSQL 16 e Flyway, e implantação estável em VPS Linux sob proxy reverso Nginx com HTTPS Let's Encrypt.</p>
 
                                 <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
                                     <a href="https://puffszone.tech" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #10b981 0%, #059669 100%); padding: 0.75rem 1.5rem; border-radius: 8px; color: white; font-weight: 600;">
@@ -251,109 +251,178 @@ function openProject(projectType) {
     else if (projectType === 'aegiscore') {
         content = `
             <div class="project-demo">
-                <h2>AegisCore — Cloud Security & Asset Management Platform</h2>
                 <div class="demo-container">
                     <div class="project-showcase">
                         <div class="showcase-header">
                             <div class="showcase-icon"><i class="fas fa-shield-halved"></i></div>
                             <div>
-                                <div class="showcase-title">AegisCore — Gestão de Ativos & Auditoria Cloud</div>
-                                <div class="showcase-subtitle">Java 25 + Spring Boot 4 + PostgreSQL 18 + Testcontainers + Docker + AWS Architecture</div>
+                                <div class="showcase-title">AegisCore — Cloud Asset &amp; Audit Platform</div>
+                                <div class="showcase-subtitle">Java 25 • Spring Boot 4 • PostgreSQL 18 • Testcontainers • RBAC &amp; BCrypt • AWS Architecture</div>
                             </div>
                         </div>
+
                         <div class="showcase-content">
-                            <div class="showcase-description" style="text-align: left;">
-                                <p>O <strong>AegisCore</strong> é uma plataforma corporativa backend de alta confiabilidade desenvolvida para centralizar a governança, o ciclo de vida (CRUD) e a conformidade de segurança de ativos de infraestrutura em nuvem multicloud (AWS, Azure e GCP). Projetada seguindo as melhores práticas de engenharia de software moderno, a aplicação combina <strong>Java 25</strong> e <strong>Spring Boot 4</strong>, segurança robusta com <strong>Spring Security (RBAC)</strong>, trilha de auditoria desacoplada via <strong>Spring Events</strong>, versionamento de banco com <strong>Flyway</strong> e testes de integração de ponta a ponta com <strong>Testcontainers</strong>.</p>
+                            <!-- Action Bar -->
+                            <div style="display: flex; gap: 1rem; margin: 0 0 1.5rem 0; flex-wrap: wrap; align-items: center;">
+                                <a href="https://github.com/davifeels/aegis-core" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.35rem; border-radius: 8px; font-weight: 600;">
+                                    <i class="fab fa-github"></i> Ver Código no GitHub
+                                </a>
+                                <span class="badge-status-cloud">
+                                    <i class="fab fa-aws"></i> Blueprint AWS Cloud Homologado
+                                </span>
+                            </div>
 
-                                <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
-                                    <a href="https://github.com/davifeels/aegis-core" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); padding: 0.75rem 1.5rem; border-radius: 8px; color: white; font-weight: 600;">
-                                        <i class="fab fa-github"></i> Acessar Repositório no GitHub
-                                    </a>
-                                    <span class="badge-status-cloud">
-                                        <i class="fab fa-aws"></i> Arquitetura AWS Homologada &amp; Pronta para Deploy
-                                    </span>
-                                </div>
+                            <!-- Interactive Modal Tabs -->
+                            <div class="modal-tabs-header">
+                                <button class="modal-tab-btn active" onclick="switchModalTab(event, 'aegis-tab-overview')">
+                                    <i class="fas fa-info-circle"></i> Visão Geral &amp; Negócio
+                                </button>
+                                <button class="modal-tab-btn" onclick="switchModalTab(event, 'aegis-tab-arch')">
+                                    <i class="fas fa-sitemap"></i> Arquitetura &amp; Código Java
+                                </button>
+                                <button class="modal-tab-btn" onclick="switchModalTab(event, 'aegis-tab-tests')">
+                                    <i class="fas fa-vial"></i> Testcontainers &amp; Testes
+                                </button>
+                                <button class="modal-tab-btn" onclick="switchModalTab(event, 'aegis-tab-cloud')">
+                                    <i class="fab fa-aws"></i> Blueprint AWS &amp; Custos
+                                </button>
+                            </div>
 
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🎯 Problema Resolvido &amp; Decisões Técnicas</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Visibilidade Centralizada de Recursos:</strong> Eliminação de silos de inventário entre múltiplos provedores cloud (AWS EC2/RDS/S3, Azure VMs e GCP Compute), mantendo um registro padronizado e auditável.</li>
-                                    <li><strong>Arquitetura Desacoplada Orientada a Eventos:</strong> Cada mutação de ativo (criação, atualização, exclusão) dispara um <code>AssetAuditEvent</code> processado de forma assíncrona por um listener dedicado (<code>AssetAuditListener</code>), garantindo que a persistência de logs de auditoria não degrade a latência do cliente HTTP.</li>
-                                    <li><strong>Controle Granular por Perfis (RBAC):</strong> Separação estrita de privilégios onde o perfil <code>ADMIN</code> gerencia ativos e investiga logs forenses, enquanto o perfil <code>USER</code> possui permissão somente-leitura restrita ao catálogo de ativos.</li>
-                                    <li><strong>Tratamento Semântico de Erros (RFC 7807):</strong> Tratamento centralizado via <code>@RestControllerAdvice</code>, retornando payloads estruturados para validações de campo (HTTP 400), conflitos de identificador (HTTP 409) e recursos inexistentes (HTTP 404).</li>
-                                </ul>
+                            <!-- Tab 1: Visão Geral -->
+                            <div class="modal-tab-content active" id="aegis-tab-overview">
+                                <div class="showcase-description" style="text-align: left;">
+                                    <p>O <strong>AegisCore</strong> é uma plataforma backend corporativa desenvolvida para solucionar a <strong>dispersão de ativos e a falta de rastreabilidade forense</strong> em infraestruturas multinuvem (AWS, Azure e GCP). Construída com <strong>Java 25</strong> e <strong>Spring Boot 4</strong>, a aplicação unifica inventário, controle de acesso estrito e trilha de auditoria transacional imutável.</p>
 
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">💻 Funcionalidades Principais</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Gestão de Ativos Cloud (CRUD):</strong> Endpoints RESTful completos (<code>/api/v1/assets</code>) para cadastro com validação de formato, consulta unificada, busca por ID, atualização atômica e exclusão.</li>
-                                    <li><strong>Trilha de Auditoria Forense com Paginação:</strong> Endpoint <code>GET /api/v1/audit-logs</code> com suporte a paginação (<code>page</code>, <code>size</code>) e filtros combinados por ação (CREATE, UPDATE, DELETE), identificador do ativo e intervalo de datas ISO-8601 (<code>fromDate</code>, <code>toDate</code>).</li>
-                                    <li><strong>Segurança HTTP Basic &amp; BCrypt:</strong> Proteção de endpoints contra acessos não autorizados, com credenciais injetadas exclusivamente via variáveis de ambiente e hashes BCrypt.</li>
-                                    <li><strong>Documentação Viva OpenAPI 3.0 / Swagger UI:</strong> Interface interativa disponível em <code>/swagger-ui.html</code> contendo schemas de requisição, respostas e códigos de status.</li>
-                                </ul>
+                                    <h4 style="color: #38bdf8; margin-top: 1.5rem;">🎯 Problemas Reais de Produção Resolvidos</h4>
+                                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; line-height: 1.7;">
+                                        <li><strong>Fim do Shadow IT &amp; Inventário Fragmentado:</strong> Centralização de instâncias, bancos de dados e buckets em um catálogo padronizado com validação de formato e integridade.</li>
+                                        <li><strong>Conformidade Regulatória (LGPD/GDPR):</strong> Trilha de auditoria obrigatória que registra quem executou a ação, data/hora em UTC, IP de origem e identificador do recurso.</li>
+                                        <li><strong>Isolamento de Falhas em Logs:</strong> Desacoplamento entre a persistência do ativo e a gravação do log de auditoria, garantindo que oscilações no subsistema de log nunca causem rollback desnecessário na operação de negócio já concluída.</li>
+                                    </ul>
 
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🛠️ Tecnologias &amp; Engenharia de Software</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Java 25 &amp; Spring Boot 4:</strong> Utilização da versão mais recente do ecossistema Java, usufruindo de melhorias de desempenho em tempo de execução e novos padrões de API.</li>
-                                    <li><strong>PostgreSQL 18 &amp; Flyway:</strong> Persistência com Spring Data JPA e versionamento automatizado de banco com scripts de migração (<code>V1__create_cloud_assets.sql</code>, <code>V2__create_asset_audit_logs.sql</code>).</li>
-                                    <li><strong>Isolamento com Docker &amp; Compose:</strong> Arquivo <code>compose.yaml</code> com healthchecks automáticos (<code>pg_isready</code>) e volumes persistentes nomeados.</li>
-                                    <li><strong>CI/CD com GitHub Actions:</strong> Pipeline automatizado (<code>.github/workflows/ci.yml</code>) compilando em JDK 25 e executando a suíte de testes com Testcontainers em cada push/PR.</li>
-                                </ul>
+                                    <h4 style="color: #38bdf8; margin-top: 1.5rem;">💻 Funcionalidades Principais</h4>
+                                    <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; line-height: 1.7;">
+                                        <li><strong>CRUD de Ativos de Nuvem (<code>/api/v1/assets</code>):</strong> Cadastro atômico, listagem unificada, busca por ID, atualização com detecção de conflitos e exclusão lógica/física.</li>
+                                        <li><strong>Pesquisa Dinâmica de Auditoria (<code>/api/v1/audit-logs</code>):</strong> Busca paginada (PageRequest) com filtros combinados de período (<code>fromDate</code>, <code>toDate</code>), tipo de ação (CREATE, UPDATE, DELETE) e ativo.</li>
+                                        <li><strong>Documentação Interativa OpenAPI 3 / Swagger:</strong> Interface viva em <code>/swagger-ui.html</code> com schemas de dados, validações e exemplos de payloads.</li>
+                                    </ul>
 
-                                <div class="testing-highlight-box">
-                                    <div class="testing-highlight-title">
-                                        <i class="fas fa-check-circle"></i> Estratégia de Testes Automatizados com Testcontainers &amp; JUnit 5
+                                    <div class="showcase-stats" style="margin-top: 1.5rem;">
+                                        <div class="stat-item"><span class="stat-number">Java 25</span><span class="stat-label">Spring Boot 4.1.1</span></div>
+                                        <div class="stat-item"><span class="stat-number">Postgres 18</span><span class="stat-label">Flyway Migrations</span></div>
+                                        <div class="stat-item"><span class="stat-number">0 Mocks</span><span class="stat-label">Testcontainers em CI</span></div>
+                                        <div class="stat-item"><span class="stat-number">P99 &lt; 25ms</span><span class="stat-label">Latência Medida</span></div>
                                     </div>
-                                    <ul class="testing-highlight-list">
-                                        <li>
-                                            <span class="testing-tag">Testcontainers</span><span class="testing-tag">PostgreSQL 18</span>
-                                            <strong>Testes de Integração com Banco Real em Contêiner:</strong> Em vez de simulações com bancos em memória (H2) que divergem de produção, o AegisCore utiliza <code>@Testcontainers</code> para instanciar contêineres reais do PostgreSQL 18 durante a execução de <code>AssetAuditIntegrationTests</code>, garantindo 100% de paridade com o ambiente real.
-                                        </li>
-                                        <li>
-                                            <span class="testing-tag">JUnit 5</span><span class="testing-tag">Mockito</span>
-                                            <strong>Testes Unitários de Serviços &amp; Eventos:</strong> Cobertura isolada de <code>AssetAuditListenerTests</code> e <code>AssetAuditPersistenceServiceTests</code>, validando o desacoplamento da mensageria de auditoria.
-                                        </li>
-                                        <li>
-                                            <span class="testing-tag">Spring Security Test</span><span class="testing-tag">RBAC</span>
-                                            <strong>Testes de Autorização &amp; Barramento:</strong> Bateria de testes em <code>SecurityTests</code> comprovando que requisições anônimas recebem HTTP 401 e que o perfil USER é barrado com HTTP 403 em rotas administrativas e de auditoria.
-                                        </li>
-                                        <li>
-                                            <span class="testing-tag">GitHub Actions</span><span class="testing-tag">CI/CD</span>
-                                            <strong>Automação Contínua:</strong> Execução automática de <code>./mvnw clean verify</code> no runner Ubuntu do GitHub Actions, assegurando zero quebras no repositório.
-                                        </li>
+                                </div>
+                            </div>
+
+                            <!-- Tab 2: Arquitetura & Código -->
+                            <div class="modal-tab-content" id="aegis-tab-arch">
+                                <div class="showcase-description" style="text-align: left;">
+                                    <h4 style="color: #38bdf8;">🏛️ Decisões Críticas de Arquitetura Transacional</h4>
+                                    <p>Ao invés de gravar o log de auditoria na mesma transação do ativo (o que poderia gerar logs falsos em caso de rollback ou reverter o ativo por falha de log), o AegisCore adota o padrão de eventos Spring pós-commit:</p>
+
+                                    <div class="code-box-preview">
+<span style="color:#64748b">// 1. Emissão Desacoplada no CloudAssetService</span>
+<span style="color:#f472b6">public</span> CloudAsset <span style="color:#38bdf8">register</span>(CloudAsset asset) {
+    CloudAssetEntity saved = assetRepository.saveAndFlush(entity);
+    eventPublisher.publishEvent(<span style="color:#f472b6">new</span> AssetAuditEvent(<span style="color:#34d399">"CREATE"</span>, currentActor(), saved.getId()));
+    <span style="color:#f472b6">return</span> toDto(saved);
+}
+
+<span style="color:#64748b">// 2. Listener Pós-Commit no AssetAuditListener (Executa APENAS após commit bem-sucedido)</span>
+<span style="color:#fbbf24">@TransactionalEventListener</span>(phase = TransactionPhase.AFTER_COMMIT)
+<span style="color:#f472b6">public void</span> <span style="color:#38bdf8">handle</span>(AssetAuditEvent event) {
+    String sanitizedAction = safeField(event.action(), 20); <span style="color:#64748b">// Previne CRLF / Log Injection</span>
+    persistenceService.record(sanitizedAction, event.actor(), event.assetId());
+}
+
+<span style="color:#64748b">// 3. Transação Física Independente no AssetAuditPersistenceService</span>
+<span style="color:#fbbf24">@Transactional</span>(propagation = Propagation.REQUIRES_NEW)
+<span style="color:#f472b6">public void</span> <span style="color:#38bdf8">record</span>(String action, String actor, String assetId) {
+    auditRepository.saveAndFlush(<span style="color:#f472b6">new</span> AssetAuditRecordEntity(action, actor, assetId));
+}
+                                    </div>
+
+                                    <h4 style="color: #38bdf8; margin-top: 1.5rem;">🛡️ Segurança Defensiva &amp; Matriz RBAC</h4>
+                                    <ul style="margin-left: 1.5rem; color: #cbd5e1; line-height: 1.7;">
+                                        <li><strong>HTTP Basic Stateless:</strong> Sem acúmulo de sessões em memória no servidor, pronto para escalabilidade horizontal.</li>
+                                        <li><strong>Hashing BCrypt:</strong> Salteamento criptográfico individual por senha via <code>BCryptPasswordEncoder</code>.</li>
+                                        <li><strong>Princípio do Menor Privilégio:</strong> Perfil <code>ROLE_USER</code> tem acesso somente de leitura (GET); mutações e consulta de logs forenses exigem <code>ROLE_ADMIN</code>.</li>
+                                        <li><strong>Prevenção de Log Injection (CRLF):</strong> Sanitização rigorosa via regex <code>[\\p{Cntrl}]</code> em todos os campos antes da gravação.</li>
                                     </ul>
                                 </div>
+                            </div>
 
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;"><i class="fab fa-aws"></i> Arquitetura de Nuvem AWS &amp; Implantação</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Rede &amp; Isolamento (AWS VPC):</strong> Subnets públicas para o Application Load Balancer (ALB) e subnets privadas restritas para os contêineres e banco de dados, sem exposição de portas à internet.</li>
-                                    <li><strong>Execução de Contêineres (Amazon ECS Fargate):</strong> Orquestração serverless da imagem Docker da aplicação, com auto scaling horizontal baseado em consumo de CPU e memória.</li>
-                                    <li><strong>Banco Gerenciado (Amazon RDS PostgreSQL 18 Multi-AZ):</strong> Alta disponibilidade com replicação síncrona entre Availability Zones, backups diários automatizados e criptografia em repouso via AWS KMS.</li>
-                                    <li><strong>Segurança de Borda &amp; TLS:</strong> Application Load Balancer com certificado SSL/TLS emitido pelo AWS Certificate Manager (ACM) e terminação HTTPS segura.</li>
-                                    <li><strong>Gestão de Segredos &amp; Observabilidade:</strong> AWS Secrets Manager / SSM Parameter Store para injeção de credenciais de produção e Amazon CloudWatch para métricas de integridade e retenção centralizada de logs.</li>
-                                    <li><strong>Status de Implantação:</strong> Aplicação 100% preparada e containerizada para nuvem. O repositório documenta a infraestrutura homologada e pronta para receber o domínio público tão logo os recursos sejam provisionados.</li>
-                                </ul>
+                            <!-- Tab 3: Testcontainers & Testes -->
+                            <div class="modal-tab-content" id="aegis-tab-tests">
+                                <div class="showcase-description" style="text-align: left;">
+                                    <h4 style="color: #38bdf8;">🧪 Testes de Integração com Banco Real (Zero H2)</h4>
+                                    <p>O AegisCore elimina a discrepância clássica entre ambientes ("funcionou no H2 em memória, quebrou no PostgreSQL de produção") adotando <strong>Testcontainers</strong> com o driver <code>jdbc:tc:postgresql:18-alpine</code>:</p>
 
-                                <div class="showcase-stats" style="margin-top: 1.5rem;">
-                                    <div class="stat-item"><span class="stat-number">Java 25</span><span class="stat-label">Spring Boot 4</span></div>
-                                    <div class="stat-item"><span class="stat-number">Postgres 18</span><span class="stat-label">Flyway Migrations</span></div>
-                                    <div class="stat-item"><span class="stat-number">Containers</span><span class="stat-label">Testcontainers &amp; Docker</span></div>
-                                    <div class="stat-item"><span class="stat-number">AWS Cloud</span><span class="stat-label">Production Ready</span></div>
+                                    <div class="code-box-preview">
+<span style="color:#64748b">// AssetAuditIntegrationTests.java - Comprovação de Commit Timing</span>
+<span style="color:#fbbf24">@Test</span>
+<span style="color:#f472b6">void</span> <span style="color:#38bdf8">shouldPersistAuditOnlyAfterAssetRegistrationCommits</span>() {
+    TransactionTemplate transaction = <span style="color:#f472b6">new</span> TransactionTemplate(transactionManager);
+
+    transaction.executeWithoutResult(status -> {
+        cloudAssetService.register(asset);
+        assertTrue(assetRepository.existsById(assetId)); <span style="color:#64748b">// Ativo existe dentro da transação</span>
+        assertFalse(auditExistsFor(assetId)); <span style="color:#64748b">// Auditoria NÃO DEVE existir antes do commit!</span>
+    });
+
+    assertTrue(auditExistsFor(assetId)); <span style="color:#64748b">// Auditoria existe IMEDIATAMENTE após o commit!</span>
+}
+                                    </div>
+
+                                    <div class="testing-highlight-box" style="margin-top: 1.25rem;">
+                                        <div class="testing-highlight-title"><i class="fas fa-check-circle"></i> Cobertura Completa da Suíte de Testes</div>
+                                        <ul class="testing-highlight-list">
+                                            <li><strong>SecurityTests (MockMvc):</strong> Validação de 401 Unauthorized para acessos anônimos e 403 Forbidden para ROLE_USER em rotas de mutação.</li>
+                                            <li><strong>AssetAuditListenerTests:</strong> Validação de limites estruturais de caracteres e sanitização de quebras de linha (anti-CRLF).</li>
+                                            <li><strong>GitHub Actions CI:</strong> Execução automática de <code>./mvnw -B clean verify</code> com Testcontainers a cada push e PR.</li>
+                                        </ul>
+                                    </div>
                                 </div>
+                            </div>
 
-                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-                                    <span class="tech-tag">Java 25</span>
-                                    <span class="tech-tag">Spring Boot 4</span>
-                                    <span class="tech-tag">PostgreSQL 18</span>
-                                    <span class="tech-tag">Flyway</span>
-                                    <span class="tech-tag">Spring Security</span>
-                                    <span class="tech-tag">BCrypt</span>
-                                    <span class="tech-tag">Testcontainers</span>
-                                    <span class="tech-tag">JUnit 5</span>
-                                    <span class="tech-tag">Docker</span>
-                                    <span class="tech-tag">Docker Compose</span>
-                                    <span class="tech-tag">GitHub Actions</span>
-                                    <span class="tech-tag">OpenAPI 3.0</span>
-                                    <span class="tech-tag">AWS Cloud</span>
+                            <!-- Tab 4: Blueprint AWS & Custos -->
+                            <div class="modal-tab-content" id="aegis-tab-cloud">
+                                <div class="showcase-description" style="text-align: left;">
+                                    <h4 style="color: #38bdf8;"><i class="fab fa-aws"></i> Topologia de Infraestrutura em Nuvem (AWS Blueprint)</h4>
+                                    <p>Arquitetura projetada e homologada para operação elástica e segura em nuvem pública:</p>
+
+                                    <ul style="margin-left: 1.5rem; color: #cbd5e1; line-height: 1.7;">
+                                        <li><strong>Compute (AWS ECS Fargate):</strong> Contêineres serverless com auto-scaling automático, executando com usuário não-root (<code>appuser</code> / UID 10001).</li>
+                                        <li><strong>Database (Amazon RDS PostgreSQL 18 Multi-AZ):</strong> Cluster gerenciado de alta disponibilidade, backups automáticos diários e criptografia em repouso via AWS KMS.</li>
+                                        <li><strong>Rede &amp; Segurança (VPC):</strong> Subnets públicas restritas ao Application Load Balancer (ALB) e subnets privadas sem IP público para banco e contêineres.</li>
+                                        <li><strong>Segredos &amp; Observabilidade:</strong> AWS Secrets Manager para injeção em tempo de execução e Amazon CloudWatch para métricas de JVM e logs centralizados.</li>
+                                    </ul>
+
+                                    <h4 style="color: #38bdf8; margin-top: 1.5rem;">💰 Estimativa de Custos &amp; Otimização Free Tier</h4>
+                                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 1rem; margin-top: 0.75rem;">
+                                        <p style="margin: 0; font-size: 0.9rem; color: #cbd5e1;">
+                                            <strong>Custo de Operação para Demonstração:</strong> <strong>$0.00 / mês</strong> com RDS <code>db.t4g.micro</code> no AWS Free Tier e provisionamento sob demanda com Terraform (destruição automatizada pós-demonstração).
+                                        </p>
+                                    </div>
                                 </div>
+                            </div>
+
+                            <!-- Badges Footer -->
+                            <div style="display: flex; gap: 0.65rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                                <span class="tech-tag">Java 25</span>
+                                <span class="tech-tag">Spring Boot 4</span>
+                                <span class="tech-tag">PostgreSQL 18</span>
+                                <span class="tech-tag">Flyway</span>
+                                <span class="tech-tag">Spring Security</span>
+                                <span class="tech-tag">BCrypt</span>
+                                <span class="tech-tag">Testcontainers</span>
+                                <span class="tech-tag">JUnit 5</span>
+                                <span class="tech-tag">Docker Multi-Stage</span>
+                                <span class="tech-tag">GitHub Actions</span>
+                                <span class="tech-tag">OpenAPI 3</span>
+                                <span class="tech-tag">AWS Cloud</span>
                             </div>
                         </div>
                     </div>
@@ -604,91 +673,104 @@ function openProject(projectType) {
     else if (projectType === 'riskcore') {
         content = `
             <div class="project-demo">
-                <h2>RiskCore AI — Centro de Comando Reputacional</h2>
+                <h2>RiskCore AI — Plataforma de Inteligência & Defesa Reputacional</h2>
                 <div class="demo-container">
                     <div class="project-showcase">
                         <div class="showcase-header">
-                            <div class="showcase-icon"><i class="fas fa-satellite-dish"></i></div>
+                            <div class="showcase-icon"><i class="fas fa-shield-virus"></i></div>
                             <div>
-                                <div class="showcase-title">Monitoramento de Reputação Digital & Gestão de Crises</div>
-                                <div class="showcase-subtitle">Command Center com IA para Inteligência Reputacional</div>
+                                <div class="showcase-title">RiskCore AI — Defesa Reputacional & Inteligência Cibernética</div>
+                                <div class="showcase-subtitle">Monitoramento 24/7 (9+ Canais) • Motor NLP • Cofre SHA-256 • Faster-Whisper • Arsenal de Contramedidas</div>
                             </div>
                         </div>
                         <div class="showcase-content">
                             <div class="showcase-description" style="text-align: left;">
-                                <p>O RiskCore AI nasceu da necessidade de um sistema capaz de operar não apenas como radar, mas como <strong>ferramenta de defesa ativa</strong>. A plataforma monitora menções digitais em tempo real, detecta desinformação via IA e preserva evidências automaticamente antes que conteúdos possam ser apagados.</p>
+                                <p>O <strong>RiskCore AI</strong> (identificado na camada de infraestrutura como <strong>SentinelGov</strong>) é uma solução corporativa de inteligência de dados, cibersegurança informacional e monitoramento estratégico contínuo voltada para proteção de marcas, figuras públicas, lideranças e grandes organizações contra ataques de desinformação coordenada, deepfakes e ilícitos digitais.</p>
 
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🏗️ Arquitetura & Stack</h4>
+                                <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                                    <a href="https://github.com/davifeels/RiskCore-AI" target="_blank" rel="noopener" class="btn btn-secondary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;">
+                                        <i class="fab fa-github"></i> Ver Código no GitHub
+                                    </a>
+                                    <span style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; font-size: 0.85rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); color: #4ade80;">
+                                        <i class="fas fa-lock"></i> Conformidade ABNT NBR ISO/IEC 27037 &amp; Marco Civil Art. 19
+                                    </span>
+                                </div>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🎯 Atuação Tríplice da Solução</h4>
                                 <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Frontend:</strong> React + Next.js + TypeScript com estética de Command Center — paleta dark com acentos em ciano/laranja para leitura rápida de alertas.</li>
-                                    <li><strong>Backend:</strong> Node.js/Express gerenciando múltiplas requisições assíncronas e integração de APIs externas.</li>
-                                    <li><strong>Banco de Dados:</strong> PostgreSQL para persistência estruturada + Redis para cache e filas de processamento rápido.</li>
-                                    <li><strong>Notificações:</strong> Integração com Telegram para alertas críticos em tempo real.</li>
+                                    <li><strong>1. Vigilância Informacional Ativa:</strong> Ingestão ininterrupta (ciclos de 5 minutos) monitorando 9+ plataformas: Instagram (API móvel privada), TikTok, Twitter/X (API v2), YouTube Data v3, Telegram (35+ canais), Reddit, Google News via Custom Search, Meta Ads Library e Diários Oficiais.</li>
+                                    <li><strong>2. Avaliação de Ameaça por IA (NLP &amp; Audio):</strong> Normalização semântica, detecção de ofensas/ironias, cálculo contínuo de <code>RiskScore</code> dinâmico, identificação de redes coordenadas de desinformação (<em>astroturfing</em>) e mídias forjadas.</li>
+                                    <li><strong>3. Neutralização &amp; Resposta Imediata:</strong> Congelamento de provas probatórias no cofre pericial (Playwright com espelho HTML e hash SHA-256) e acionamento de contramedidas automatizadas (notificações, DMCA, desindexação e flagging no VirusTotal).</li>
                                 </ul>
 
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🛡️ Módulos Principais</h4>
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🏗️ Arquitetura de Microsserviços &amp; Stack Tecnológica</h4>
                                 <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Detector de Desinformação:</strong> Analisa menções de alto risco a cada 30 min via IA, classificando em LIKELY_FALSE / MISLEADING / UNVERIFIABLE / VERIFIED_TRUE com confidence score e contra-narrativas sugeridas.</li>
-                                    <li><strong>Crisis Radar:</strong> Dashboard de alertas com score de risco ponderado, escalonamento por severidade e checklists de resposta.</li>
-                                    <li><strong>Preservação de Evidências:</strong> Mecanismo que salva capturas de tela, metadados e conteúdo original automaticamente antes de possíveis remoções.</li>
-                                    <li><strong>Monitoramento Parlamentar:</strong> Rastreamento de posicionamentos e menções de figuras públicas.</li>
-                                    <li><strong>Mapa Eleitoral:</strong> Visualização georreferenciada de sentimento por região.</li>
-                                    <li><strong>Análise de Sentimento:</strong> NLP em tempo real sobre o volume de menções por plataforma.</li>
-                                    <li><strong>Meta Ads Monitor:</strong> Acompanhamento de campanhas pagas ligadas ao monitorado.</li>
-                                    <li><strong>SentinelChat:</strong> IA conversacional integrada ao contexto do cliente para consultas sobre crises ativas.</li>
+                                    <li><strong>Backend Principal (NestJS 10 / Node.js 20+):</strong> Arquitetura modular orientada a domínios em TypeScript, controladores REST documentados via OpenAPI/Swagger e gateways WebSockets.</li>
+                                    <li><strong>Banco de Dados &amp; Persistência (PostgreSQL 16 + Prisma ORM):</strong> Modelagem relacional estruturada com índices B-Tree temporais para consultas instantâneas e campos JSONB para metadados ricos de mídia e conexões de rede.</li>
+                                    <li><strong>Mensageria &amp; Cache (Redis 7 + BullMQ 5):</strong> Filas de processamento assíncrono com controle de concorrência, retentativas com backoff exponencial e Dead Letter Queues (DLQ) para isolamento de falhas.</li>
+                                    <li><strong>Inteligência Acústica (Python 3.11 + Faster-Whisper):</strong> Worker dedicado executando modelo quantizado int8 via motor CTranslate2, processando streams de rádio ao vivo com buffer circular de áudio pré-roll de 10s.</li>
+                                    <li><strong>Frontend Command Center (Next.js 14 App Router + React 18):</strong> Interface analítica reativa de alto impacto com Tailwind CSS, animações Framer Motion, gráficos Recharts e atualizações em tempo real via Socket.IO.</li>
+                                    <li><strong>Cofre Pericial &amp; Scrapers:</strong> Playwright com Puppeteer-Stealth para renderização de páginas dinâmicas, rotação de proxies e geração de hashes imutáveis SHA-256.</li>
                                 </ul>
 
-                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">⚙️ Desafios Técnicos</h4>
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🛡️ Módulos e Capacidades Centrais</h4>
                                 <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
-                                    <li><strong>Scrapers Resilientes:</strong> Algoritmos de extração preparados para contornar bloqueios e variações de layout.</li>
-                                    <li><strong>Pipeline de Análise IA:</strong> Cada menção de risco elevado é submetida a análise LLM com scoring de confiança e geração de contra-narrativa.</li>
-                                    <li><strong>Performance:</strong> Redis para filas garante que picos de volume não travam a interface.</li>
-                                    <li><strong>Multiview:</strong> 20+ views especializadas (FakeNews, Judicial, Archive, Polls, Radio, Reports...) construídas como componentes independentes em React.</li>
+                                    <li><strong>Cofre Pericial de Evidências (Chain of Custody):</strong> Preservação pericial em conformidade com o CPP (Art. 158-A a 158-F) e a norma ABNT NBR ISO/IEC 27037. Cada captura gera screenshot 4K, espelho do código-fonte original, carimbo de tempo irrefutável e laudo em PDF assinado com hash SHA-256.</li>
+                                    <li><strong>Arsenal de Contramedidas Automatizadas (10+ Ações):</strong> Geração de notificações extrajudiciais fundadas no Marco Civil da Internet (Art. 19), notificações de takedown DMCA para provedores de hospedagem internacional, sinalização de URLs maliciosas na API VirusTotal e Google Web Risk, e pedidos de desindexação no Google Search.</li>
+                                    <li><strong>Crisis Radar &amp; Matriz de Risco:</strong> Algoritmo de risco ponderado combinando polaridade de sentimento NLP, autoridade do emissor, velocidade de compartilhamento viral e alcance estimado.</li>
+                                    <li><strong>Escuta de Rádios com Faster-Whisper:</strong> Monitoramento contínuo de emissoras AM/FM via internet. Transcrição contínua em tempo real com identificação de palavras-chave sensíveis e disparo automático de alertas no Telegram.</li>
+                                    <li><strong>Inteligência Geográfica &amp; Competitiva:</strong> Mapeamento vetorial de sentimento regionalizado, monitoramento de menções parlamentares e biblioteca de anúncios pagos via Meta Ad Library.</li>
                                 </ul>
 
                                 <div class="testing-highlight-box">
                                     <div class="testing-highlight-title">
-                                        <i class="fas fa-vial"></i> Estratégia de Testes Automatizados & Resiliência (Jest & Vitest)
+                                        <i class="fas fa-vial"></i> Estratégia de Testes Automatizados & Qualidade de Software
                                     </div>
                                     <ul class="testing-highlight-list">
                                         <li>
                                             <span class="testing-tag">Jest</span><span class="testing-tag">TypeScript</span>
-                                            <strong>Testes Unitários do Motor de Risco Reputacional:</strong> Testes unitários do algoritmo ponderado de risco (<code>RiskScoringEngine</code>): validação matemática dos scores de severidade com base em sentimento NLP (-1.0 a +1.0), autoridade do canal e velocidade de propagação viral.
+                                            <strong>Testes Unitários do Motor de Risco Reputacional:</strong> Testes matemáticos isolados do algoritmo de scoring (<code>RiskScoringEngine</code>): validação da matriz ponderada de severidade, polaridade de sentimento (-1.0 a +1.0) e detecção de anomalias em picos de volume.
                                         </li>
                                         <li>
-                                            <span class="testing-tag">Supertest</span><span class="testing-tag">API REST</span>
-                                            <strong>Testes de Integração de Endpoints:</strong> Testes de rotas da API com <code>Supertest</code> cobrindo autenticação JWT, filtragem de alertas críticos e validação de contratos com schemas Zod.
+                                            <span class="testing-tag">Supertest</span><span class="testing-tag">Zod</span>
+                                            <strong>Testes de Integração de Endpoints &amp; Contratos:</strong> Cobertura de rotas REST com <code>Supertest</code>, validação estrita de schemas de entrada/saída com Zod e autenticação JWT por perfil de acesso.
                                         </li>
                                         <li>
-                                            <span class="testing-tag">Nock</span><span class="testing-tag">Mocking</span>
-                                            <strong>Mocking de Serviços Externos & Resiliência:</strong> Mocking de APIs de mensageria (Telegram Bot API) e LLM APIs. Simulação de cenários de queda de rede, rate limit (HTTP 429) e retentativas com backoff exponencial.
+                                            <span class="testing-tag">BullMQ</span><span class="testing-tag">Redis DLQ</span>
+                                            <strong>Testes de Concorrência &amp; Dead Letter Queue:</strong> Simulação de sobrecarga em ingestão de dados em tempo real, validando que filas assíncronas do BullMQ absorvam picos sem perda de eventos e com descarte seguro para DLQ.
                                         </li>
                                         <li>
-                                            <span class="testing-tag">Redis Mock</span><span class="testing-tag">Dead Letter Queue</span>
-                                            <strong>Testes de Fila & Concorrência Assíncrona:</strong> Testes garantindo que picos repentinos de menções sejam enfileirados no Redis sem perda de pacotes, com tratamento automático para mensagens corrompidas na DLQ.
+                                            <span class="testing-tag">Playwright</span><span class="testing-tag">SHA-256</span>
+                                            <strong>Testes de Integridade da Cadeia de Custódia:</strong> Validação automatizada do pipeline de preservação: constatação de que qualquer byte alterado no snapshot HTML corrompe a correspondência do hash SHA-256, garantindo inviolabilidade forense.
                                         </li>
                                         <li>
-                                            <span class="testing-tag">React Testing Library</span><span class="testing-tag">Next.js</span>
-                                            <strong>Testes de Componentes do Command Center:</strong> Testes de UI validando renderização de gráficos em tempo real, alternância de filtros de crise e preservação de evidências digitais.
+                                            <span class="testing-tag">React Testing Library</span><span class="testing-tag">Socket.IO</span>
+                                            <strong>Testes de UI Reativa &amp; WebSockets:</strong> Testes de renderização em tempo real das 50+ visões do painel, garantindo renderização assíncrona fluida de métricas de crise e filtros dinâmicos.
                                         </li>
                                     </ul>
                                 </div>
 
                                 <div class="showcase-stats" style="margin-top: 1.5rem;">
-                                    <div class="stat-item"><span class="stat-number">20+</span><span class="stat-label">Views no Dashboard</span></div>
-                                    <div class="stat-item"><span class="stat-number">4</span><span class="stat-label">Tecnologias de BD</span></div>
-                                    <div class="stat-item"><span class="stat-number">30min</span><span class="stat-label">Ciclo de Análise IA</span></div>
-                                    <div class="stat-item"><span class="stat-number">Real-time</span><span class="stat-label">Alertas Telegram</span></div>
+                                    <div class="stat-item"><span class="stat-number">50+</span><span class="stat-label">Visões no Command Center</span></div>
+                                    <div class="stat-item"><span class="stat-number">9+</span><span class="stat-label">Canais Monitorados 24/7</span></div>
+                                    <div class="stat-item"><span class="stat-number">SHA-256</span><span class="stat-label">Cadeia de Custódia Forense</span></div>
+                                    <div class="stat-item"><span class="stat-number">10+</span><span class="stat-label">Armas de Contramedidas</span></div>
                                 </div>
 
-                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">Next.js</span>
+                                <div style="display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+                                    <span class="tech-tag">NestJS 10</span>
+                                    <span class="tech-tag">Next.js 14</span>
                                     <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Redis</span>
-                                    <span class="tech-tag">Tailwind CSS</span>
+                                    <span class="tech-tag">PostgreSQL 16</span>
+                                    <span class="tech-tag">Prisma ORM</span>
+                                    <span class="tech-tag">Redis 7</span>
+                                    <span class="tech-tag">BullMQ 5</span>
+                                    <span class="tech-tag">Python 3.11</span>
+                                    <span class="tech-tag">Faster-Whisper</span>
+                                    <span class="tech-tag">Playwright</span>
+                                    <span class="tech-tag">Socket.IO</span>
+                                    <span class="tech-tag">Docker Compose</span>
+                                </div>
                                 </div>
 
                                 <div class="project-gallery" style="margin-top: 1.5rem;">
@@ -932,7 +1014,7 @@ function viewCode(projectType) {
         repoUrl = 'https://github.com/davifeels/PuffsZone';
         window.open(repoUrl, '_blank');
     } else if (projectType === 'riskcore') {
-        repoUrl = 'https://github.com/davifeels/riskcore-ai-frontend';
+        repoUrl = 'https://github.com/davifeels/RiskCore-AI';
         window.open(repoUrl, '_blank');
     } else if (projectType === 'nexus') {
         repoUrl = 'https://github.com/davifeels/nexus-ai-core';
@@ -1226,3 +1308,54 @@ function showToast(message) {
         toast.classList.remove('show');
     }, 2800);
 }
+
+
+/* ================================================================== */
+/* WORLD-CLASS INTERACTIVE CONTROLS: TERMINAL & MODAL TABS
+/* ================================================================== */
+
+window.switchTerminalTab = function(tabId) {
+    document.querySelectorAll('.terminal-tab').forEach(tab => {
+        tab.classList.toggle('active', tab.getAttribute('data-tab') === tabId);
+    });
+    document.querySelectorAll('.terminal-pane').forEach(pane => {
+        pane.classList.toggle('active', pane.id === tabId);
+    });
+};
+
+window.copyTerminalCode = function() {
+    const activePane = document.querySelector('.terminal-pane.active');
+    if (activePane) {
+        // Obter apenas o texto visível sem o cursor
+        const text = activePane.innerText.replace('█', '').trim();
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.querySelector('.terminal-copy-btn');
+                if (btn) {
+                    btn.innerHTML = '<i class="fas fa-check" style="color:#10b981"></i>';
+                    setTimeout(() => { btn.innerHTML = '<i class="fas fa-copy"></i>'; }, 1800);
+                }
+                if (typeof showToast === 'function') {
+                    showToast('Saída do terminal copiada para a área de transferência! 📋');
+                }
+            }).catch(() => {});
+        }
+    }
+};
+
+window.switchModalTab = function(event, tabId) {
+    if (event) event.preventDefault();
+    const parent = event ? event.target.closest('.project-demo') : document.querySelector('.project-demo');
+    if (!parent) return;
+    
+    parent.querySelectorAll('.modal-tab-btn').forEach(btn => btn.classList.remove('active'));
+    parent.querySelectorAll('.modal-tab-content').forEach(pane => pane.classList.remove('active'));
+    
+    if (event && event.currentTarget) {
+        event.currentTarget.classList.add('active');
+    }
+    const target = parent.querySelector('#' + tabId);
+    if (target) {
+        target.classList.add('active');
+    }
+};

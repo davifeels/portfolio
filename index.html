@@ -45,43 +45,109 @@
                 <div class="profile-photo">
                     <img src="assets/images/profile.jpg" alt="Davi Anderson" class="profile-img">
                     <div class="profile-overlay">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-terminal"></i>
                     </div>
                 </div>
-                <div class="availability-badge">
-                    <span class="live-dot"></span>
-                    <span>Disponível para Oportunidades · Java Backend Júnior</span>
+                <div class="availability-badge executive">
+                    <span class="live-dot pulse-emerald"></span>
+                    <span class="badge-text">DISPONÍVEL PARA CONTRATAÇÃO · BACKEND JAVA JÚNIOR</span>
                 </div>
                 <h1 class="hero-title">
                     Davi Anderson
+                    <span class="hero-title-sub">Backend Software Engineer</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Desenvolvedor de Software | Backend Java • Spring Boot • APIs REST | Full Stack • PostgreSQL
+                    Java 25 &amp; Spring Boot 4 • Microsserviços &amp; APIs REST • PostgreSQL 18 • Testcontainers • Docker &amp; Cloud
                 </p>
-                <p class="hero-location">
-                    📍 Planaltina - DF | 📧 davifeels333@gmail.com | 📱 (61) 99428-5138
+                <p class="hero-description">
+                    Especialista em construir APIs RESTful resilientes, microsserviços desacoplados e governança de dados. <strong>2 anos de experiência em autarquia federal (ITI / Presidência da República)</strong>, aplicando criptografia de Estado, LGPD, testes herméticos sem mocks em memória e sistemas ativos em produção Linux.
                 </p>
+                <div class="hero-credentials">
+                    <span class="cred-chip"><i class="fas fa-shield-halved"></i> 24m ITI (Presidência)</span>
+                    <span class="cred-chip"><i class="fas fa-server"></i> Produção VPS Linux</span>
+                    <span class="cred-chip"><i class="fas fa-vial"></i> Testcontainers (Zero H2)</span>
+                </div>
                 <div class="hero-buttons">
-                    <a href="curriculo.html" class="btn btn-primary" target="_blank">
-                        <i class="fas fa-file-alt"></i> Ver Currículo
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-cubes"></i> Ver Projetos
                     </a>
-                    <a href="#projects" class="btn btn-secondary">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-secondary">Contato</a>
+                    <a href="curriculo.html" class="btn btn-secondary" target="_blank">
+                        <i class="fas fa-file-pdf"></i> Currículo ATS
+                    </a>
+                    <a href="https://github.com/davifeels" target="_blank" rel="noopener" class="btn btn-ghost">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </div>
             </div>
+            
             <div class="hero-visual">
-                <div class="floating-elements">
-                    <div class="floating-card card-security">
-                        <i class="fab fa-java"></i>
-                        <span>Java &amp; Spring</span>
+                <!-- Terminal Interativo Executivo -->
+                <div class="hero-terminal" id="heroTerminal">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="t-dot dot-red"></span>
+                            <span class="t-dot dot-yellow"></span>
+                            <span class="t-dot dot-green"></span>
+                        </div>
+                        <div class="terminal-tabs">
+                            <button class="terminal-tab active" data-tab="tab-api" onclick="switchTerminalTab('tab-api')">
+                                <i class="fas fa-code"></i> api-health.sh
+                            </button>
+                            <button class="terminal-tab" data-tab="tab-vps" onclick="switchTerminalTab('tab-vps')">
+                                <i class="fas fa-server"></i> puffszone.service
+                            </button>
+                            <button class="terminal-tab" data-tab="tab-iti" onclick="switchTerminalTab('tab-iti')">
+                                <i class="fas fa-shield-alt"></i> iti-governance.env
+                            </button>
+                        </div>
+                        <button class="terminal-copy-btn" onclick="copyTerminalCode()" title="Copiar saída do terminal">
+                            <i class="fas fa-copy"></i>
+                        </button>
                     </div>
-                    <div class="floating-card card-surveillance">
-                        <i class="fas fa-database"></i>
-                        <span>PostgreSQL &amp; PDV</span>
-                    </div>
-                    <div class="floating-card card-ai">
-                        <i class="fab fa-docker"></i>
-                        <span>Docker &amp; Cloud</span>
+                    
+                    <div class="terminal-body">
+                        <!-- Tab 1: API Health / AegisCore -->
+                        <div class="terminal-pane active" id="tab-api">
+                            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">curl</span> -s https://api.aegiscore.internal/actuator/health | jq</div>
+                            <div class="t-line t-output">{</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"status"</span>: <span class="t-str">"UP"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"runtime"</span>: <span class="t-str">"Java 25 (Eclipse Temurin)"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"framework"</span>: <span class="t-str">"Spring Boot 4.1.1"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"database"</span>: <span class="t-str">"PostgreSQL 18 Multi-AZ (Connected)"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"schema_migrations"</span>: <span class="t-str">"Flyway V1 &amp; V2 (Applied)"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"test_parity"</span>: <span class="t-str">"Testcontainers PostgreSQL (0 Mocks)"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"audit_bus"</span>: <span class="t-str">"Spring Events (AFTER_COMMIT / REQUIRES_NEW)"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"security"</span>: <span class="t-str">"Stateless HTTP Basic + BCrypt RBAC"</span>,</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">"latency_p99"</span>: <span class="t-num">"22ms"</span></div>
+                            <div class="t-line t-output">}</div>
+                            <div class="t-line t-cursor"><span class="t-prompt">$</span> <span class="blinking-cursor">█</span></div>
+                        </div>
+
+                        <!-- Tab 2: VPS Produção -->
+                        <div class="terminal-pane" id="tab-vps">
+                            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">systemctl</span> status puffszone-backend.service</div>
+                            <div class="t-line t-output">● puffszone.service - Commercial POS &amp; ERP API</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;Loaded: loaded (/etc/systemd/system/puffszone.service)</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;<span class="t-key">Active:</span> <span class="t-success">active (running)</span> since VPS Boot</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;Host: Debian GNU/Linux 12 (bookworm)</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;Ingress: HTTPS via Nginx Reverse Proxy (SSL Certbot)</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;Domain: <span class="t-str">https://puffszone.tech</span> (Live in Production)</div>
+                            <div class="t-line t-output">&nbsp;&nbsp;JVM: OpenJDK 21 64-Bit Server VM (ZGC Enabled)</div>
+                            <div class="t-line t-cursor"><span class="t-prompt">$</span> <span class="blinking-cursor">█</span></div>
+                        </div>
+
+                        <!-- Tab 3: ITI Federal Governance -->
+                        <div class="terminal-pane" id="tab-iti">
+                            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat</span> /etc/iti/clearance.conf</div>
+                            <div class="t-line t-comment"># Instituto Nacional de Tecnologia da Informação (ITI)</div>
+                            <div class="t-line t-comment"># Presidência da República / Casa Civil</div>
+                            <div class="t-line t-output"><span class="t-key">INSTITUTION</span>=<span class="t-str">"ITI Federal Autarchy (Brasília - DF)"</span></div>
+                            <div class="t-line t-output"><span class="t-key">TENURE</span>=<span class="t-str">"24 Months (18m Dev Java + 6m DBA PostgreSQL)"</span></div>
+                            <div class="t-line t-output"><span class="t-key">COMPLIANCE</span>=<span class="t-str">"LGPD Art. 37 (Catalogação &amp; Auditoria)"</span></div>
+                            <div class="t-line t-output"><span class="t-key">SECURITY_STACK</span>=<span class="t-str">"ICP-Brasil PKI · Criptografia RSA/AES · RBAC"</span></div>
+                            <div class="t-line t-output"><span class="t-key">DATABASE_OPTIMIZATION</span>=<span class="t-num">"-40% Query Latency"</span></div>
+                            <div class="t-line t-cursor"><span class="t-prompt">$</span> <span class="blinking-cursor">█</span></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -91,48 +157,86 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        <strong>Desenvolvedor Backend Java Júnior | Spring Boot · APIs REST · PostgreSQL · Docker</strong><br>
-                        Desenvolvedor backend com <strong>dois anos de estágio no Instituto Nacional de Tecnologia da Informação (ITI)</strong>:
-                        <strong>18 meses em desenvolvimento de sistemas com Java e Spring Boot</strong> e <strong>6 meses em administração e modelagem de bancos de dados PostgreSQL</strong>.
-                        Atuação com APIs REST, integração de sistemas corporativos, autenticação e autorização com JWT, criptografia (RSA/AES), controle de acesso por perfis (RBAC), PostgreSQL, Docker e pipelines CI/CD em produção.
-                    </p>
-                    <p>
-                        <strong>Autor e desenvolvedor do PuffsZone</strong>, sistema de gestão comercial e PDV desenvolvido com Java 21, Spring Boot 3, Spring Security, Flyway, React 19, TypeScript e Docker, publicado e operando em produção em VPS Linux sob proxy Nginx e HTTPS. Cursa <strong>Tecnologia em Banco de Dados (UniCesumar, conclusão prevista em 02/2027)</strong> e busca oportunidade como <strong>Desenvolvedor Java Júnior</strong>.
-                    </p>
-                    <div class="education-section">
-                        <h3>Formação Acadêmica &amp; Cursos Complementares</h3>
-                        <div class="education-item">
-                            <strong>Tecnólogo em Banco de Dados (Curso Superior de Tecnologia)</strong>
-                            <span>UniCesumar — Conclusão prevista: Fevereiro de 2027 (02/2027)</span>
-                            <span class="education-item-sub">Modelagem relacional, otimização de consultas SQL, integridade transacional e governança de dados</span>
-                        </div>
-                        <div class="education-item">
-                            <strong>Cursos Complementares Oficiais (AWS, Containers &amp; IA)</strong>
-                            <span>• AWS Cloud Practitioner Essentials (treinamento oficial AWS)</span>
-                            <span class="education-item-sub">• Amazon API Gateway for Serverless Applications | • Introduction to Containers (DevOps &amp; Kubernetes) | • Security, Compliance &amp; Governance for AI Solutions</span>
-                        </div>
+            <h2 class="section-title">Sobre Mim &amp; Pilares de Engenharia</h2>
+            <p class="about-lead">
+                Desenvolvedor Backend com formação prática de <strong>2 anos em ambiente de missão crítica na Presidência da República</strong> e autor de sistemas operando em produção real. Foco em arquitetura limpa, segurança defensiva e testes herméticos.
+            </p>
+
+            <div class="about-bento-grid">
+                <!-- Pilar 1 -->
+                <div class="bento-card bento-core">
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fab fa-java"></i></div>
+                        <span class="bento-badge">Core Backend</span>
                     </div>
-                    <div class="quick-stats">
-                        <div class="stat-card">
-                            <div class="stat-number">2 Anos</div>
-                            <div class="stat-label">Experiência no ITI (Dev + DBA)</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">Java 21</div>
-                            <div class="stat-label">Spring Boot 3 &amp; APIs REST</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Em Produção Real (PuffsZone)</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">Postgres</div>
-                            <div class="stat-label">Modelagem, Flyway &amp; Tuning</div>
-                        </div>
+                    <h3>Engenharia de Software &amp; APIs REST</h3>
+                    <p>
+                        Construção de microsserviços e APIs com <strong>Java 25 e Spring Boot 4</strong>. Aplicação do princípio do desacoplamento transacional via <strong>Spring Events pós-commit</strong>, uso de Records para DTOs imutáveis, tratamento global de exceções e contratos de API documentados com OpenAPI/Swagger.
+                    </p>
+                    <div class="bento-tags">
+                        <span>Java 25/21</span>
+                        <span>Spring Boot</span>
+                        <span>Spring Events</span>
+                        <span>Virtual Threads</span>
+                        <span>OpenAPI 3</span>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="bento-card bento-security">
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fas fa-shield-halved"></i></div>
+                        <span class="bento-badge">Segurança &amp; Estado</span>
+                    </div>
+                    <h3>Criptografia, PKI &amp; Governança Governamental</h3>
+                    <p>
+                        Experiência prática durante <strong>24 meses no ITI (Presidência da República)</strong>, autoridade certificadora raiz da ICP-Brasil. Implementação de conformidade com o <strong>Art. 37 da LGPD</strong>, segregação estrita de privilégios (<strong>RBAC</strong>), proteção de credenciais com <strong>BCrypt</strong> e sanitização anti-log injection.
+                    </p>
+                    <div class="bento-tags">
+                        <span>Presidência da República</span>
+                        <span>ICP-Brasil PKI</span>
+                        <span>LGPD Art. 37</span>
+                        <span>RBAC &amp; BCrypt</span>
+                        <span>AppSec</span>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="bento-card bento-data">
+                    <div class="bento-header">
+                        <div class="bento-icon"><i class="fas fa-database"></i></div>
+                        <span class="bento-badge">Dados &amp; Produção</span>
+                    </div>
+                    <h3>PostgreSQL, Testcontainers &amp; Produção Real</h3>
+                    <p>
+                        Graduando em <strong>Banco de Dados (UniCesumar)</strong> com 6 meses de DBA no ITI (-40% latência em queries). Versionamento determinístico com <strong>Flyway</strong>, testes herméticos de integração com <strong>Testcontainers</strong> (sem mocks em memória) e autor do <strong>PuffsZone</strong> operando em VPS Linux sob Nginx.
+                    </p>
+                    <div class="bento-tags">
+                        <span>PostgreSQL 18</span>
+                        <span>Flyway</span>
+                        <span>Testcontainers</span>
+                        <span>Linux Debian VPS</span>
+                        <span>Docker Multi-Stage</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formação & Certificações -->
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <div class="edu-info">
+                        <h4>Tecnólogo em Banco de Dados (Curso Superior de Tecnologia)</h4>
+                        <span class="edu-inst">UniCesumar — Conclusão prevista: Fevereiro de 2027 (02/2027)</span>
+                        <p class="edu-desc">Modelagem relacional, otimização de consultas SQL, integridade transacional ACID e governança de dados corporativos.</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="edu-icon"><i class="fab fa-aws"></i></div>
+                    <div class="edu-info">
+                        <h4>Especializações Oficiais &amp; Certificações em Nuvem</h4>
+                        <span class="edu-inst">AWS Training &amp; Certification</span>
+                        <p class="edu-desc">• AWS Cloud Practitioner Essentials | • Amazon API Gateway for Serverless Applications | • Containers, Docker &amp; Kubernetes | • Security &amp; Compliance for AI Solutions.</p>
                     </div>
                 </div>
             </div>
@@ -499,63 +603,22 @@
             </div>
 
             <div class="projects-grid">
-                <!-- PuffsZone -->
-                <div class="project-card" data-project="puffszone" data-category="backend fullstack">
-                    <div class="project-image">
-                        <div class="card-status-pill status-production"><span class="mini-pulse"></span> Em Produção</div>
-                        <img src="assets/puffszone.png" alt="PuffsZone logo">
-                    </div>
-                    <div class="project-content">
-                        <h3>PuffsZone — Sistema de Gestão Comercial e PDV</h3>
-                        <p>
-                            Aplicação web completa voltada à gestão comercial, controle de estoque, operações de caixa e gerenciamento financeiro.
-                            Desenvolvida com regras de negócio avançadas, segurança JWT e implantada em produção em VPS Linux com Docker, Nginx e HTTPS.
-                        </p>
-                        <div class="project-highlights">
-                            <span class="highlight">✓ Ponto de Venda (PDV) &amp; Controle de Caixa</span>
-                            <span class="highlight">✓ Java 21 + Spring Boot 3 &amp; React 19</span>
-                            <span class="highlight">✓ Testes com JUnit 5, Mockito &amp; MockMvc</span>
-                            <span class="highlight">✓ Em Produção Real com Docker &amp; Nginx</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Java 21</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">React 19</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">PostgreSQL 16</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Tailwind CSS</span>
-                        </div>
-                        <div class="project-buttons">
-                            <button class="btn btn-primary" onclick="openProject('puffszone')">
-                                <i class="fas fa-external-link-alt"></i> Ver Detalhes
-                            </button>
-                            <a href="https://puffszone.tech" target="_blank" rel="noopener" class="btn btn-secondary">
-                                <i class="fas fa-globe"></i> Ver Online
-                            </a>
-                            <button class="btn btn-secondary" onclick="viewCode('puffszone')">
-                                <i class="fab fa-github"></i> GitHub
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- AegisCore -->
+                <!-- AegisCore (Destaque Principal) -->
                 <div class="project-card" data-project="aegiscore" data-category="backend">
                     <div class="project-image">
-                        <div class="card-status-pill status-aegis"><i class="fas fa-shield-halved"></i> Cloud Security &amp; Audit</div>
+                        <div class="card-status-pill status-aegis"><i class="fas fa-shield-halved"></i> Destaque · Cloud Security &amp; Audit</div>
                         <img src="assets/aegiscore.svg" alt="AegisCore logo">
                     </div>
                     <div class="project-content">
                         <h3>AegisCore — Gestão de Ativos &amp; Segurança Cloud</h3>
                         <p>
                             Plataforma backend corporativa para governança, inventário e controle de segurança de ativos em nuvem (AWS, Azure e GCP).
-                            Desenvolvida com API RESTful em Java 25 e Spring Boot 4, controle de acesso RBAC, trilha de auditoria orientada a eventos e persistência com PostgreSQL 18 e Flyway.
+                            Desenvolvida com API RESTful em Java 25 e Spring Boot 4, controle de acesso RBAC com senhas em BCrypt, trilha de auditoria desacoplada pós-commit (@TransactionalEventListener) e persistência com PostgreSQL 18 e Flyway.
                         </p>
                         <div class="project-highlights">
                             <span class="highlight">✓ Trilha de Auditoria com Filtros &amp; Paginação</span>
                             <span class="highlight">✓ Java 25 + Spring Boot 4 &amp; PostgreSQL 18</span>
-                            <span class="highlight">✓ Testes de Integração com Testcontainers</span>
+                            <span class="highlight">✓ Testes de Integração Herméticos com Testcontainers</span>
                             <span class="highlight">✓ CI/CD com GitHub Actions &amp; Arquitetura AWS</span>
                         </div>
                         <div class="project-tech">
@@ -580,11 +643,92 @@
                     </div>
                 </div>
 
+                <!-- PuffsZone (Concluído & Operacional) -->
+                <div class="project-card" data-project="puffszone" data-category="backend fullstack">
+                    <div class="project-image">
+                        <div class="card-status-pill status-production"><span class="mini-pulse"></span> Concluído &amp; Operacional</div>
+                        <img src="assets/puffszone.svg" alt="PuffsZone logo">
+                    </div>
+                    <div class="project-content">
+                        <h3>PuffsZone — Sistema de Gestão Comercial e PDV</h3>
+                        <p>
+                            Sistema comercial completo concluído e em funcionamento ativo em VPS Linux com Docker, Nginx e HTTPS.
+                            Desenvolvido com Ponto de Venda (PDV) de alta vazão, controle atômico de estoque, fechamento cego de turnos de caixa, fluxo financeiro empresarial e cupons de desconto.
+                        </p>
+                        <div class="project-highlights">
+                            <span class="highlight">✓ Ponto de Venda (PDV) &amp; Fechamento de Caixa</span>
+                            <span class="highlight">✓ Java 21 + Spring Boot 3 &amp; React 19</span>
+                            <span class="highlight">✓ Testes com JUnit 5, Mockito &amp; MockMvc</span>
+                            <span class="highlight">✓ Concluído &amp; Operacional em VPS Linux</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java 21</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">React 19</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">PostgreSQL 16</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Nginx SSL</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn btn-primary" onclick="openProject('puffszone')">
+                                <i class="fas fa-external-link-alt"></i> Ver Detalhes
+                            </button>
+                            <a href="https://puffszone.tech" target="_blank" rel="noopener" class="btn btn-secondary">
+                                <i class="fas fa-globe"></i> Ver Online
+                            </a>
+                            <button class="btn btn-secondary" onclick="viewCode('puffszone')">
+                                <i class="fab fa-github"></i> GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RiskCore AI (Vigilância Multicanal & Defesa Reputacional) -->
+                <div class="project-card" data-project="riskcore" data-category="ai fullstack backend">
+                    <div class="project-image">
+                        <div class="card-status-pill status-ai"><i class="fas fa-shield-virus"></i> Ciberdefesa &amp; IA 24/7</div>
+                        <img src="assets/logorisk.png" alt="RiskCore AI logo">
+                    </div>
+                    <div class="project-content">
+                        <h3>RiskCore AI — Inteligência &amp; Defesa Reputacional</h3>
+                        <p>
+                            Plataforma corporativa de cibersegurança informacional e monitoramento estratégico contínuo 24/7 em 9+ canais.
+                            Equipada com motor de IA semântico para detecção de riscos, cofre pericial de evidências digitais com hash SHA-256 (ISO/IEC 27037), escuta de rádios com Faster-Whisper e arsenal automatizado de contramedidas.
+                        </p>
+                        <div class="project-highlights">
+                            <span class="highlight">✓ Vigilância Multicanal 24/7 (9+ Plataformas)</span>
+                            <span class="highlight">✓ Cofre Pericial SHA-256 (Cadeia de Custódia)</span>
+                            <span class="highlight">✓ IA Acústica Faster-Whisper (Transmissão de Rádio)</span>
+                            <span class="highlight">✓ Arsenal Automatizado de Contramedidas (DMCA &amp; Takedown)</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">NestJS 10</span>
+                            <span class="tech-tag">Next.js 14</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">PostgreSQL 16</span>
+                            <span class="tech-tag">Prisma ORM</span>
+                            <span class="tech-tag">Redis / BullMQ</span>
+                            <span class="tech-tag">Python Faster-Whisper</span>
+                            <span class="tech-tag">Playwright</span>
+                        </div>
+                        <div class="project-buttons">
+                            <button class="btn btn-primary" onclick="openProject('riskcore')">
+                                <i class="fas fa-external-link-alt"></i> Ver Detalhes
+                            </button>
+                            <button class="btn btn-secondary" onclick="viewCode('riskcore')">
+                                <i class="fab fa-github"></i> GitHub
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- DataProtection -->
                 <div class="project-card" data-project="dataprotection" data-category="backend">
                     <div class="project-image">
                         <div class="card-status-pill status-iti"><i class="fas fa-landmark"></i> ITI (Federal)</div>
-                        <img src="assets/datapretection.png" alt="DataProtection logo">
+                        <img src="assets/dataprotection.svg" alt="DataProtection logo">
                     </div>
                     <div class="project-content">
                         <h3>DataProtection — Governança de Dados &amp; LGPD</h3>
@@ -617,49 +761,11 @@
                     </div>
                 </div>
 
-                <!-- RiskCore AI -->
-                <div class="project-card" data-project="riskcore" data-category="ai fullstack">
-                    <div class="project-image">
-                        <div class="card-status-pill status-ai"><i class="fas fa-brain"></i> IA &amp; Crises</div>
-                        <img src="assets/logorisk.png" alt="RiskCore AI logo">
-                    </div>
-                    <div class="project-content">
-                        <h3>RiskCore AI — Monitoramento de Reputação Digital</h3>
-                        <p>
-                            Plataforma com Inteligência Artificial para monitoramento de reputação digital, identificação preditiva de riscos e gestão de crises.
-                            Integração de serviços backend ao frontend, persistência em PostgreSQL via Prisma ORM e camada de alta performance com Redis.
-                        </p>
-                        <div class="project-highlights">
-                            <span class="highlight">✓ Monitoramento de Reputação &amp; Crises</span>
-                            <span class="highlight">✓ Testes Automatizados com Jest &amp; Supertest</span>
-                            <span class="highlight">✓ PostgreSQL + Prisma ORM + Redis Cache</span>
-                            <span class="highlight">✓ Arquitetura Modular &amp; Escalável</span>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">TypeScript</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Next.js</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Prisma ORM</span>
-                            <span class="tech-tag">Redis</span>
-                        </div>
-                        <div class="project-buttons">
-                            <button class="btn btn-primary" onclick="openProject('riskcore')">
-                                <i class="fas fa-external-link-alt"></i> Ver Detalhes
-                            </button>
-                            <button class="btn btn-secondary" onclick="viewCode('riskcore')">
-                                <i class="fab fa-github"></i> GitHub
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Nexus AI OS -->
                 <div class="project-card" data-project="nexus" data-category="ai backend">
                     <div class="project-image">
                         <div class="card-status-pill status-ai"><i class="fas fa-microchip"></i> Memória + RAG</div>
-                        <img src="assets/logonexus.png" alt="Nexus AI OS logo">
+                        <img src="assets/nexus.svg" alt="Nexus AI OS logo">
                     </div>
                     <div class="project-content">
                         <h3>Nexus AI OS — Assistente com Memória Persistente</h3>
@@ -695,7 +801,7 @@
                 <div class="project-card" data-project="mdm" data-category="fullstack">
                     <div class="project-image">
                         <div class="card-status-pill status-mobile"><i class="fas fa-mobile-alt"></i> Kotlin &amp; ML Kit</div>
-                        <img src="assets/logorekkon.png" alt="Rekkon logo">
+                        <img src="assets/rekkon.svg" alt="Rekkon logo">
                     </div>
                     <div class="project-content">
                         <h3>Rekkon — MDM &amp; Controle Parental</h3>
@@ -731,7 +837,7 @@
                 <div class="project-card" data-project="jurimetria" data-category="ai backend">
                     <div class="project-image">
                         <div class="card-status-pill status-legal"><i class="fas fa-balance-scale"></i> LegalTech RAG</div>
-                        <img src="assets/jurimetria.png" alt="Jurimetria Preditiva logo">
+                        <img src="assets/jurimetria.svg" alt="Jurimetria Preditiva logo">
                     </div>
                     <div class="project-content">
                         <h3>Jurimetria Preditiva — Análise Judicial com IA</h3>

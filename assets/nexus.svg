@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 200" width="100%" height="100%">
+  <defs>
+    <!-- Background Radial Glow -->
+    <radialGradient id="nexusGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.38"/>
+      <stop offset="60%" stop-color="#d946ef" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#0b0819" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Outer Geometry Gradient -->
+    <linearGradient id="nexusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#f472b6"/>
+    </linearGradient>
+
+    <!-- 3D Ribbon "N" Gradients -->
+    <linearGradient id="ribbonLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <linearGradient id="ribbonDiag" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <linearGradient id="ribbonRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e879f9"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+
+    <!-- Text Core Gradient -->
+    <linearGradient id="nexusTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="50%" stop-color="#e879f9"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <filter id="nexusNeon" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Glow -->
+  <circle cx="100" cy="100" r="85" fill="url(#nexusGlow)" />
+
+  <!-- Emblem: Isometric Quantum "N" Core -->
+  <g transform="translate(25, 20)">
+    <!-- Hexagonal Quantum Chamber Outer Boundary -->
+    <path d="M 75,12 
+             L 135,42 
+             L 135,118 
+             L 75,158 
+             L 15,118 
+             L 15,42 Z" 
+          fill="#0c091f" 
+          stroke="url(#nexusGrad)" 
+          stroke-width="3" 
+          stroke-linejoin="round"
+          filter="url(#nexusNeon)"/>
+
+    <!-- Inner Chamber Inset -->
+    <path d="M 75,24 
+             L 123,50 
+             L 123,110 
+             L 75,144 
+             L 27,110 
+             L 27,50 Z" 
+          fill="rgba(15, 10, 32, 0.75)" 
+          stroke="rgba(168, 85, 247, 0.35)" 
+          stroke-width="1.5" 
+          stroke-linejoin="round"/>
+
+    <!-- Dimensional Quantum "N" Neural Monolith -->
+    <!-- Left Column -->
+    <path d="M 45,115 L 45,55 L 60,45 L 60,105 Z" fill="url(#ribbonLeft)"/>
+    <!-- Diagonal Bridge -->
+    <path d="M 45,55 L 60,45 L 105,115 L 90,125 Z" fill="url(#ribbonDiag)"/>
+    <!-- Right Column -->
+    <path d="M 90,125 L 90,65 L 105,55 L 105,115 Z" fill="url(#ribbonRight)"/>
+
+    <!-- Synaptic Nodes / Vector Embeddings -->
+    <circle cx="45" cy="55" r="3.5" fill="#38bdf8"/>
+    <circle cx="105" cy="115" r="3.5" fill="#f43f5e"/>
+    <circle cx="75" cy="85" r="4.5" fill="#ffffff" filter="url(#nexusNeon)"/>
+
+    <!-- Vector Field Orbit Trajectories -->
+    <path d="M 30,85 C 30,60 120,60 120,85 C 120,110 30,110 30,85" 
+          fill="none" 
+          stroke="rgba(192, 132, 252, 0.45)" 
+          stroke-width="1.2" 
+          stroke-dasharray="4,4"/>
+  </g>
+
+  <!-- Typography & Brand Text -->
+  <g transform="translate(195, 20)">
+    <!-- Main Title -->
+    <text x="0" y="78" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="50" fill="#ffffff" letter-spacing="3.5">
+      NEXUS<tspan fill="url(#nexusTextGrad)"> AI OS</tspan>
+    </text>
+
+    <!-- Subtitle Badge -->
+    <text x="3" y="112" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#c084fc" letter-spacing="2">
+      AUTONOMOUS AGENT &amp; PERSISTENT MEMORY
+    </text>
+
+    <!-- Technology Pills Row -->
+    <g transform="translate(0, 130)">
+      <!-- Pill 1 -->
+      <rect x="0" y="0" width="135" height="25" rx="6" fill="rgba(139, 92, 246, 0.12)" stroke="rgba(139, 92, 246, 0.35)" stroke-width="1"/>
+      <text x="12" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#c4b5fd">PYTHON · FASTAPI</text>
+
+      <!-- Pill 2 -->
+      <rect x="145" y="0" width="160" height="25" rx="6" fill="rgba(217, 70, 239, 0.12)" stroke="rgba(217, 70, 239, 0.35)" stroke-width="1"/>
+      <text x="155" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#f0abfc">PGVECTOR · RAG ENGINE</text>
+
+      <!-- Pill 3 -->
+      <rect x="315" y="0" width="140" height="25" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1"/>
+      <text x="323" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#7dd3fc">34 COGNITIVE AGENTS</text>
+    </g>
+  </g>
+</svg>
