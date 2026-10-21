@@ -42,31 +42,44 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <div class="profile-photo">
-                    <img src="assets/images/profile.jpg" alt="Davi Anderson" class="profile-img">
-                    <div class="profile-overlay">
-                        <i class="fas fa-terminal"></i>
+                <!-- Identity Bar (Photo + Availability + Clear Credentials) -->
+                <div class="hero-identity-bar">
+                    <div class="profile-photo-wrap">
+                        <img src="assets/images/profile.jpg" alt="Davi Anderson" class="profile-img">
+                        <span class="avatar-status-badge" title="Disponível para contratação"><span class="live-dot pulse-emerald"></span></span>
+                    </div>
+                    <div class="identity-info">
+                        <div class="availability-badge executive">
+                            <span class="live-dot pulse-emerald"></span>
+                            <span class="badge-text">DISPONÍVEL PARA CONTRATAÇÃO</span>
+                        </div>
+                        <div class="identity-meta-chips">
+                            <span class="meta-tag"><i class="fas fa-landmark"></i> 24m ITI (Presidência da República)</span>
+                            <span class="meta-tag"><i class="fas fa-server"></i> VPS Linux em Produção</span>
+                        </div>
                     </div>
                 </div>
-                <div class="availability-badge executive">
-                    <span class="live-dot pulse-emerald"></span>
-                    <span class="badge-text">DISPONÍVEL PARA CONTRATAÇÃO · BACKEND JAVA JÚNIOR</span>
+
+                <h1 class="hero-name">Davi Anderson</h1>
+                <div class="hero-role-wrapper">
+                    <h2 class="hero-role-title">Backend Software Engineer</h2>
+                    <span class="hero-role-badge"><i class="fab fa-java"></i> Java 25 &amp; Spring Boot 4</span>
                 </div>
-                <h1 class="hero-title">
-                    Davi Anderson
-                    <span class="hero-title-sub">Backend Software Engineer</span>
-                </h1>
+                
                 <p class="hero-subtitle">
-                    Java 25 &amp; Spring Boot 4 • Microsserviços &amp; APIs REST • PostgreSQL 18 • Testcontainers • Docker &amp; Cloud
+                    APIs RESTful de Alta Concorrência • PostgreSQL 18 • Testcontainers (Zero H2) • Cloud AWS &amp; Docker
                 </p>
+                
                 <p class="hero-description">
                     Especialista em construir APIs RESTful resilientes, microsserviços desacoplados e governança de dados. <strong>2 anos de experiência em autarquia federal (ITI / Presidência da República)</strong>, aplicando criptografia de Estado, LGPD, testes herméticos sem mocks em memória e sistemas ativos em produção Linux.
                 </p>
+                
                 <div class="hero-credentials">
                     <span class="cred-chip"><i class="fas fa-shield-halved"></i> 24m ITI (Presidência)</span>
                     <span class="cred-chip"><i class="fas fa-server"></i> Produção VPS Linux</span>
                     <span class="cred-chip"><i class="fas fa-vial"></i> Testcontainers (Zero H2)</span>
                 </div>
+                
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
                         <i class="fas fa-cubes"></i> Ver Projetos
@@ -81,7 +94,7 @@
             </div>
             
             <div class="hero-visual">
-                <!-- Terminal Interativo Executivo -->
+                <!-- Terminal Interativo Executivo Cinema Grade -->
                 <div class="hero-terminal" id="heroTerminal">
                     <div class="terminal-header">
                         <div class="terminal-dots">
@@ -95,6 +108,9 @@
                             </button>
                             <button class="terminal-tab" data-tab="tab-vps" onclick="switchTerminalTab('tab-vps')">
                                 <i class="fas fa-server"></i> puffszone.service
+                            </button>
+                            <button class="terminal-tab" data-tab="tab-testcontainers" onclick="switchTerminalTab('tab-testcontainers')">
+                                <i class="fas fa-vial"></i> testcontainers.log
                             </button>
                             <button class="terminal-tab" data-tab="tab-iti" onclick="switchTerminalTab('tab-iti')">
                                 <i class="fas fa-shield-alt"></i> iti-governance.env
@@ -136,7 +152,21 @@
                             <div class="t-line t-cursor"><span class="t-prompt">$</span> <span class="blinking-cursor">█</span></div>
                         </div>
 
-                        <!-- Tab 3: ITI Federal Governance -->
+                        <!-- Tab 3: Testcontainers Execution -->
+                        <div class="terminal-pane" id="tab-testcontainers">
+                            <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">./mvnw</span> -B clean verify -Dtest=AssetAuditIntegrationTests</div>
+                            <div class="t-line t-output">[INFO] Scanning for projects...</div>
+                            <div class="t-line t-output">[INFO] -------------------&lt; io.aegiscore:aegis-core &gt;-------------------</div>
+                            <div class="t-line t-output">[INFO] Running io.aegiscore.audit.AssetAuditIntegrationTests</div>
+                            <div class="t-line t-output"><span class="t-key">[INFO] 🐳 [postgres:18-alpine]</span> -&gt; Container started on port 32771</div>
+                            <div class="t-line t-output">[INFO] Flyway Database: PostgreSQL 18.0 - Applied: V1, V2</div>
+                            <div class="t-line t-output"><span class="t-success">[INFO] ✔ shouldPersistAuditOnlyAfterAssetRegistrationCommits() [PASSED]</span></div>
+                            <div class="t-line t-output">[INFO] Tests run: 24, Failures: 0, Errors: 0 (Zero Mocks in CI)</div>
+                            <div class="t-line t-output"><span class="t-success">[INFO] BUILD SUCCESS</span> [Total time: 8.420 s]</div>
+                            <div class="t-line t-cursor"><span class="t-prompt">$</span> <span class="blinking-cursor">█</span></div>
+                        </div>
+
+                        <!-- Tab 4: ITI Federal Governance -->
                         <div class="terminal-pane" id="tab-iti">
                             <div class="t-line"><span class="t-prompt">$</span> <span class="t-cmd">cat</span> /etc/iti/clearance.conf</div>
                             <div class="t-line t-comment"># Instituto Nacional de Tecnologia da Informação (ITI)</div>
@@ -148,6 +178,16 @@
                             <div class="t-line t-output"><span class="t-key">DATABASE_OPTIMIZATION</span>=<span class="t-num">"-40% Query Latency"</span></div>
                             <div class="t-line t-cursor"><span class="t-prompt">$</span> <span class="blinking-cursor">█</span></div>
                         </div>
+                    </div>
+
+                    <div class="terminal-footer">
+                        <span class="t-foot-item"><span class="mini-pulse"></span> <strong>P99:</strong> 22ms</span>
+                        <span class="t-foot-sep">•</span>
+                        <span class="t-foot-item"><i class="fab fa-docker"></i> Docker Engine: OK</span>
+                        <span class="t-foot-sep">•</span>
+                        <span class="t-foot-item"><i class="fas fa-database"></i> PostgreSQL 18</span>
+                        <span class="t-foot-sep">•</span>
+                        <span class="t-foot-item"><i class="fas fa-shield-alt" style="color:#10b981"></i> Zero H2 Mocks</span>
                     </div>
                 </div>
             </div>

@@ -1056,8 +1056,9 @@ if (contactForm) {
     });
 }
 
-// Typing effect for hero title
-function typeWriter(element, text, speed = 100) {
+// Typing effect utility (kept for optional dynamic components)
+function typeWriter(element, text, speed = 50) {
+    if (!element) return;
     let i = 0;
     element.innerHTML = '';
     function type() {
@@ -1069,15 +1070,6 @@ function typeWriter(element, text, speed = 100) {
     }
     type();
 }
-
-// Initialize typing effect when page loads
-window.addEventListener('load', () => {
-    const heroTitle = document.querySelector('.hero-title');
-    if (heroTitle) {
-        const text = heroTitle.textContent;
-        typeWriter(heroTitle, text, 50);
-    }
-});
 
 // Parallax effect for floating cards - responsivo e otimizado
 let parallaxEnabled = null;
