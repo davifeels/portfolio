@@ -601,58 +601,6 @@ function openProject(projectType) {
             </div>
         `;
     }
-    else if (projectType === 'aegiscore') {
-        content = `
-            <div class="project-demo">
-                <h2>AegisCore — Cloud Security &amp; Operations Platform</h2>
-                <div class="demo-container">
-                    <div class="project-showcase">
-                        <div class="showcase-header">
-                            <div class="showcase-icon"><i class="fas fa-shield-alt"></i></div>
-                            <div>
-                                <div class="showcase-title">AegisCore — Plataforma de Segurança &amp; Governança de Nuvem</div>
-                                <div class="showcase-subtitle">Java 25 + Spring Boot + Spring Security (RBAC) + PostgreSQL 18 + Flyway + Testcontainers</div>
-                            </div>
-                        </div>
-                        <div class="showcase-content">
-                            <div class="showcase-description" style="text-align: left;">
-                                <p>O <strong>AegisCore</strong> é uma API REST corporativa desenvolvida para resolver os desafios de <strong>inventário, governança e conformidade em infraestruturas multinuvem</strong> (AWS, Azure e GCP). Focada em segurança defensiva e arquitetura limpa, a plataforma implementa catálogo unificado de recursos, controle de acesso estrito baseado em papéis (RBAC) e uma trilha de auditoria transacional imutável orientada a eventos.</p>
-
-                                <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
-                                    <a href="https://github.com/davifeels/aegis-core" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%); padding: 0.75rem 1.5rem; border-radius: 8px; color: white; font-weight: 600;">
-                                        <i class="fab fa-github"></i> Ver Código no GitHub
-                                    </a>
-                                </div>
-
-                                <h4 style="color: #38bdf8; margin-top: 1.5rem;">🏛️ Arquitetura &amp; Decisões de Engenharia</h4>
-                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; line-height: 1.7;">
-                                    <li><strong>Controle de Acesso RBAC &amp; BCrypt:</strong> Autenticação HTTP Basic stateless sobre Spring Security com segregação de perfis (<code>ADMIN</code> para mutações de ativos e visualização de auditoria; <code>USER</code> com acesso restrito a leitura de inventário).</li>
-                                    <li><strong>Auditoria Transacional Desacoplada:</strong> Mutação e auditoria desacopladas via <code>ApplicationEventPublisher</code>. O listener utiliza <code>@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)</code> e o serviço de persistência roda em <code>Propagation.REQUIRES_NEW</code>, garantindo que logs só sejam gravados após o commit real da transação e em isolamento.</li>
-                                    <li><strong>Busca Paginada &amp; Filtros Dinâmicos:</strong> Endpoint de auditoria construído com Spring Data JPA <code>Specification</code> e Criteria API, com paginação segura (limite de 100 itens) e validação de janelas temporais.</li>
-                                    <li><strong>Modelagem &amp; Migrations Flyway:</strong> PostgreSQL 18 com versionamento formal (<code>V1__create_cloud_assets.sql</code> e <code>V2__create_asset_audit_logs.sql</code>) e índices B-Tree estratégicos em <code>asset_id</code> e <code>occurred_at</code> para alto desempenho analítico.</li>
-                                    <li><strong>Testes Herméticos com Testcontainers:</strong> Testes de integração isolados utilizando <code>jdbc:tc:postgresql:18-alpine</code>, garantindo paridade total com o banco de dados de produção sem dependência de instâncias externas instaladas.</li>
-                                    <li><strong>Containerização &amp; CI:</strong> Dockerfile multi-stage com usuário não-root (<code>appuser</code>), orquestração Docker Compose e pipeline de integração contínua no GitHub Actions executando suíte completa de testes a cada push e PR.</li>
-                                </ul>
-
-                                <h4 style="color: #38bdf8; margin-top: 1.5rem;">🛠️ Tecnologias Utilizadas</h4>
-                                <div class="project-tech" style="margin-top: 0.5rem;">
-                                    <span class="tech-tag">Java 25</span>
-                                    <span class="tech-tag">Spring Boot</span>
-                                    <span class="tech-tag">Spring Security</span>
-                                    <span class="tech-tag">PostgreSQL 18</span>
-                                    <span class="tech-tag">Flyway</span>
-                                    <span class="tech-tag">Testcontainers</span>
-                                    <span class="tech-tag">Docker Compose</span>
-                                    <span class="tech-tag">OpenAPI / Swagger</span>
-                                    <span class="tech-tag">GitHub Actions CI</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
     else if (projectType === 'riskcore') {
         content = `
             <div class="project-demo">
