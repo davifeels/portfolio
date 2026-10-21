@@ -387,241 +387,354 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Skills Section (Tech Bento Matrix & Production Mastery) -->
     <section id="skills" class="skills-section">
-        <div class="container">
-            <h2 class="section-title">Habilidades Técnicas</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3><i class="fas fa-code"></i> Linguagens de Programação</h3>
-                    <div class="skill-items">
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-java"></i>
-                            <span>Java 21</span>
-                            <div class="skill-level">Intermediário</div>
+        <div class="container skills-container-expanded">
+            <div class="skills-header-center">
+                <div class="skills-kicker">
+                    <span class="live-dot pulse-emerald"></span> ENGENHARIA DE SOFTWARE &amp; ARQUITETURA PRÁTICA
+                </div>
+                <h2 class="section-title">Habilidades Técnicas &amp; Domínio de Produção</h2>
+                <p class="skills-lead">
+                    Competências forjadas em <strong>2 anos de atuação em autarquia federal de missão crítica (ITI / Presidência da República)</strong> e sistemas ativos em produção Linux. Cada ferramenta é fundamentada em evidências reais, decisões de arquitetura e zero achismos.
+                </p>
+
+                <!-- Interactive Tech Matrix Filter Bar -->
+                <div class="tech-matrix-filters">
+                    <button class="t-filter-btn active" data-filter="all" onclick="filterTechMatrix('all')">
+                        <i class="fas fa-layer-group"></i> Visão Geral Completa
+                    </button>
+                    <button class="t-filter-btn" data-filter="java" onclick="filterTechMatrix('java')">
+                        <i class="fab fa-java"></i> Java 25 &amp; Spring Core
+                    </button>
+                    <button class="t-filter-btn" data-filter="security" onclick="filterTechMatrix('security')">
+                        <i class="fas fa-shield-halved"></i> Segurança Federal &amp; LGPD
+                    </button>
+                    <button class="t-filter-btn" data-filter="data" onclick="filterTechMatrix('data')">
+                        <i class="fas fa-database"></i> PostgreSQL &amp; Persistência
+                    </button>
+                    <button class="t-filter-btn" data-filter="devops" onclick="filterTechMatrix('devops')">
+                        <i class="fab fa-docker"></i> DevOps &amp; Cloud Linux
+                    </button>
+                    <button class="t-filter-btn" data-filter="ai" onclick="filterTechMatrix('ai')">
+                        <i class="fas fa-brain"></i> IA &amp; RAG Semântico
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bento Grid Executivo Surreal -->
+            <div class="tech-bento-matrix" id="techBentoMatrix">
+                
+                <!-- CARD 1: O TITULAR SUPREMO (Span 2 colunas / Destaque Gigante) -->
+                <div class="bento-box bento-hero-java" data-category="java">
+                    <div class="bento-glow-blob blob-blue"></div>
+                    <div class="bento-top-bar">
+                        <div class="bento-badge-tech core-pill">
+                            <i class="fab fa-java"></i> CORE BACKEND STACK · PRODUÇÃO REAL
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-js"></i>
-                            <span>TypeScript</span>
-                            <div class="skill-level">Intermediário</div>
+                        <span class="bento-telemetry-chip"><i class="fas fa-check-circle"></i> 24m ITI Federal + AegisCore</span>
+                    </div>
+
+                    <div class="bento-main-info">
+                        <h3>Ecossistema Java 25 &amp; Spring Boot 4 Enterprise</h3>
+                        <p class="bento-desc">
+                            Construção de APIs RESTful herméticas, microsserviços desacoplados e regras de negócio com integridade transacional ACID. 
+                            Utilização de <strong>Java moderno (Virtual Threads, Records, Pattern Matching)</strong> e testes automatizados sem mocks em memória via <strong>Testcontainers</strong>.
+                        </p>
+                    </div>
+
+                    <div class="tech-chips-grid grid-java-six">
+                        <div class="tech-item-hud" data-tech="java">
+                            <div class="hud-icon"><i class="fab fa-java" style="color:#38bdf8"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Java 25 / 21</span>
+                                <span class="hud-proof">Eclipse Temurin · 24m Produção</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Aplicação Comprovada:</strong> APIs corporativas no ITI (Federal) e arquitetura AegisCore com Virtual Threads e tratamento rigoroso de exceções.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-js-square"></i>
-                            <span>JavaScript</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="spring">
+                            <div class="hud-icon"><i class="fas fa-leaf" style="color:#10b981"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Spring Boot 4 / 3</span>
+                                <span class="hud-proof">MVC · JPA · Actuator · Events</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Arquitetura Desacoplada:</strong> Injeção de dependências limpa, Spring Events assíncronos (AFTER_COMMIT / REQUIRES_NEW) e DTOs imutáveis.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="testcontainers">
+                            <div class="hud-icon"><i class="fas fa-vial" style="color:#818cf8"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Testcontainers</span>
+                                <span class="hud-proof">Zero H2 Mocks em CI</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Testes Herméticos:</strong> PostgreSQL 18 real inicializado sob demanda em Docker durante o ciclo de build do Maven.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Kotlin</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="security">
+                            <div class="hud-icon"><i class="fas fa-shield-halved" style="color:#06b6d4"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Spring Security</span>
+                                <span class="hud-proof">RBAC · BCrypt · Stateless</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Segurança Defensiva:</strong> Filtro de segurança customizado, controle por perfis ADMIN/USER e hashing BCrypt com salt dinâmico.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="junit">
+                            <div class="hud-icon"><i class="fas fa-check-double" style="color:#34d399"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">JUnit 5 &amp; MockMvc</span>
+                                <span class="hud-proof">Integração &amp; Contrato REST</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Qualidade de Código:</strong> Validação de status HTTP, serialização JSON, autenticação de endpoints e Bean Validation.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5 & CSS3</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="flyway">
+                            <div class="hud-icon"><i class="fas fa-code-branch" style="color:#f59e0b"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Flyway Migration</span>
+                                <span class="hud-proof">Versionamento Imutável de Schema</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Zero Drift de Banco:</strong> Scripts versionados V1..V2 aplicados no boot da aplicação com histórico rastreável.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-server"></i> Frameworks & Bibliotecas</h3>
-                    <div class="skill-items">
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-leaf"></i>
-                            <span>Spring Boot 3</span>
-                            <div class="skill-level">Intermediário</div>
+
+                <!-- CARD 2: SEGURANÇA E GOVERNANÇA FEDERAL (ITI) -->
+                <div class="bento-box bento-security-box" data-category="security">
+                    <div class="bento-glow-blob blob-purple"></div>
+                    <div class="bento-top-bar">
+                        <div class="bento-badge-tech security-pill">
+                            <i class="fas fa-landmark"></i> GOVERNANÇA ESTATAL &amp; LGPD
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-react"></i>
-                            <span>React 19</span>
-                            <div class="skill-level">Intermediário</div>
+                        <span class="bento-telemetry-chip"><i class="fas fa-shield-alt"></i> ITI / Presidência</span>
+                    </div>
+
+                    <div class="bento-main-info">
+                        <h3>Criptografia de Estado &amp; LGPD Art. 37</h3>
+                        <p class="bento-desc">
+                            Experiência de 24 meses em autarquia federal aplicando controle de acesso estrito, auditoria imutável de operações críticas e criptografia padrão ICP-Brasil.
+                        </p>
+                    </div>
+
+                    <div class="tech-chips-grid">
+                        <div class="tech-item-hud" data-tech="lgpd">
+                            <div class="hud-icon"><i class="fas fa-file-shield" style="color:#a855f7"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">LGPD Art. 37</span>
+                                <span class="hud-proof">Inventário &amp; Ciclo de Vida</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Registro Legal:</strong> Catalogação de operações, base legal, finalidade e relatórios formais para auditoria governamental.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-node-js"></i>
-                            <span>Node.js</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="crypto">
+                            <div class="hud-icon"><i class="fas fa-key" style="color:#f59e0b"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">RSA / AES / PKI</span>
+                                <span class="hud-proof">Padrão ICP-Brasil</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Criptografia Forte:</strong> Encriptação em repouso e trânsito, certificados X.509 e assinaturas digitais com hash SHA-256.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-bolt"></i>
-                            <span>Express</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-angular"></i>
-                            <span>Angular</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-wind"></i>
-                            <span>Tailwind CSS</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-bolt"></i>
-                            <span>FastAPI</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Streamlit</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="audit">
+                            <div class="hud-icon"><i class="fas fa-clock-rotate-left" style="color:#38bdf8"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Audit Trail</span>
+                                <span class="hud-proof">Logs Imutáveis Desacoplados</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Auditoria Contínua:</strong> Trilha de eventos pós-commit com registro de autor, timestamp UTC e payload da operação.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-database"></i> Banco de Dados & Persistência</h3>
-                    <div class="skill-items">
-                        <div class="skill-item intermediate">
-                            <img class="skill-icon-svg" src="assets/icons/postgresql.svg" alt="PostgreSQL logo" />
-                            <span>PostgreSQL 16</span>
-                            <div class="skill-level">Intermediário</div>
+
+                <!-- CARD 3: BANCOS DE DADOS & PERSISTÊNCIA -->
+                <div class="bento-box bento-data-box" data-category="data">
+                    <div class="bento-glow-blob blob-emerald"></div>
+                    <div class="bento-top-bar">
+                        <div class="bento-badge-tech data-pill">
+                            <i class="fas fa-database"></i> PERSISTÊNCIA &amp; ALTA PERFORMANCE
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-code-branch"></i>
-                            <span>Flyway</span>
-                            <div class="skill-level">Intermediário</div>
+                        <span class="bento-telemetry-chip"><i class="fas fa-graduation-cap"></i> Superior em Banco de Dados</span>
+                    </div>
+
+                    <div class="bento-main-info">
+                        <h3>PostgreSQL 18, Otimização de Queries &amp; Redis</h3>
+                        <p class="bento-desc">
+                            Modelagem relacional normalizada (3FN), criação de índices estratégicos (B-Tree, GIN, HNSW), isolamento transacional e redução de até 40% na latência de queries.
+                        </p>
+                    </div>
+
+                    <div class="tech-chips-grid">
+                        <div class="tech-item-hud" data-tech="postgres">
+                            <div class="hud-icon"><i class="fas fa-database" style="color:#38bdf8"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">PostgreSQL 18</span>
+                                <span class="hud-proof">Multi-AZ · ACID · EXPLAIN ANALYZE</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Engenharia SQL:</strong> Particionamento, índices parciais e otimização de planos de execução em produção.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-vector-square"></i>
-                            <span>pgvector</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="redis">
+                            <div class="hud-icon"><i class="fas fa-bolt" style="color:#ef4444"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Redis In-Memory</span>
+                                <span class="hud-proof">Cache &amp; Sessões · P99: 22ms</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Aceleração de Resposta:</strong> Cache de consultas repetitivas e controle de concorrência com expiração TTL.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-memory"></i>
-                            <span>Redis</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-search"></i>
-                            <span>Elastic Search</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-cube"></i>
-                            <span>SQLite & NoSQL</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="pgvector">
+                            <div class="hud-icon"><i class="fas fa-network-wired" style="color:#10b981"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">pgvector</span>
+                                <span class="hud-proof">Embeddings &amp; Busca Vetorial</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Busca Semântica:</strong> Armazenamento e consulta por similaridade de cosseno para RAG e jurisprudência jurídica.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-shield-alt"></i> Segurança & DevOps</h3>
-                    <div class="skill-items">
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker & Compose</span>
-                            <div class="skill-level">Intermediário</div>
+
+                <!-- CARD 4: CLOUD, LINUX & DEVOPS -->
+                <div class="bento-box bento-devops-box" data-category="devops">
+                    <div class="bento-glow-blob blob-cyan"></div>
+                    <div class="bento-top-bar">
+                        <div class="bento-badge-tech devops-pill">
+                            <i class="fab fa-docker"></i> INFRAESTRUTURA ATIVA &amp; CLOUD
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-network-wired"></i>
-                            <span>Nginx Proxy</span>
-                            <div class="skill-level">Intermediário</div>
+                        <span class="bento-telemetry-chip"><i class="fas fa-server"></i> VPS Linux 100% Operacional</span>
+                    </div>
+
+                    <div class="bento-main-info">
+                        <h3>Docker, Linux VPS, Nginx SSL &amp; Cloud AWS</h3>
+                        <p class="bento-desc">
+                            Aplicações em produção no mundo real em instâncias Linux Debian/Ubuntu, com proxy reverso Nginx com SSL Certbot, orquestração multi-container e esteiras de CI/CD automáticas.
+                        </p>
+                    </div>
+
+                    <div class="tech-chips-grid grid-devops-four">
+                        <div class="tech-item-hud" data-tech="docker">
+                            <div class="hud-icon"><i class="fab fa-docker" style="color:#38bdf8"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Docker &amp; Compose</span>
+                                <span class="hud-proof">Multi-Stage Builds &amp; Redes Privadas</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Containers Herméticos:</strong> Imagens enxutas em alpine, persistência via volumes nomeados e isolamento de portas.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-linux"></i>
-                            <span>Linux (VPS)</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="linux">
+                            <div class="hud-icon"><i class="fab fa-linux" style="color:#f59e0b"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Linux VPS Produção</span>
+                                <span class="hud-proof">Systemd Services · UFW · Produção</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Host Ativo:</strong> Deploy do PuffsZone ao vivo em servidor Linux Debian 12 com reinicialização resiliente systemd.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-certificate"></i>
-                            <span>Spring Security & JWT</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="nginx">
+                            <div class="hud-icon"><i class="fas fa-shield-virus" style="color:#10b981"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Nginx + SSL</span>
+                                <span class="hud-proof">Reverse Proxy · HTTPS Certbot</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Ingress Seguro:</strong> Terminação TLS 1.3, mitigação de DDoS, compressão gzip e roteamento de tráfego 443 -> 8080.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-gitlab"></i>
-                            <span>GitLab CI/CD</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-key"></i>
-                            <span>RSA / AES / PKI</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-shield-virus"></i>
-                            <span>LGPD Compliance</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="aws">
+                            <div class="hud-icon"><i class="fab fa-aws" style="color:#fbbf24"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">AWS Cloud</span>
+                                <span class="hud-proof">EC2 · S3 · RDS · IAM</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Treinamento Oficial AWS:</strong> Cloud Practitioner Essentials, arquitetura distribuída e segurança em nuvem.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-vial"></i> Testes &amp; Qualidade de Software</h3>
-                    <div class="skill-items">
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-check-double"></i>
-                            <span>JUnit 5 &amp; Mockito</span>
-                            <div class="skill-level">Intermediário</div>
+
+                <!-- CARD 5: IA APLICADA & FULLSTACK COMPLEMENTAR -->
+                <div class="bento-box bento-ai-box" data-category="ai">
+                    <div class="bento-glow-blob blob-amber"></div>
+                    <div class="bento-top-bar">
+                        <div class="bento-badge-tech ai-pill">
+                            <i class="fas fa-robot"></i> IA GENERATIVA &amp; FULLSTACK MODERNO
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>MockMvc &amp; Spring Test</span>
-                            <div class="skill-level">Intermediário</div>
+                        <span class="bento-telemetry-chip"><i class="fas fa-brain"></i> RAG &amp; Agentes Cognitivos</span>
+                    </div>
+
+                    <div class="bento-main-info">
+                        <h3>Python RAG, FastAPI, React 19 &amp; Mobile Kotlin</h3>
+                        <p class="bento-desc">
+                            Integração de Inteligência Artificial para análise preditiva jurídica, transcrição pericial de áudio (Whisper) e interfaces web reativas de alto desempenho.
+                        </p>
+                    </div>
+
+                    <div class="tech-chips-grid">
+                        <div class="tech-item-hud" data-tech="python">
+                            <div class="hud-icon"><i class="fab fa-python" style="color:#38bdf8"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Python &amp; FastAPI</span>
+                                <span class="hud-proof">RAG · LangChain · Scikit-Learn</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>IA em Produção:</strong> Endpoints assíncronos de alta vazão para classificação preditiva e pipelines semânticos.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-python"></i>
-                            <span>PyTest &amp; TestClient</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="react">
+                            <div class="hud-icon"><i class="fab fa-react" style="color:#60a5fa"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">React 19 &amp; TypeScript</span>
+                                <span class="hud-proof">Tailwind CSS · Vite · SPA</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Frontends Corporativos:</strong> Dashboards operacionais responsivos consumindo APIs RESTful seguras.
+                            </div>
                         </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-js-square"></i>
-                            <span>Jest &amp; Testing Library</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-paper-plane"></i>
-                            <span>Postman</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-robot"></i>
-                            <span>Playwright</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fab fa-github"></i>
-                            <span>Git &amp; GitHub</span>
-                            <div class="skill-level">Intermediário</div>
-                        </div>
-                        <div class="skill-item intermediate">
-                            <i class="fas fa-mobile-alt"></i>
-                            <span>Android Studio</span>
-                            <div class="skill-level">Intermediário</div>
+
+                        <div class="tech-item-hud" data-tech="kotlin">
+                            <div class="hud-icon"><i class="fas fa-mobile-alt" style="color:#a3e635"></i></div>
+                            <div class="hud-meta">
+                                <span class="hud-name">Kotlin &amp; ML Kit</span>
+                                <span class="hud-proof">Android Nativo · Biometria Facial</span>
+                            </div>
+                            <div class="hud-tooltip">
+                                <strong>Mobile MDM:</strong> Detecção biométrica on-device via ML Kit e comunicação WebSocket com backend Node.js.
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-brain"></i> Práticas de Engenharia</h3>
-                    <div class="soft-skills">
-                        <div class="soft-skill-item">
-                            <i class="fas fa-sitemap"></i>
-                            <span>Arquitetura limpa em camadas (Controller, Service, Repository, DTOs e Mappers)</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <i class="fas fa-shield-alt"></i>
-                            <span>Segurança da informação, autenticação stateless JWT e conformidade LGPD</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <i class="fas fa-coins"></i>
-                            <span>Consistência transacional (@Transactional) e integridade em fluxos financeiros</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <i class="fas fa-brain"></i>
-                            <span>Pipelines de IA aplicada (RAG, busca vetorial semântica e embeddings)</span>
-                        </div>
-                        <div class="soft-skill-item">
-                            <i class="fas fa-server"></i>
-                            <span>Deploy real de ponta a ponta: conteinerização, proxy reverso Nginx e HTTPS</span>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
