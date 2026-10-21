@@ -95,30 +95,30 @@
   </g>
 
   <!-- Typography & Brand Text -->
-  <g transform="translate(195, 20)">
+  <g transform="translate(180, 20)">
     <!-- Main Title -->
-    <text x="0" y="78" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="50" fill="#ffffff" letter-spacing="3.5">
+    <text x="0" y="78" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="48" fill="#ffffff" letter-spacing="3">
       NEXUS<tspan fill="url(#nexusTextGrad)"> AI OS</tspan>
     </text>
 
     <!-- Subtitle Badge -->
-    <text x="3" y="112" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#c084fc" letter-spacing="2">
+    <text x="2" y="112" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="12" fill="#c084fc" letter-spacing="1.8">
       AUTONOMOUS AGENT &amp; PERSISTENT MEMORY
     </text>
 
     <!-- Technology Pills Row -->
-    <g transform="translate(0, 130)">
+    <g transform="translate(0, 128)">
       <!-- Pill 1 -->
-      <rect x="0" y="0" width="135" height="25" rx="6" fill="rgba(139, 92, 246, 0.12)" stroke="rgba(139, 92, 246, 0.35)" stroke-width="1"/>
-      <text x="12" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#c4b5fd">PYTHON · FASTAPI</text>
+      <rect x="0" y="0" width="130" height="24" rx="6" fill="rgba(139, 92, 246, 0.12)" stroke="rgba(139, 92, 246, 0.35)" stroke-width="1"/>
+      <text x="10" y="16.5" font-family="'Inter', sans-serif" font-weight="600" font-size="10.5" fill="#c4b5fd">PYTHON · FASTAPI</text>
 
       <!-- Pill 2 -->
-      <rect x="145" y="0" width="160" height="25" rx="6" fill="rgba(217, 70, 239, 0.12)" stroke="rgba(217, 70, 239, 0.35)" stroke-width="1"/>
-      <text x="155" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#f0abfc">PGVECTOR · RAG ENGINE</text>
+      <rect x="140" y="0" width="155" height="24" rx="6" fill="rgba(217, 70, 239, 0.12)" stroke="rgba(217, 70, 239, 0.35)" stroke-width="1"/>
+      <text x="150" y="16.5" font-family="'Inter', sans-serif" font-weight="600" font-size="10.5" fill="#f0abfc">PGVECTOR · RAG ENGINE</text>
 
       <!-- Pill 3 -->
-      <rect x="315" y="0" width="140" height="25" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1"/>
-      <text x="323" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#7dd3fc">34 COGNITIVE AGENTS</text>
+      <rect x="305" y="0" width="135" height="24" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1"/>
+      <text x="313" y="16.5" font-family="'Inter', sans-serif" font-weight="600" font-size="10.5" fill="#7dd3fc">34 COGNITIVE AGENTS</text>
     </g>
   </g>
 </svg>

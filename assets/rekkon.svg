@@ -93,30 +93,30 @@
   </g>
 
   <!-- Typography & Brand Text -->
-  <g transform="translate(195, 20)">
+  <g transform="translate(180, 20)">
     <!-- Main Title -->
-    <text x="0" y="78" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="50" fill="#ffffff" letter-spacing="3.5">
+    <text x="0" y="78" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="48" fill="#ffffff" letter-spacing="3">
       REKKON<tspan fill="url(#rekkonTextGrad)"> MDM</tspan>
     </text>
 
     <!-- Subtitle Badge -->
-    <text x="3" y="112" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#a3e635" letter-spacing="2">
+    <text x="2" y="112" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="12" fill="#a3e635" letter-spacing="1.8">
       REMOTE DEVICE MANAGEMENT &amp; BIOMETRICS
     </text>
 
     <!-- Technology Pills Row -->
-    <g transform="translate(0, 130)">
+    <g transform="translate(0, 128)">
       <!-- Pill 1 -->
-      <rect x="0" y="0" width="165" height="25" rx="6" fill="rgba(132, 204, 22, 0.12)" stroke="rgba(132, 204, 22, 0.35)" stroke-width="1"/>
-      <text x="12" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#bef264">KOTLIN NATIVO · ANDROID</text>
+      <rect x="0" y="0" width="145" height="24" rx="6" fill="rgba(132, 204, 22, 0.12)" stroke="rgba(132, 204, 22, 0.35)" stroke-width="1"/>
+      <text x="10" y="16.5" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#bef264">KOTLIN NATIVO · ANDROID</text>
 
       <!-- Pill 2 -->
-      <rect x="175" y="0" width="160" height="25" rx="6" fill="rgba(34, 197, 94, 0.12)" stroke="rgba(34, 197, 94, 0.35)" stroke-width="1"/>
-      <text x="185" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#86efac">ML KIT FACE DETECTION</text>
+      <rect x="155" y="0" width="140" height="24" rx="6" fill="rgba(34, 197, 94, 0.12)" stroke="rgba(34, 197, 94, 0.35)" stroke-width="1"/>
+      <text x="163" y="16.5" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#86efac">ML KIT BIOMETRICS</text>
 
       <!-- Pill 3 -->
-      <rect x="345" y="0" width="130" height="25" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1"/>
-      <text x="353" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#7dd3fc">NODE.JS WEBSOCKET</text>
+      <rect x="305" y="0" width="130" height="24" rx="6" fill="rgba(56, 189, 248, 0.12)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1"/>
+      <text x="313" y="16.5" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#7dd3fc">NODE.JS WEBSOCKET</text>
     </g>
   </g>
 </svg>

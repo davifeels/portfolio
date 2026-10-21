@@ -2,15 +2,15 @@
   <defs>
     <!-- Background Radial Glow -->
     <radialGradient id="juriGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.35"/>
-      <stop offset="60%" stop-color="#8b5cf6" stop-opacity="0.15"/>
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.12"/>
       <stop offset="100%" stop-color="#080e1d" stop-opacity="0"/>
     </radialGradient>
     
     <!-- Shield Border Gradient -->
     <linearGradient id="juriGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#60a5fa"/>
-      <stop offset="50%" stop-color="#3b82f6"/>
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#60a5fa"/>
       <stop offset="100%" stop-color="#f59e0b"/>
     </linearGradient>
 
@@ -22,101 +22,104 @@
 
     <!-- Text Core Gradient -->
     <linearGradient id="juriTextGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="0%" stop-color="#38bdf8"/>
       <stop offset="50%" stop-color="#93c5fd"/>
-      <stop offset="100%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#fbbf24"/>
     </linearGradient>
 
     <filter id="juriNeon" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
   </defs>
 
-  <!-- Ambient Glow -->
-  <circle cx="100" cy="100" r="85" fill="url(#juriGlow)" />
+  <!-- Ambient Glow Behind Shield -->
+  <circle cx="105" cy="100" r="85" fill="url(#juriGlow)" />
 
   <!-- Shield Outer Geometry: LegalTech Scales & Neural Grid -->
-  <g transform="translate(25, 20)">
+  <g transform="translate(30, 20)">
     <!-- Outer Shield Outline -->
-    <path d="M 75,10 
-             L 135,32 
-             L 135,95 
-             C 135,135 105,158 75,170 
-             C 45,158 15,135 15,95 
-             L 15,32 Z" 
+    <path d="M 75,12 
+             L 132,32 
+             L 132,92 
+             C 132,130 102,154 75,166 
+             C 48,154 18,130 18,92 
+             L 18,32 Z" 
           fill="#0a1224" 
           stroke="url(#juriGrad)" 
-          stroke-width="3" 
+          stroke-width="2.8" 
           stroke-linejoin="round"
           filter="url(#juriNeon)"/>
 
     <!-- Inner Shield Inset -->
-    <path d="M 75,22 
-             L 123,40 
-             L 123,92 
-             C 123,124 99,144 75,154 
-             C 51,144 27,124 27,92 
-             L 27,40 Z" 
+    <path d="M 75,23 
+             L 121,39 
+             L 121,89 
+             C 121,120 97,140 75,150 
+             C 53,140 29,120 29,89 
+             L 29,39 Z" 
           fill="rgba(15, 23, 42, 0.75)" 
-          stroke="rgba(96, 165, 250, 0.35)" 
-          stroke-width="1.5" 
+          stroke="rgba(96, 165, 250, 0.3)" 
+          stroke-width="1.4" 
           stroke-linejoin="round"/>
 
     <!-- Scales of Justice Central Pillar -->
-    <line x1="75" y1="36" x2="75" y2="125" stroke="#fde047" stroke-width="2.5" stroke-linecap="round"/>
-    <circle cx="75" cy="36" r="4.5" fill="#fde047"/>
+    <line x1="75" y1="36" x2="75" y2="122" stroke="#fde047" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="75" cy="36" r="4" fill="#fde047"/>
 
     <!-- Balance Horizontal Crossbeam -->
-    <line x1="45" y1="55" x2="105" y2="55" stroke="url(#scalesGold)" stroke-width="3" stroke-linecap="round"/>
+    <line x1="46" y1="55" x2="104" y2="55" stroke="url(#scalesGold)" stroke-width="2.8" stroke-linecap="round"/>
+    <circle cx="75" cy="55" r="3" fill="#ffffff"/>
 
-    <!-- Left Scale Pan & Strings -->
-    <line x1="45" y1="55" x2="35" y2="82" stroke="#93c5fd" stroke-width="1.2"/>
-    <line x1="45" y1="55" x2="55" y2="82" stroke="#93c5fd" stroke-width="1.2"/>
-    <path d="M 30,82 C 30,94 60,94 60,82 Z" fill="rgba(245, 158, 11, 0.3)" stroke="#fde047" stroke-width="1.8"/>
+    <!-- Left Scale Pan & Strings (Precedents / Law) -->
+    <line x1="48" y1="55" x2="38" y2="80" stroke="#93c5fd" stroke-width="1.2"/>
+    <line x1="48" y1="55" x2="58" y2="80" stroke="#93c5fd" stroke-width="1.2"/>
+    <path d="M 33,80 C 33,92 63,92 63,80 Z" fill="rgba(245, 158, 11, 0.25)" stroke="#fbbf24" stroke-width="1.6"/>
+    <circle cx="48" cy="83" r="2.5" fill="#fde047"/>
 
-    <!-- Right Scale Pan & Strings (Elevated for predictive probability balance) -->
-    <line x1="105" y1="55" x2="95" y2="78" stroke="#93c5fd" stroke-width="1.2"/>
-    <line x1="105" y1="55" x2="115" y2="78" stroke="#93c5fd" stroke-width="1.2"/>
-    <path d="M 90,78 C 90,90 120,90 120,78 Z" fill="rgba(59, 130, 246, 0.3)" stroke="#60a5fa" stroke-width="1.8"/>
-
-    <!-- Neural Data Nodes / Decision Trees in Scales -->
-    <circle cx="45" cy="85" r="3" fill="#fde047"/>
-    <circle cx="105" cy="81" r="3" fill="#38bdf8"/>
+    <!-- Right Scale Pan & Strings (Predictive Analytics / Probability) -->
+    <line x1="102" y1="55" x2="92" y2="76" stroke="#93c5fd" stroke-width="1.2"/>
+    <line x1="102" y1="55" x2="112" y2="76" stroke="#93c5fd" stroke-width="1.2"/>
+    <path d="M 87,76 C 87,88 117,88 117,76 Z" fill="rgba(56, 189, 248, 0.25)" stroke="#38bdf8" stroke-width="1.6"/>
+    <circle cx="102" cy="79" r="2.5" fill="#38bdf8"/>
 
     <!-- Scale Base / Pedestal -->
-    <rect x="58" y="125" width="34" height="8" rx="2" fill="#fde047"/>
+    <rect x="60" y="122" width="30" height="7" rx="2" fill="#fde047"/>
 
-    <!-- Predictive Trajectory Arc (RAG AI Forecast) -->
-    <path d="M 38,105 Q 75,138 112,105" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="3,3"/>
-    <circle cx="112" cy="105" r="3.5" fill="#38bdf8"/>
+    <!-- Predictive Trajectory Arc (RAG AI Forecast Curve) -->
+    <path d="M 40,102 Q 75,130 110,100" fill="none" stroke="#38bdf8" stroke-width="1.8" stroke-dasharray="3,3"/>
+    <circle cx="110" cy="100" r="3" fill="#38bdf8"/>
+
+    <!-- Bottom Pulse Lines -->
+    <path d="M 58,136 L 75,148 L 92,136" fill="none" stroke="url(#juriGrad)" stroke-width="1.8" stroke-linecap="round"/>
   </g>
 
   <!-- Typography & Brand Text -->
-  <g transform="translate(195, 20)">
-    <!-- Main Title -->
-    <text x="0" y="78" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="44" fill="#ffffff" letter-spacing="2.5">
-      JURIMETRIA<tspan fill="url(#juriTextGrad)"> PREDITIVA</tspan>
+  <g transform="translate(195, 24)">
+    <!-- Line 1: JURIMETRIA -->
+    <text x="0" y="52" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="38" fill="#ffffff" letter-spacing="2">
+      JURIMETRIA
+    </text>
+
+    <!-- Line 2: PREDITIVA -->
+    <text x="0" y="92" font-family="'Poppins', 'Inter', 'Segoe UI', sans-serif" font-weight="800" font-size="34" fill="url(#juriTextGrad)" letter-spacing="2">
+      PREDITIVA
     </text>
 
     <!-- Subtitle Badge -->
-    <text x="3" y="112" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="13" fill="#60a5fa" letter-spacing="2">
+    <text x="2" y="118" font-family="'Inter', 'Segoe UI', sans-serif" font-weight="700" font-size="11.5" fill="#38bdf8" letter-spacing="2">
       LEGALTECH AI &amp; PREDICTIVE ANALYTICS
     </text>
 
     <!-- Technology Pills Row -->
-    <g transform="translate(0, 130)">
-      <!-- Pill 1 -->
-      <rect x="0" y="0" width="165" height="25" rx="6" fill="rgba(59, 130, 246, 0.12)" stroke="rgba(59, 130, 246, 0.35)" stroke-width="1"/>
-      <text x="12" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#93c5fd">PYTHON &amp; MACHINE LEARNING</text>
+    <g transform="translate(0, 132)">
+      <!-- Pill 1: Python & Scikit-Learn -->
+      <rect x="0" y="0" width="160" height="24" rx="6" fill="rgba(56, 189, 248, 0.1)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1"/>
+      <text x="12" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#7dd3fc" letter-spacing="0.5">PYTHON · SCIKIT-LEARN</text>
 
-      <!-- Pill 2 -->
-      <rect x="175" y="0" width="155" height="25" rx="6" fill="rgba(245, 158, 11, 0.12)" stroke="rgba(245, 158, 11, 0.35)" stroke-width="1"/>
-      <text x="185" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#fde047">NLP &amp; JURISPRUDÊNCIA</text>
-
-      <!-- Pill 3 -->
-      <rect x="340" y="0" width="135" height="25" rx="6" fill="rgba(139, 92, 246, 0.12)" stroke="rgba(139, 92, 246, 0.35)" stroke-width="1"/>
-      <text x="348" y="17" font-family="'Inter', sans-serif" font-weight="600" font-size="11" fill="#c4b5fd">RAG + PGVECTOR</text>
+      <!-- Pill 2: RAG & pgvector -->
+      <rect x="170" y="0" width="165" height="24" rx="6" fill="rgba(245, 158, 11, 0.1)" stroke="rgba(245, 158, 11, 0.3)" stroke-width="1"/>
+      <text x="182" y="16" font-family="'Inter', sans-serif" font-weight="600" font-size="10" fill="#fde047" letter-spacing="0.5">RAG · PGVECTOR · NLP</text>
     </g>
   </g>
 </svg>
