@@ -1351,3 +1351,24 @@ window.switchModalTab = function(event, tabId) {
         target.classList.add('active');
     }
 };
+
+/* ================================================================== */
+/* TECH MATRIX BENTO GRID FILTER INTERACTION
+/* ================================================================== */
+window.filterTechMatrix = function(category) {
+    // Atualiza estado visual dos botões de filtro
+    document.querySelectorAll('.t-filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === category);
+    });
+
+    // Filtra ou foca as caixas do Bento Grid
+    const boxes = document.querySelectorAll('.bento-box');
+    boxes.forEach(box => {
+        if (category === 'all') {
+            box.classList.remove('faded');
+        } else {
+            const match = box.getAttribute('data-category') === category;
+            box.classList.toggle('faded', !match);
+        }
+    });
+};
