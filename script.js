@@ -248,6 +248,120 @@ function openProject(projectType) {
         `;
     } 
     
+    else if (projectType === 'aegiscore') {
+        content = `
+            <div class="project-demo">
+                <h2>AegisCore — Cloud Security & Asset Management Platform</h2>
+                <div class="demo-container">
+                    <div class="project-showcase">
+                        <div class="showcase-header">
+                            <div class="showcase-icon"><i class="fas fa-shield-halved"></i></div>
+                            <div>
+                                <div class="showcase-title">AegisCore — Gestão de Ativos & Auditoria Cloud</div>
+                                <div class="showcase-subtitle">Java 25 + Spring Boot 4 + PostgreSQL 18 + Testcontainers + Docker + AWS Architecture</div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-description" style="text-align: left;">
+                                <p>O <strong>AegisCore</strong> é uma plataforma corporativa backend de alta confiabilidade desenvolvida para centralizar a governança, o ciclo de vida (CRUD) e a conformidade de segurança de ativos de infraestrutura em nuvem multicloud (AWS, Azure e GCP). Projetada seguindo as melhores práticas de engenharia de software moderno, a aplicação combina <strong>Java 25</strong> e <strong>Spring Boot 4</strong>, segurança robusta com <strong>Spring Security (RBAC)</strong>, trilha de auditoria desacoplada via <strong>Spring Events</strong>, versionamento de banco com <strong>Flyway</strong> e testes de integração de ponta a ponta com <strong>Testcontainers</strong>.</p>
+
+                                <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                                    <a href="https://github.com/davifeels/aegis-core" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%); padding: 0.75rem 1.5rem; border-radius: 8px; color: white; font-weight: 600;">
+                                        <i class="fab fa-github"></i> Acessar Repositório no GitHub
+                                    </a>
+                                    <span class="badge-status-cloud">
+                                        <i class="fab fa-aws"></i> Arquitetura AWS Homologada &amp; Pronta para Deploy
+                                    </span>
+                                </div>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🎯 Problema Resolvido &amp; Decisões Técnicas</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Visibilidade Centralizada de Recursos:</strong> Eliminação de silos de inventário entre múltiplos provedores cloud (AWS EC2/RDS/S3, Azure VMs e GCP Compute), mantendo um registro padronizado e auditável.</li>
+                                    <li><strong>Arquitetura Desacoplada Orientada a Eventos:</strong> Cada mutação de ativo (criação, atualização, exclusão) dispara um <code>AssetAuditEvent</code> processado de forma assíncrona por um listener dedicado (<code>AssetAuditListener</code>), garantindo que a persistência de logs de auditoria não degrade a latência do cliente HTTP.</li>
+                                    <li><strong>Controle Granular por Perfis (RBAC):</strong> Separação estrita de privilégios onde o perfil <code>ADMIN</code> gerencia ativos e investiga logs forenses, enquanto o perfil <code>USER</code> possui permissão somente-leitura restrita ao catálogo de ativos.</li>
+                                    <li><strong>Tratamento Semântico de Erros (RFC 7807):</strong> Tratamento centralizado via <code>@RestControllerAdvice</code>, retornando payloads estruturados para validações de campo (HTTP 400), conflitos de identificador (HTTP 409) e recursos inexistentes (HTTP 404).</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">💻 Funcionalidades Principais</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Gestão de Ativos Cloud (CRUD):</strong> Endpoints RESTful completos (<code>/api/v1/assets</code>) para cadastro com validação de formato, consulta unificada, busca por ID, atualização atômica e exclusão.</li>
+                                    <li><strong>Trilha de Auditoria Forense com Paginação:</strong> Endpoint <code>GET /api/v1/audit-logs</code> com suporte a paginação (<code>page</code>, <code>size</code>) e filtros combinados por ação (CREATE, UPDATE, DELETE), identificador do ativo e intervalo de datas ISO-8601 (<code>fromDate</code>, <code>toDate</code>).</li>
+                                    <li><strong>Segurança HTTP Basic &amp; BCrypt:</strong> Proteção de endpoints contra acessos não autorizados, com credenciais injetadas exclusivamente via variáveis de ambiente e hashes BCrypt.</li>
+                                    <li><strong>Documentação Viva OpenAPI 3.0 / Swagger UI:</strong> Interface interativa disponível em <code>/swagger-ui.html</code> contendo schemas de requisição, respostas e códigos de status.</li>
+                                </ul>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;">🛠️ Tecnologias &amp; Engenharia de Software</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Java 25 &amp; Spring Boot 4:</strong> Utilização da versão mais recente do ecossistema Java, usufruindo de melhorias de desempenho em tempo de execução e novos padrões de API.</li>
+                                    <li><strong>PostgreSQL 18 &amp; Flyway:</strong> Persistência com Spring Data JPA e versionamento automatizado de banco com scripts de migração (<code>V1__create_cloud_assets.sql</code>, <code>V2__create_asset_audit_logs.sql</code>).</li>
+                                    <li><strong>Isolamento com Docker &amp; Compose:</strong> Arquivo <code>compose.yaml</code> com healthchecks automáticos (<code>pg_isready</code>) e volumes persistentes nomeados.</li>
+                                    <li><strong>CI/CD com GitHub Actions:</strong> Pipeline automatizado (<code>.github/workflows/ci.yml</code>) compilando em JDK 25 e executando a suíte de testes com Testcontainers em cada push/PR.</li>
+                                </ul>
+
+                                <div class="testing-highlight-box">
+                                    <div class="testing-highlight-title">
+                                        <i class="fas fa-check-circle"></i> Estratégia de Testes Automatizados com Testcontainers &amp; JUnit 5
+                                    </div>
+                                    <ul class="testing-highlight-list">
+                                        <li>
+                                            <span class="testing-tag">Testcontainers</span><span class="testing-tag">PostgreSQL 18</span>
+                                            <strong>Testes de Integração com Banco Real em Contêiner:</strong> Em vez de simulações com bancos em memória (H2) que divergem de produção, o AegisCore utiliza <code>@Testcontainers</code> para instanciar contêineres reais do PostgreSQL 18 durante a execução de <code>AssetAuditIntegrationTests</code>, garantindo 100% de paridade com o ambiente real.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">JUnit 5</span><span class="testing-tag">Mockito</span>
+                                            <strong>Testes Unitários de Serviços &amp; Eventos:</strong> Cobertura isolada de <code>AssetAuditListenerTests</code> e <code>AssetAuditPersistenceServiceTests</code>, validando o desacoplamento da mensageria de auditoria.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">Spring Security Test</span><span class="testing-tag">RBAC</span>
+                                            <strong>Testes de Autorização &amp; Barramento:</strong> Bateria de testes em <code>SecurityTests</code> comprovando que requisições anônimas recebem HTTP 401 e que o perfil USER é barrado com HTTP 403 em rotas administrativas e de auditoria.
+                                        </li>
+                                        <li>
+                                            <span class="testing-tag">GitHub Actions</span><span class="testing-tag">CI/CD</span>
+                                            <strong>Automação Contínua:</strong> Execução automática de <code>./mvnw clean verify</code> no runner Ubuntu do GitHub Actions, assegurando zero quebras no repositório.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <h4 style="color: #60a5fa; margin-top: 1.5rem;"><i class="fab fa-aws"></i> Arquitetura de Nuvem AWS &amp; Implantação</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1;">
+                                    <li><strong>Rede &amp; Isolamento (AWS VPC):</strong> Subnets públicas para o Application Load Balancer (ALB) e subnets privadas restritas para os contêineres e banco de dados, sem exposição de portas à internet.</li>
+                                    <li><strong>Execução de Contêineres (Amazon ECS Fargate):</strong> Orquestração serverless da imagem Docker da aplicação, com auto scaling horizontal baseado em consumo de CPU e memória.</li>
+                                    <li><strong>Banco Gerenciado (Amazon RDS PostgreSQL 18 Multi-AZ):</strong> Alta disponibilidade com replicação síncrona entre Availability Zones, backups diários automatizados e criptografia em repouso via AWS KMS.</li>
+                                    <li><strong>Segurança de Borda &amp; TLS:</strong> Application Load Balancer com certificado SSL/TLS emitido pelo AWS Certificate Manager (ACM) e terminação HTTPS segura.</li>
+                                    <li><strong>Gestão de Segredos &amp; Observabilidade:</strong> AWS Secrets Manager / SSM Parameter Store para injeção de credenciais de produção e Amazon CloudWatch para métricas de integridade e retenção centralizada de logs.</li>
+                                    <li><strong>Status de Implantação:</strong> Aplicação 100% preparada e containerizada para nuvem. O repositório documenta a infraestrutura homologada e pronta para receber o domínio público tão logo os recursos sejam provisionados.</li>
+                                </ul>
+
+                                <div class="showcase-stats" style="margin-top: 1.5rem;">
+                                    <div class="stat-item"><span class="stat-number">Java 25</span><span class="stat-label">Spring Boot 4</span></div>
+                                    <div class="stat-item"><span class="stat-number">Postgres 18</span><span class="stat-label">Flyway Migrations</span></div>
+                                    <div class="stat-item"><span class="stat-number">Containers</span><span class="stat-label">Testcontainers &amp; Docker</span></div>
+                                    <div class="stat-item"><span class="stat-number">AWS Cloud</span><span class="stat-label">Production Ready</span></div>
+                                </div>
+
+                                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin: 2rem 0;">
+                                    <span class="tech-tag">Java 25</span>
+                                    <span class="tech-tag">Spring Boot 4</span>
+                                    <span class="tech-tag">PostgreSQL 18</span>
+                                    <span class="tech-tag">Flyway</span>
+                                    <span class="tech-tag">Spring Security</span>
+                                    <span class="tech-tag">BCrypt</span>
+                                    <span class="tech-tag">Testcontainers</span>
+                                    <span class="tech-tag">JUnit 5</span>
+                                    <span class="tech-tag">Docker</span>
+                                    <span class="tech-tag">Docker Compose</span>
+                                    <span class="tech-tag">GitHub Actions</span>
+                                    <span class="tech-tag">OpenAPI 3.0</span>
+                                    <span class="tech-tag">AWS Cloud</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    } 
+    
     else if (projectType === 'mdm') {
         content = `
             <div class="project-demo">
@@ -479,6 +593,58 @@ function openProject(projectType) {
                                     <span class="tech-tag">CameraX</span>
                                     <span class="tech-tag">Jetpack Compose</span>
                                     <span class="tech-tag">Retrofit</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    else if (projectType === 'aegiscore') {
+        content = `
+            <div class="project-demo">
+                <h2>AegisCore — Cloud Security &amp; Operations Platform</h2>
+                <div class="demo-container">
+                    <div class="project-showcase">
+                        <div class="showcase-header">
+                            <div class="showcase-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <div class="showcase-title">AegisCore — Plataforma de Segurança &amp; Governança de Nuvem</div>
+                                <div class="showcase-subtitle">Java 25 + Spring Boot + Spring Security (RBAC) + PostgreSQL 18 + Flyway + Testcontainers</div>
+                            </div>
+                        </div>
+                        <div class="showcase-content">
+                            <div class="showcase-description" style="text-align: left;">
+                                <p>O <strong>AegisCore</strong> é uma API REST corporativa desenvolvida para resolver os desafios de <strong>inventário, governança e conformidade em infraestruturas multinuvem</strong> (AWS, Azure e GCP). Focada em segurança defensiva e arquitetura limpa, a plataforma implementa catálogo unificado de recursos, controle de acesso estrito baseado em papéis (RBAC) e uma trilha de auditoria transacional imutável orientada a eventos.</p>
+
+                                <div style="display: flex; gap: 1rem; margin: 1.5rem 0; flex-wrap: wrap;">
+                                    <a href="https://github.com/davifeels/aegis-core" target="_blank" rel="noopener" class="btn btn-primary" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; background: linear-gradient(135deg, #06b6d4 0%, #0284c7 100%); padding: 0.75rem 1.5rem; border-radius: 8px; color: white; font-weight: 600;">
+                                        <i class="fab fa-github"></i> Ver Código no GitHub
+                                    </a>
+                                </div>
+
+                                <h4 style="color: #38bdf8; margin-top: 1.5rem;">🏛️ Arquitetura &amp; Decisões de Engenharia</h4>
+                                <ul style="margin-left: 1.5rem; margin-bottom: 1rem; color: #cbd5e1; line-height: 1.7;">
+                                    <li><strong>Controle de Acesso RBAC &amp; BCrypt:</strong> Autenticação HTTP Basic stateless sobre Spring Security com segregação de perfis (<code>ADMIN</code> para mutações de ativos e visualização de auditoria; <code>USER</code> com acesso restrito a leitura de inventário).</li>
+                                    <li><strong>Auditoria Transacional Desacoplada:</strong> Mutação e auditoria desacopladas via <code>ApplicationEventPublisher</code>. O listener utiliza <code>@TransactionalEventListener(phase = TransactionPhase.AFTER_COMMIT)</code> e o serviço de persistência roda em <code>Propagation.REQUIRES_NEW</code>, garantindo que logs só sejam gravados após o commit real da transação e em isolamento.</li>
+                                    <li><strong>Busca Paginada &amp; Filtros Dinâmicos:</strong> Endpoint de auditoria construído com Spring Data JPA <code>Specification</code> e Criteria API, com paginação segura (limite de 100 itens) e validação de janelas temporais.</li>
+                                    <li><strong>Modelagem &amp; Migrations Flyway:</strong> PostgreSQL 18 com versionamento formal (<code>V1__create_cloud_assets.sql</code> e <code>V2__create_asset_audit_logs.sql</code>) e índices B-Tree estratégicos em <code>asset_id</code> e <code>occurred_at</code> para alto desempenho analítico.</li>
+                                    <li><strong>Testes Herméticos com Testcontainers:</strong> Testes de integração isolados utilizando <code>jdbc:tc:postgresql:18-alpine</code>, garantindo paridade total com o banco de dados de produção sem dependência de instâncias externas instaladas.</li>
+                                    <li><strong>Containerização &amp; CI:</strong> Dockerfile multi-stage com usuário não-root (<code>appuser</code>), orquestração Docker Compose e pipeline de integração contínua no GitHub Actions executando suíte completa de testes a cada push e PR.</li>
+                                </ul>
+
+                                <h4 style="color: #38bdf8; margin-top: 1.5rem;">🛠️ Tecnologias Utilizadas</h4>
+                                <div class="project-tech" style="margin-top: 0.5rem;">
+                                    <span class="tech-tag">Java 25</span>
+                                    <span class="tech-tag">Spring Boot</span>
+                                    <span class="tech-tag">Spring Security</span>
+                                    <span class="tech-tag">PostgreSQL 18</span>
+                                    <span class="tech-tag">Flyway</span>
+                                    <span class="tech-tag">Testcontainers</span>
+                                    <span class="tech-tag">Docker Compose</span>
+                                    <span class="tech-tag">OpenAPI / Swagger</span>
+                                    <span class="tech-tag">GitHub Actions CI</span>
                                 </div>
                             </div>
                         </div>
@@ -822,6 +988,9 @@ function viewCode(projectType) {
         window.open(repoUrl, '_blank');
     } else if (projectType === 'nexus') {
         repoUrl = 'https://github.com/davifeels/nexus-ai-core';
+        window.open(repoUrl, '_blank');
+    } else if (projectType === 'aegiscore') {
+        repoUrl = 'https://github.com/davifeels/aegis-core';
         window.open(repoUrl, '_blank');
     } else if (projectType === 'dataprotection') {
         openProject('dataprotection');
