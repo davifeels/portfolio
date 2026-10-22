@@ -16,80 +16,32 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
+if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+        const isActive = hamburger.classList.toggle('active');
+        navMenu.classList.toggle('active', isActive);
+        document.body.classList.toggle('menu-open', isActive);
+    });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+            document.body.classList.remove('menu-open');
+        });
+    });
+}
 
-// Navbar scroll effect
+// Navbar scroll effect com suporte fluido dark theme
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    const navMenu = document.querySelector('.nav-menu');
-    const navContainer = document.querySelector('.nav-container');
-    const navLogo = document.querySelector('.nav-logo');
-    const hamburger = document.querySelector('.hamburger');
-    
-    if (window.scrollY > 100) {
-        navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
-        navbar.style.color = '#333';
-        // Fechar/ocultar menu mobile totalmente ao descer
-        navMenu.classList.remove('active');
-        navMenu.style.opacity = '0';
-        navMenu.style.visibility = 'hidden';
-        navMenu.style.display = 'none';
-        if (hamburger) hamburger.classList.remove('active');
-        // Esconder botão hambúrguer em mobile durante scroll para baixo
-        if (window.innerWidth <= 768 && hamburger) {
-            hamburger.style.opacity = '0';
-            hamburger.style.pointerEvents = 'none';
-        }
-        // Centralizar logo quando desce
-        navContainer.style.justifyContent = 'center';
-        navContainer.style.transition = 'justify-content 0.3s ease';
-        // Forçar centralização absoluta
-        navLogo.style.position = 'absolute';
-        navLogo.style.left = '50%';
-        navLogo.style.transform = 'translateX(-50%)';
-        navLogo.style.transition = 'all 0.3s ease';
-        // Alterar cor dos links para escuro quando navbar fica branco
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.style.color = '#333';
-        });
-        navLogo.style.color = '#333';
+    if (!navbar) return;
+    if (window.scrollY > 40) {
+        navbar.classList.add('navbar-scrolled');
     } else {
-        navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-        navbar.style.boxShadow = 'none';
-        navbar.style.color = '#e2e8f0';
-        // Reexibir menu/hambúrguer quando volta ao topo
-        navMenu.style.opacity = '1';
-        navMenu.style.visibility = 'visible';
-        navMenu.style.display = '';
-        if (window.innerWidth <= 768 && hamburger) {
-            hamburger.style.opacity = '';
-            hamburger.style.pointerEvents = '';
-        }
-        // Voltar logo para posição original (esquerda)
-        navContainer.style.justifyContent = 'space-between';
-        navContainer.style.transition = 'justify-content 0.3s ease';
-        // Resetar posicionamento absoluto
-        navLogo.style.position = 'static';
-        navLogo.style.left = 'auto';
-        navLogo.style.transform = 'none';
-        navLogo.style.transition = 'all 0.3s ease';
-        // Voltar cor original dos links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.style.color = '#e2e8f0';
-        });
-        navLogo.style.color = '#60a5fa';
+        navbar.classList.remove('navbar-scrolled');
     }
-});
+}, { passive: true });
 
 // Intersection Observer for animations
 const observerOptions = {
